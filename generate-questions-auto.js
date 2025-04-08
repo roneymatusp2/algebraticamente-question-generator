@@ -1,17 +1,16 @@
-// Script para geração automática de questões
-// Este script conecta ao Supabase e usa a API DeepSeek para gerar questões
+//
+// Arquivo: generate-questions-auto.js
+// Versão ES Modules (funciona com "type": "module" no package.json)
+//
 
-const { createClient } = require('@supabase/supabase-js');
-const axios = require('axios');
-const fs = require('fs');
-const path = require('path');
+import { createClient } from '@supabase/supabase-js';
+import axios from 'axios';
+import fs from 'fs';
+import path from 'path';
 
-// Carrega variáveis de ambiente do arquivo .env, se existir
-try {
-  require('dotenv').config();
-} catch (error) {
-  console.log('Arquivo .env não encontrado, usando variáveis de ambiente do sistema');
-}
+// Se estiver usando "dotenv" em ES Modules:
+import dotenv from 'dotenv';
+dotenv.config();
 
 // Configuração do Supabase
 const supabaseUrl = process.env.SUPABASE_URL;
@@ -49,7 +48,7 @@ const TOPICS = [
   'Simplificação de expressões algébricas'
 ];
 
-// Limites de cotas por nível de dificuldade
+// Limites de cotas por nível
 const QUOTA_LIMITS = {
   easy: 300,
   medium: 200,
@@ -114,9 +113,7 @@ async function generateQuestion(topic, difficulty) {
   
   Importantes regras para todas as questões:
   - Use notação simples como x², x³ em vez de notações complexas
-  - Aceite simplificações como 3x² + 5x² = 8x²
   - Crie questões que envolvam um único conceito/operação por vez para níveis fáceis
-  - Para questões de adição/subtração, use apenas termos semelhantes em níveis fáceis
   - Inclua no enunciado exemplos de como os termos podem ser escritos (quando relevante)
   - Garanta que as respostas incorretas sejam plausíveis mas claramente erradas
   
