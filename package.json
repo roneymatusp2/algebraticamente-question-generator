@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
+  "scripts": {
     "build": "tsc",
     "generate-questions": "node dist/generate-questions-auto.js"
   },
@@ -12,7 +13,6 @@
     "node-fetch": "^3.3.2"
   },
   "devDependencies": {
-    "typescript": "^5.0.0",
-  },
-
+    "typescript": "^5.0.0"
+  }
 }
