@@ -26,12 +26,12 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20'
-          cache: 'npm'  # Ativa cache de dependências para execução mais rápida
+          node-version: '22'
+          # Removendo a opção de cache que estava causando o erro
       
       - name: Install dependencies
         run: npm install
-      
+        
       - name: Generate questions
         run: node generate-questions-auto.js
         env:
