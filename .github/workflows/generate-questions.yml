@@ -1,5 +1,8 @@
 name: Generate Questions
 on:
+  push:
+    branches:
+      - main  # Ou master, dependendo da sua branch principal
   schedule:
     - cron: '35 10 * * *'  # Executa todo dia às 10:35 AM UTC (11:35 AM em Portugal)
   workflow_dispatch:  # Permite execução manual através da interface do GitHub
