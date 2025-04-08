@@ -10,13 +10,16 @@ on:
   
   # Executa diariamente
   schedule:
-    - cron: '35 10 * * *'  # 10:35 UTC (11:35 em Portugal)
+    - cron: '35 10 * * *'  # 10:35 UTC (11:35 em Portugal) - Corrigido com 5 asteriscos
   
   # Permite execução manual
   workflow_dispatch:
 jobs:
   generate:
     runs-on: ubuntu-latest
+    # Adiciona permissões explícitas para o job
+    permissions:
+      contents: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
