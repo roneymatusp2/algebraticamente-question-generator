@@ -10,7 +10,7 @@ on:
   
   # Executa diariamente
   schedule:
-    - cron: '35 10 * * *'  # 10:35 UTC (11:35 em Portugal) - Corrigido a sintaxe do cron
+    - cron: '35 10 * * *'  # 10:35 UTC (11:35 em Portugal)
   
   # Permite execução manual
   workflow_dispatch:
@@ -26,7 +26,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20'  # Alterado para versão 20 para compatibilidade
+          node-version: '20'
           cache: 'npm'  # Ativa cache de dependências para execução mais rápida
       
       - name: Install dependencies
