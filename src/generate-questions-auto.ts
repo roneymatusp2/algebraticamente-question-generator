@@ -63,7 +63,6 @@ interface QuestionData {
   hints?: string[];
 }
 
-// Define interface for DeepSeek API response
 interface DeepSeekMessage {
   role: string;
   content: string;
@@ -92,23 +91,30 @@ async function checkCurrentQuestionCounts(): Promise<Record<string, number>> {
   console.log('Verificando contagem de questões por nível...');
   const counts: Record<string, number> = { easy: 0, medium: 0, hard: 0 };
 
-  for (const difficulty of DIFFICULTY_LEVELS) {
-    const { count, error } = await supabase
-      .from('questions')
-      .select('id', { count: 'exact' })
-      .eq('difficulty', difficulty);
+  const { data, error } = await supabase
+    .from('questions')
+    .select('difficulty');
 
-    if (error) {
-      console.error(`Erro ao obter contagem (${difficulty}):`, error.message);
-      continue;
+  if (error) {
+    console.error('Erro ao obter contagem:', error.message);
+    return counts;
+  }
+
+  if (data && data.length > 0) {
+    for (const question of data) {
+      const difficulty = question.difficulty?.toLowerCase() || '';
+      if (counts.hasOwnProperty(difficulty)) {
+        counts[difficulty]++;
+      }
     }
-    counts[difficulty] = count || 0;
+  }
+
+  for (const difficulty of DIFFICULTY_LEVELS) {
     console.log(`Nível "${difficulty}": ${counts[difficulty]}/${QUOTA_LIMITS[difficulty]} questões`);
   }
 
   return counts;
 }
-
 
 async function generateQuestion(topic: string, difficulty: string): Promise<QuestionData> {
   console.log(`Gerando questão sobre "${topic}" (nível: ${difficulty})`);
@@ -190,7 +196,6 @@ async function generateQuestion(topic: string, difficulty: string): Promise<Ques
   return questionData;
 }
 
-
 async function generateHints(question: QuestionData): Promise<string[]> {
   const hintsApiKey = apiKeys.hints;
   if (!hintsApiKey) {
@@ -249,7 +254,6 @@ async function generateHints(question: QuestionData): Promise<string[]> {
     return [];
   }
 }
-
 
 async function saveQuestionToSupabase(question: QuestionData) {
   const { data, error } = await supabase
