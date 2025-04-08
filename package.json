@@ -2,12 +2,19 @@
   "name": "algebraticamente-question-generator",
   "private": true,
   "version": "0.1.0",
-  "type": "module",
+  "type": "module", // Indica uso de ES Modules
   "scripts": {
-    "generate-questions": "node generate-questions-auto.js"
+    // Compila o TypeScript
+    "build": "tsc",
+    // Roda o arquivo já compilado, que estará em dist/generate-questions-auto.js
+    "generate-questions": "node dist/generate-questions-auto.js"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.39.7",
+    "dotenv": "^16.3.1",
     "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
   }
 }
