@@ -1,5 +1,4 @@
 name: Generate Questions
-
 on:
   push:
     branches:
@@ -11,9 +10,10 @@ on:
       - 'package.json'
   
   schedule:
-    - cron: '35 10 * * *'
+    - cron: '35 10 * * *'  # Fixed cron syntax - runs at 10:35 UTC daily
   
   workflow_dispatch:
+
 jobs:
   generate:
     runs-on: ubuntu-latest
