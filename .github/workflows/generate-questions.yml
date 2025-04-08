@@ -1,10 +1,8 @@
 name: Generate Questions
-
 on:
   schedule:
     - cron: '35 10 * * *'  # Executa todo dia às 10:35 AM UTC (11:35 AM em Portugal)
   workflow_dispatch:  # Permite execução manual através da interface do GitHub
-
 jobs:
   generate:
     runs-on: ubuntu-latest
@@ -15,7 +13,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: '22'
           
       - name: Install dependencies
         run: npm install
@@ -28,3 +26,11 @@ jobs:
           DEEPSEEK_API_KEY_EASY: ${{ secrets.DEEPSEEK_API_KEY_EASY }}
           DEEPSEEK_API_KEY_MEDIUM: ${{ secrets.DEEPSEEK_API_KEY_MEDIUM }}
           DEEPSEEK_API_KEY_HARD: ${{ secrets.DEEPSEEK_API_KEY_HARD }}
+          
+      - name: Commit changes if any new questions were generated
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git diff --quiet && git diff --staged --quiet || git commit -m "Auto-generate questions [skip ci]"
+          git push
