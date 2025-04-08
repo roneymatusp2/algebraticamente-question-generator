@@ -1,4 +1,3 @@
-
 import 'dotenv/config'; 
 import { createClient } from '@supabase/supabase-js';
 import fetch from 'node-fetch';
@@ -64,6 +63,30 @@ interface QuestionData {
   hints?: string[];
 }
 
+// Define interface for DeepSeek API response
+interface DeepSeekMessage {
+  role: string;
+  content: string;
+}
+
+interface DeepSeekChoice {
+  message: DeepSeekMessage;
+  index: number;
+  finish_reason: string;
+}
+
+interface DeepSeekResponse {
+  id: string;
+  object: string;
+  created: number;
+  model: string;
+  choices: DeepSeekChoice[];
+  usage: {
+    prompt_tokens: number;
+    completion_tokens: number;
+    total_tokens: number;
+  };
+}
 
 async function checkCurrentQuestionCounts(): Promise<Record<string, number>> {
   console.log('Verificando contagem de questões por nível...');
@@ -136,7 +159,7 @@ async function generateQuestion(topic: string, difficulty: string): Promise<Ques
     throw new Error(`Erro na API DeepSeek: ${response.status} - ${text}`);
   }
 
-  const data = await response.json();
+  const data = await response.json() as DeepSeekResponse;
   const content = data?.choices?.[0]?.message?.content || '';
   if (!content) {
     throw new Error('Resposta vazia ou inválida da API DeepSeek');
@@ -206,7 +229,7 @@ async function generateHints(question: QuestionData): Promise<string[]> {
     return [];
   }
 
-  const data = await response.json();
+  const data = await response.json() as DeepSeekResponse;
   const content = data?.choices?.[0]?.message?.content || '';
   if (!content) {
     return [];
