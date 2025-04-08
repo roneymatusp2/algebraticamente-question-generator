@@ -1,18 +1,19 @@
 // Script para geração automática de questões
 // Este script conecta ao Supabase e usa a API DeepSeek para gerar questões
+
 const { createClient } = require('@supabase/supabase-js');
 const axios = require('axios');
 const fs = require('fs');
 const path = require('path');
 
-// Carrega variáveis de ambiente do arquivo .env caso exista
+// Carrega variáveis de ambiente do arquivo .env, se existir
 try {
   require('dotenv').config();
 } catch (error) {
   console.log('Arquivo .env não encontrado, usando variáveis de ambiente do sistema');
 }
 
-// Configuração Supabase
+// Configuração do Supabase
 const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseKey = process.env.SUPABASE_SERVICE_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
@@ -29,7 +30,7 @@ const apiKeys = {
 // URL da API DeepSeek
 const API_URL = 'https://api.deepseek.com/v1/chat/completions';
 
-// Tópicos para geração de questões - ATUALIZADOS para focar em monômios, binômios e trinômios
+// Tópicos para geração de questões
 const TOPICS = [
   'Adição de monômios semelhantes',
   'Subtração de monômios semelhantes',
@@ -48,7 +49,7 @@ const TOPICS = [
   'Simplificação de expressões algébricas'
 ];
 
-// Limites de cotas por nível de dificuldade - ATUALIZADOS
+// Limites de cotas por nível de dificuldade
 const QUOTA_LIMITS = {
   easy: 300,
   medium: 200,
@@ -62,8 +63,7 @@ const DIFFICULTY_LEVELS = ['easy', 'medium', 'hard'];
 const QUESTIONS_PER_TOPIC_LEVEL = 2;
 
 /**
- * Verifica o número atual de questões por nível de dificuldade
- * @returns {Promise<Object>} - Objeto com o número de questões por nível
+ * Verifica o número atual de questões por nível
  */
 async function checkCurrentQuestionCounts() {
   console.log('Verificando número atual de questões por nível...');
@@ -88,16 +88,12 @@ async function checkCurrentQuestionCounts() {
     return counts;
   } catch (error) {
     console.error('Erro ao verificar contagem de questões:', error.message);
-    // Em caso de erro, retorna contagens zeradas para permitir geração
     return { easy: 0, medium: 0, hard: 0 };
   }
 }
 
 /**
  * Gera uma questão usando a API DeepSeek
- * @param {string} topic - Tópico da questão
- * @param {string} difficulty - Nível de dificuldade
- * @returns {Promise<Object>} - Objeto com a questão gerada
  */
 async function generateQuestion(topic, difficulty) {
   console.log(`Gerando questão sobre ${topic} (${difficulty})...`);
@@ -107,7 +103,7 @@ async function generateQuestion(topic, difficulty) {
     throw new Error(`API key para o nível ${difficulty} não encontrada`);
   }
 
-  // PROMPT ATUALIZADO para gerar questões mais robustas e específicas
+  // Prompt para a API
   const prompt = `
   Gere uma questão de álgebra sobre "${topic}" com nível de dificuldade "${difficulty}".
   
@@ -118,7 +114,7 @@ async function generateQuestion(topic, difficulty) {
   
   Importantes regras para todas as questões:
   - Use notação simples como x², x³ em vez de notações complexas
-  - Aceite simplificações como 3x² + 5x² = 8x² ou 3xx + 5xx = 8xx
+  - Aceite simplificações como 3x² + 5x² = 8x²
   - Crie questões que envolvam um único conceito/operação por vez para níveis fáceis
   - Para questões de adição/subtração, use apenas termos semelhantes em níveis fáceis
   - Inclua no enunciado exemplos de como os termos podem ser escritos (quando relevante)
@@ -133,8 +129,8 @@ async function generateQuestion(topic, difficulty) {
   {
     "question": "O enunciado completo da questão",
     "options": ["Alternativa A", "Alternativa B", "Alternativa C", "Alternativa D", "Alternativa E"],
-    "correctOption": "índice da alternativa correta (0-4)",
-    "explanation": "Explicação detalhada da solução que mostre o passo-a-passo"
+    "correctOption": 0,
+    "explanation": "Explicação passo-a-passo"
   }
   
   Responda somente com o JSON, sem texto adicional.
@@ -157,15 +153,14 @@ async function generateQuestion(topic, difficulty) {
       }
     );
 
-    // Extrai o JSON da resposta
     const content = response.data.choices[0].message.content;
     let questionData;
     
+    // Tenta fazer o parse do JSON
     try {
-      // Tenta fazer o parse do JSON
       questionData = JSON.parse(content.trim());
     } catch (error) {
-      // Se falhar, tenta extrair JSON usando regex
+      // Se falhar, tenta extrair JSON por regex
       const jsonMatch = content.match(/({[\s\S]*})/);
       if (jsonMatch) {
         questionData = JSON.parse(jsonMatch[0]);
@@ -191,8 +186,6 @@ async function generateQuestion(topic, difficulty) {
 
 /**
  * Gera dicas para uma questão
- * @param {Object} question - Objeto da questão gerada
- * @returns {Promise<Array>} - Array com dicas em diferentes níveis
  */
 async function generateHints(question) {
   console.log(`Gerando dicas para questão sobre ${question.topic}...`);
@@ -209,14 +202,11 @@ async function generateHints(question) {
   
   Crie três dicas progressivas para ajudar um estudante a resolvê-la:
   
-  1. Uma dica sutil que apenas orienta na direção certa
-  2. Uma dica moderada que explica um conceito-chave necessário
-  3. Uma dica direta que praticamente indica o caminho para a solução (sem dar a resposta)
+  1. Uma dica sutil
+  2. Uma dica moderada
+  3. Uma dica quase explícita
   
-  Certifique-se que as dicas sejam claras e adequadas para alunos do ensino fundamental/médio.
-  
-  Retorne apenas um array JSON no formato:
-  ["dica1", "dica2", "dica3"]
+  Retorne apenas um array JSON no formato: ["dica1", "dica2", "dica3"]
   `;
 
   try {
@@ -238,21 +228,13 @@ async function generateHints(question) {
 
     const content = response.data.choices[0].message.content;
     try {
-      // Tenta extrair o array JSON
-      const hintsArray = JSON.parse(content.trim());
-      return Array.isArray(hintsArray) ? hintsArray : [];
+      return JSON.parse(content.trim());
     } catch (error) {
-      // Tenta extrair usando regex se o parse falhar
+      // Tenta extrair por regex
       const match = content.match(/\[(.*?)\]/s);
       if (match) {
-        try {
-          return JSON.parse(`[${match[1]}]`);
-        } catch {
-          // Se ainda falhar, retorna vazio
-          return [];
-        }
+        return JSON.parse(`[${match[1]}]`);
       }
-      console.error('Erro ao extrair dicas:', error.message);
       return [];
     }
   } catch (error) {
@@ -263,7 +245,6 @@ async function generateHints(question) {
 
 /**
  * Salva a questão no Supabase
- * @param {Object} question - Questão a ser salva
  */
 async function saveQuestionToSupabase(question) {
   try {
@@ -284,53 +265,48 @@ async function saveQuestionToSupabase(question) {
 }
 
 /**
- * Função principal que gerencia todo o processo
+ * Função principal que orquestra todo o processo
  */
 async function main() {
   console.log('Iniciando geração de questões...');
   
-  // Verifica se as credenciais estão configuradas
+  // Verifica se as credenciais do Supabase estão configuradas
   if (!supabaseUrl || !supabaseKey) {
-    console.error('Erro: Credenciais do Supabase não configuradas');
+    console.error('Erro: Credenciais do Supabase não configuradas.');
     process.exit(1);
   }
 
   // Verifica se pelo menos uma API key está configurada
   const hasApiKey = Object.values(apiKeys).some(key => !!key);
   if (!hasApiKey) {
-    console.error('Erro: Nenhuma API key do DeepSeek configurada');
+    console.error('Erro: Nenhuma API key do DeepSeek configurada.');
     process.exit(1);
   }
 
-  // Verifica o número atual de questões por nível
-  let questionCounts;
+  // Verifica quantas questões já temos
+  let questionCounts = { easy: 0, medium: 0, hard: 0 };
   try {
     questionCounts = await checkCurrentQuestionCounts();
-  } catch (error) {
-    console.error('Erro ao verificar contagem de questões:', error.message);
-    // Se falhar, assume valores zerados para continuar
-    questionCounts = { easy: 0, medium: 0, hard: 0 };
+  } catch (err) {
+    console.error('Erro ao obter contagem de questões existentes:', err.message);
   }
 
-  // Array para armazenar as questões geradas
+  // Guardaremos as questões geradas localmente também
   const generatedQuestions = [];
 
-  // Gera questões para cada tópico e nível de dificuldade
+  // Gera questões em lote, por tópico e dificuldade
   for (const topic of TOPICS) {
     for (const difficulty of DIFFICULTY_LEVELS) {
-      // Pula níveis sem API key configurada
       if (!apiKeys[difficulty]) {
         console.log(`Pulando ${topic} (${difficulty}) - API key não configurada`);
         continue;
       }
       
-      // Verifica se atingiu a cota para este nível
       if (questionCounts[difficulty] >= QUOTA_LIMITS[difficulty]) {
         console.log(`Pulando ${topic} (${difficulty}) - Cota atingida (${questionCounts[difficulty]}/${QUOTA_LIMITS[difficulty]})`);
         continue;
       }
       
-      // Calcula quantas questões ainda podem ser geradas neste nível
       const remainingQuota = QUOTA_LIMITS[difficulty] - questionCounts[difficulty];
       const questionsToGenerate = Math.min(QUESTIONS_PER_TOPIC_LEVEL, remainingQuota);
       
@@ -338,15 +314,13 @@ async function main() {
         continue;
       }
       
-      console.log(`Gerando ${questionsToGenerate} questões para ${topic} (${difficulty}) - Restam ${remainingQuota} na cota`);
+      console.log(`Gerando ${questionsToGenerate} questão(ões) para ${topic} (${difficulty})...`);
       
-      // Gera o número especificado de questões por tópico/nível
       for (let i = 0; i < questionsToGenerate; i++) {
         try {
-          // Tenta gerar a questão
           const question = await generateQuestion(topic, difficulty);
           
-          // Gera dicas para a questão
+          // Gera dicas
           const hints = await generateHints(question);
           if (hints.length > 0) {
             question.hints = hints;
@@ -354,45 +328,35 @@ async function main() {
           
           // Salva no Supabase
           await saveQuestionToSupabase(question);
-          
-          // Incrementa a contagem local
+          generatedQuestions.push(question);
+
+          // Incrementa localmente para não gerar além da cota
           questionCounts[difficulty]++;
           
-          // Adiciona ao array local
-          generatedQuestions.push(question);
-          
-          // Aguarda 1 segundo entre requisições para não sobrecarregar a API
+          // Espera 1s para evitar "flood" na API
           await new Promise(resolve => setTimeout(resolve, 1000));
-        } catch (error) {
-          console.error(`Falha ao processar questão de ${topic} (${difficulty}):`, error.message);
-          // Continua para a próxima questão mesmo em caso de erro
+        } catch (err) {
+          console.error(`Erro ao gerar/salvar questão [${topic} - ${difficulty}]:`, err.message);
         }
       }
     }
   }
 
-  // Salva um registro local das questões geradas
+  // Salva localmente num .json
   const outputDir = 'questions-output';
   if (!fs.existsSync(outputDir)) {
     fs.mkdirSync(outputDir);
   }
-  
   const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-  const outputFile = path.join(outputDir, `questions-${timestamp}.json`);
+  const outputPath = path.join(outputDir, `questions-${timestamp}.json`);
+  fs.writeFileSync(outputPath, JSON.stringify(generatedQuestions, null, 2));
   
-  fs.writeFileSync(outputFile, JSON.stringify(generatedQuestions, null, 2));
-  console.log(`Questões salvas localmente em ${outputFile}`);
-  console.log(`Total de questões geradas: ${generatedQuestions.length}`);
-  
-  // Exibe o resumo final
-  console.log('\nResumo final de quotas:');
-  for (const difficulty of DIFFICULTY_LEVELS) {
-    console.log(`${difficulty}: ${questionCounts[difficulty]}/${QUOTA_LIMITS[difficulty]} questões`);
-  }
+  console.log(`\nForam geradas ${generatedQuestions.length} questões ao todo.`);
+  console.log(`Arquivo JSON salvo em: ${outputPath}`);
+  console.log(`Contagem final: easy=${questionCounts.easy}, medium=${questionCounts.medium}, hard=${questionCounts.hard}`);
 }
 
-// Executa a função principal
-main().catch(error => {
-  console.error('Erro fatal:', error);
+main().catch(err => {
+  console.error('Erro fatal no script:', err);
   process.exit(1);
 });
