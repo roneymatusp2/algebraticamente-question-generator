@@ -12,7 +12,7 @@ on:
   
   schedule:
     - cron: '35 10 * * *'
-
+  
   workflow_dispatch:
 
 jobs:
@@ -26,19 +26,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0  
-
+          fetch-depth: 0
+          
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: '22'
-
+          node-version: '18'
+      
       - name: Install dependencies
         run: npm install
-
+        
       - name: Build
         run: npm run build
-
+        
       - name: Run generation script
         run: npm run generate-questions
         env:
@@ -49,7 +49,7 @@ jobs:
           DEEPSEEK_API_KEY_HARD: ${{ secrets.DEEPSEEK_API_KEY_HARD }}
           DEEPSEEK_API_KEY_FEEDBACK: ${{ secrets.DEEPSEEK_API_KEY_FEEDBACK }}
           DEEPSEEK_API_KEY_HINTS: ${{ secrets.DEEPSEEK_API_KEY_HINTS }}
-
+      
       - name: Commit and push changes
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
