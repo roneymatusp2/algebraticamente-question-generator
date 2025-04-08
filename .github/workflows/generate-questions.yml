@@ -1,19 +1,18 @@
 name: Generate Questions
 
 on:
-  # Executa após push na branch 'master'
   push:
     branches:
       - master
     paths:
       - '.github/workflows/generate-questions.yml'
-      - 'generate-questions-auto.js'
+      - 'src/generate-questions-auto.ts'
+      - 'tsconfig.json'
+      - 'package.json'
   
-  # Executa diariamente às 10:35 UTC
   schedule:
     - cron: '35 10 * * *'
 
-  # Permite execução manual
   workflow_dispatch:
 
 jobs:
@@ -24,24 +23,25 @@ jobs:
       contents: write
     
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Necessário para permitir commit e push
-      
-      - name: Setup Node.js
+          fetch-depth: 0  
+
+      - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          # Use a versão do Node que quiser (16, 18, etc.)
-          node-version: '18'
-      
+          node-version: '22'
+
       - name: Install dependencies
         run: npm install
-      
-      - name: Generate questions
-        run: node generate-questions-auto.js
+
+      - name: Build
+        run: npm run build
+
+      - name: Run generation script
+        run: npm run generate-questions
         env:
-          # Variáveis de ambiente lidas no script
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
           DEEPSEEK_API_KEY_EASY: ${{ secrets.DEEPSEEK_API_KEY_EASY }}
@@ -49,7 +49,7 @@ jobs:
           DEEPSEEK_API_KEY_HARD: ${{ secrets.DEEPSEEK_API_KEY_HARD }}
           DEEPSEEK_API_KEY_FEEDBACK: ${{ secrets.DEEPSEEK_API_KEY_FEEDBACK }}
           DEEPSEEK_API_KEY_HINTS: ${{ secrets.DEEPSEEK_API_KEY_HINTS }}
-      
+
       - name: Commit and push changes
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
