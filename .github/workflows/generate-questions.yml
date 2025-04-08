@@ -1,55 +1,36 @@
-name: Generate Questions
-on:
-  # Executa imediatamente após o push
-  push:
-    branches:
-      - master  # ou main, dependendo da sua branch principal
-    paths:
-      - '.github/workflows/generate-questions.yml'
-      - 'generate-questions-auto.js'
-  
-  # Executa diariamente
-  schedule:
-    - cron: '35 10 * * *'  # 10:35 UTC (11:35 em Portugal) - Corrigido com 5 asteriscos
-  
-  # Permite execução manual
-  workflow_dispatch:
-jobs:
-  generate:
-    runs-on: ubuntu-latest
-    # Adiciona permissões explícitas para o job
-    permissions:
-      contents: write
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0  # Importante para ter acesso ao histórico git completo
-      
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '22'
-          # Removendo a opção de cache que estava causando o erro
-      
-      - name: Install dependencies
-        run: npm install
-        
-      - name: Generate questions
-        run: node generate-questions-auto.js
-        env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
-          DEEPSEEK_API_KEY_EASY: ${{ secrets.DEEPSEEK_API_KEY_EASY }}
-          DEEPSEEK_API_KEY_MEDIUM: ${{ secrets.DEEPSEEK_API_KEY_MEDIUM }}
-          DEEPSEEK_API_KEY_HARD: ${{ secrets.DEEPSEEK_API_KEY_HARD }}
-          DEEPSEEK_API_KEY_FEEDBACK: ${{ secrets.DEEPSEEK_API_KEY_FEEDBACK }}
-          DEEPSEEK_API_KEY_HINTS: ${{ secrets.DEEPSEEK_API_KEY_HINTS }}
-      
-      - name: Commit and push changes
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add .
-          # Commit apenas se houver alterações
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-generate questions [skip ci]" && git push)
+// Exemplo usando import em vez de require
+import { createClient } from '@supabase/supabase-js';
+
+// Ler as variáveis de ambiente definidas no GitHub Actions ou localmente
+const supabaseUrl = process.env.SUPABASE_URL;
+const supabaseServiceKey = process.env.SUPABASE_SERVICE_KEY;
+
+// Inicializar o cliente do Supabase
+const supabase = createClient(supabaseUrl, supabaseServiceKey);
+
+// Função principal autoexecutável
+(async () => {
+  try {
+    console.log("Gerando perguntas...");
+
+    // TODO: Coloque aqui a lógica que gera suas perguntas
+    // Exemplo fictício de inserção de dados:
+    /*
+    const { data, error } = await supabase
+      .from('perguntas')
+      .insert([
+        { texto: 'Pergunta de exemplo', dificuldade: 'fácil' }
+      ]);
+
+    if (error) {
+      throw error;
+    }
+    console.log('Inserido:', data);
+    */
+
+    console.log("Perguntas geradas com sucesso!");
+  } catch (err) {
+    console.error("Erro ao gerar perguntas:", err);
+    process.exit(1); // Para garantir que o processo retorne erro no GitHub Actions
+  }
+})();
