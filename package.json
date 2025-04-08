@@ -2,11 +2,8 @@
   "name": "algebraticamente-question-generator",
   "private": true,
   "version": "0.1.0",
-  "type": "module", // Indica uso de ES Modules
-  "scripts": {
-    // Compila o TypeScript
+  "type": "module",
     "build": "tsc",
-    // Roda o arquivo já compilado, que estará em dist/generate-questions-auto.js
     "generate-questions": "node dist/generate-questions-auto.js"
   },
   "dependencies": {
