@@ -45,16 +45,22 @@ const QUESTIONS_PER_TOPIC_LEVEL = 2;
 async function checkCurrentQuestionCounts() {
     console.log('Verificando contagem de questões por nível...');
     const counts = { easy: 0, medium: 0, hard: 0 };
-    for (const difficulty of DIFFICULTY_LEVELS) {
-        const { count, error } = await supabase
-            .from('questions')
-            .select('id', { count: 'exact' })
-            .eq('difficulty', difficulty);
-        if (error) {
-            console.error(`Erro ao obter contagem (${difficulty}):`, error.message);
-            continue;
+    const { data, error } = await supabase
+        .from('questions')
+        .select('difficulty');
+    if (error) {
+        console.error('Erro ao obter contagem:', error.message);
+        return counts;
+    }
+    if (data && data.length > 0) {
+        for (const question of data) {
+            const difficulty = question.difficulty?.toLowerCase() || '';
+            if (counts.hasOwnProperty(difficulty)) {
+                counts[difficulty]++;
+            }
         }
-        counts[difficulty] = count || 0;
+    }
+    for (const difficulty of DIFFICULTY_LEVELS) {
         console.log(`Nível "${difficulty}": ${counts[difficulty]}/${QUOTA_LIMITS[difficulty]} questões`);
     }
     return counts;
