@@ -36,9 +36,9 @@ const TOPICS = [
     'Simplificação de expressões algébricas'
 ];
 const QUOTA_LIMITS = {
-    easy: 350,
-    medium: 250,
-    hard: 150
+    easy: 450,
+    medium: 350,
+    hard: 250
 };
 const DIFFICULTY_LEVELS = ['easy', 'medium', 'hard'];
 const QUESTIONS_PER_TOPIC_LEVEL = 2;
