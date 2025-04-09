@@ -43,9 +43,9 @@ const TOPICS = [
 ];
 
 const QUOTA_LIMITS: Record<string, number> = {
-  easy: 300,
-  medium: 200,
-  hard: 100
+  easy: 350,
+  medium: 250,
+  hard: 150
 };
 
 const DIFFICULTY_LEVELS = ['easy', 'medium', 'hard'];
