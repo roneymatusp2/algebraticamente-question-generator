@@ -9,7 +9,6 @@ on:
       - 'tsconfig.json'
       - 'package.json'
 
-  
   schedule:
     - cron: '35 10 * * *'  # Fixed cron syntax - runs at 10:35 UTC daily
   
