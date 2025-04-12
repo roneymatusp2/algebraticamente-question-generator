@@ -1,0 +1,40 @@
+[
+  {
+    "question": "Fatore completamente o trinômio: x⁴ + 5x² + 6",
+    "options": [
+      "(x² + 2)(x² + 3)",
+      "(x + √2)(x - √2)(x² + 3)",
+      "(x² + 5)(x² + 1)",
+      "(x² + 1)(x² + 5)"
+    ],
+    "correctOption": 0,
+    "explanation": "1. Observe que o trinômio tem a forma quadrática em relação a x². Podemos fazer uma substituição: seja y = x²\n2. Reescrevemos o trinômio como y² + 5y + 6\n3. Fatoramos o trinômio quadrático: procuramos dois números que multiplicados dão 6 e somados dão 5 → 2 e 3\n4. Assim: y² + 5y + 6 = (y + 2)(y + 3)\n5. Desfazendo a substituição: (x² + 2)(x² + 3)\n6. Observação: x² + 2 e x² + 3 não podem ser fatorados em números reais, portanto esta é a forma completamente fatorada no conjunto dos números reais.",
+    "topic": "Fatoração de trinômios",
+    "difficulty": "hard",
+    "createdAt": "2025-04-12T10:44:04.161Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Dado o polinômio P(x, y) = 4x²y - 2xy² + 3x - 5y, qual é o valor numérico quando x = -2 e y = 3?",
+    "options": [
+      "39",
+      "-9",
+      "63",
+      "75"
+    ],
+    "correctOption": 2,
+    "explanation": "Substituindo x = -2 e y = 3 no polinômio:\n\n1. Cálculo de 4x²y:\n   = 4*(-2)²*3\n   = 4*4*3\n   = 48\n\n2. Cálculo de -2xy²:\n   = -2*(-2)*(3)²\n   = -2*(-2)*9\n   = 36\n\n3. Cálculo de 3x:\n   = 3*(-2)\n   = -6\n\n4. Cálculo de -5y:\n   = -5*3\n   = -15\n\nSoma dos termos:\n48 + 36 - 6 - 15 = 63\n\nErros comuns incluem esquecer de elevar ao quadrado (levando a 39), errar sinais nos termos negativos (levando a -9 ou 75), ou calcular incorretamente os expoentes.",
+    "topic": "Valor numérico de polinômios",
+    "difficulty": "medium",
+    "createdAt": "2025-04-12T10:51:44.343Z",
+    "hints": [
+      "dica1: Lembre-se de substituir cada variável no polinômio pelo valor correspondente. Verifique se todas as operações (multiplicação, potência, sinais) estão sendo respeitadas em cada termo.",
+      "dica2: Polinômios requerem cálculo termo a termo. Separe cada parte (ex: 4x²y, -2xy², etc), substitua x e y, resolva as potências primeiro, depois multiplique pelos coeficientes. Atenção à ordem das operações e sinais ao substituir valores negativos!",
+      "dica3: Para x = -2 e y = 3: Calcule 4*(-2)²*3, depois -2*(-2)*(3)², em seguida 3*(-2), e finalmente -5*3. Some todos os resultados parciais, lembrando de manter os sinais corretos em cada etapa."
+    ]
+  }
+]
