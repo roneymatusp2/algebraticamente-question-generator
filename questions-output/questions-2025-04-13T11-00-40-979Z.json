@@ -1,0 +1,59 @@
+[
+  {
+    "question": "Fatore completamente o trinômio: 3x² + (7/2)x + 1.",
+    "options": [
+      "(3x + 1)(x + 1)",
+      "(3x + 2)(x + 1/2)",
+      "(3x + 1/2)(x + 2)",
+      "(6x + 4)(x + 0,5)"
+    ],
+    "correctOption": 1,
+    "explanation": "Para fatorar 3x² + (7/2)x + 1, multiplicamos todos os termos por 2 para eliminar a fração: 6x² + 7x + 2. Fatorando 6x² + 7x + 2, procuramos dois números que multiplicam 6×2=12 e somam 7. Esses números são 3 e 4. Reescrevemos o trinômio como 6x² + 3x + 4x + 2. Agrupamos: 3x(2x + 1) + 2(2x + 1) = (3x + 2)(2x + 1). Dividimos por 2 (devido à multiplicação inicial): (3x + 2)(2x + 1)/2 = (3x + 2)(x + 1/2). Portanto, a resposta correta é (3x + 2)(x + 1/2).",
+    "topic": "Fatoração de trinômios",
+    "difficulty": "hard",
+    "createdAt": "2025-04-13T10:48:27.507Z",
+    "hints": [
+      "dica1: Tente eliminar as frações multiplicando o trinômio por um número que simplifique os coeficientes, facilitando a visualização dos fatores.",
+      "dica2: Após ajustar os coeficientes, utilize o método de decompor o termo do meio em duas partes cujo produto seja igual ao produto do primeiro e último coeficientes.",
+      "dica3: Agrupe os termos em pares, fatore cada grupo separadamente e, por fim, ajuste a expressão para refletir a fatoração original (desfazendo a multiplicação inicial)."
+    ]
+  },
+  {
+    "question": "Dado o polinômio P(x, y) = 3x²y - 2xy³ + 5, qual é o seu valor numérico quando x = 2 e y = -1?",
+    "options": [
+      "-3",
+      "5",
+      "13",
+      "-13"
+    ],
+    "correctOption": 0,
+    "explanation": "Passo a passo:\n1. Substitua x = 2 e y = -1 em cada termo:\n   - Primeiro termo: 3x²y = 3*(2)²*(-1) = 3*4*(-1) = -12\n   - Segundo termo: -2xy³ = -2*(2)*(-1)³ = -2*2*(-1) = 4 (pois (-1)³ = -1)\n   - Terceiro termo: +5\n2. Some os resultados: -12 + 4 + 5 = -3\n\nPossíveis erros comuns:\n- Calcular (-1)³ como +1 (levaria a 13)\n- Trocar o sinal do termo constante (levaria a -13)\n- Errar a ordem das operações nos cálculos intermediários",
+    "topic": "Valor numérico de polinômios",
+    "difficulty": "medium",
+    "createdAt": "2025-04-13T10:53:36.992Z",
+    "hints": [
+      "dica1: Lembre-se de substituir cada variável pelo valor correspondente, respeitando os sinais e a ordem das operações.",
+      "dica2: Ao substituir, atente-se aos expoentes em termos como x² e y³: (-1)³ = -1 e (2)² = 4. Não esqueça de multiplicar pelos coeficientes antes de somar/subtrair.",
+      "dica3: Calcule cada termo separadamente: 3*(2)²*(-1), depois -2*(2)*(-1)³ e por fim some 5. Combine os resultados parciais respeitando os sinais das operações."
+    ]
+  },
+  {
+    "question": "Dado o polinômio P(x, y) = 3x²y - 2xy² + 4x - 5y, qual é o seu valor numérico quando x = -1 e y = 2?",
+    "options": [
+      "0",
+      "-12",
+      "8",
+      "-16"
+    ],
+    "correctOption": 0,
+    "explanation": "Primeiro substituímos os valores de x e y no polinômio:\n1. 3x²y = 3*(-1)²*2 = 3*1*2 = 6\n2. -2xy² = -2*(-1)*(2)² = -2*(-1)*4 = +8\n3. 4x = 4*(-1) = -4\n4. -5y = -5*2 = -10\nSomando todos os termos: 6 + 8 - 4 - 10 = 0\nÉ crucial respeitar a ordem das operações:\n- Resolver expoentes primeiro (-1)² = 1\n- Manter atenção aos sinais negativos nas variáveis\n- Multiplicar coeficientes corretamente",
+    "topic": "Valor numérico de polinômios",
+    "difficulty": "medium",
+    "createdAt": "2025-04-13T10:54:54.229Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  }
+]
