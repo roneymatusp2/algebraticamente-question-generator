@@ -1,0 +1,21 @@
+[
+  {
+    "question": "Calcule o valor numérico do polinômio P(x) = (2x³ - 1/x)² - 4x(x² + 1) quando x = 1/2.",
+    "options": [
+      "9/16",
+      "-9/16",
+      "49/16",
+      "1/16"
+    ],
+    "correctOption": 0,
+    "explanation": "1. Substitua x = 1/2 em cada termo:\n   - 2x³ = 2*(1/2)³ = 2*(1/8) = 1/4\n   - 1/x = 1/(1/2) = 2\n2. Calcule (2x³ - 1/x): 1/4 - 2 = -7/4\n3. Eleve ao quadrado: (-7/4)² = 49/16\n4. Calcule 4x(x² + 1):\n   - x² = (1/2)² = 1/4\n   - 4*(1/2)*(1/4 + 1) = 2*(5/4) = 5/2\n5. Subtraia os resultados: 49/16 - 5/2 = 49/16 - 40/16 = 9/16",
+    "topic": "Valor numérico de polinômios",
+    "difficulty": "hard",
+    "createdAt": "2025-04-14T11:01:12.282Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  }
+]
