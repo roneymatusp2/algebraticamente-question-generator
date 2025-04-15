@@ -1,0 +1,35 @@
+[
+  {
+    "question": "Fatore completamente a expressão: 6x⁴ + 5x² - 4",
+    "options": [
+      "(6x² - 1)(x² + 4)",
+      "(3x² - 2)(2x² + 2)",
+      "(2x² - 1)(3x² + 4)",
+      "(x² - 1)(6x² + 4)"
+    ],
+    "correctOption": 2,
+    "explanation": "1. Substitua y = x² para transformar em um trinômio quadrático: 6y² + 5y - 4\n2. Fatoramos o trinômio procurando dois números que multiplicam 6*(-4) = -24 e somam 5 (8 e -3)\n3. Reescrevemos o termo do meio: 6y² + 8y - 3y - 4\n4. Agrupamos: (6y² + 8y) + (-3y - 4) = 2y(3y + 4) - 1(3y + 4)\n5. Fatoramos o binômio comum: (2y - 1)(3y + 4)\n6. Substituímos y = x² de volta: (2x² - 1)(3x² + 4)\n7. Verificamos a fatoração expandindo: 2x²*3x² + 2x²*4 - 1*3x² - 1*4 = 6x⁴ + 8x² - 3x² - 4 = 6x⁴ + 5x² - 4",
+    "topic": "Fatoração de trinômios",
+    "difficulty": "hard",
+    "createdAt": "2025-04-15T10:49:02.476Z"
+  },
+  {
+    "question": "Dado o polinômio P(x, y) = 3x² - 2xy + 4y², qual é o valor numérico de P(-1, 2)?",
+    "options": [
+      "23",
+      "15",
+      "9",
+      "20"
+    ],
+    "correctOption": 0,
+    "explanation": "Substituindo x = -1 e y = 2 no polinômio:\n1. 3x² = 3(-1)² = 3(1) = 3\n2. -2xy = -2(-1)(2) = +4\n3. 4y² = 4(2)² = 4(4) = 16\nSoma total: 3 + 4 + 16 = 23\n\nErros comuns:\n- Calcular 4y² como 4×2 = 8 (resultaria 15)\n- Considerar (-1)² = -1 (levaria a 3(-1) = -3 → total 9)\n- Trocar valores de x e y: P(2, -1) = 3(4) -2(2)(-1) +4(1) = 20",
+    "topic": "Valor numérico de polinômios",
+    "difficulty": "medium",
+    "createdAt": "2025-04-15T10:54:26.654Z",
+    "hints": [
+      "Dica 1: Lembre-se que para calcular o valor de um polinômio com duas variáveis, você precisa substituir cada ocorrência das letras pelos números correspondentes. Preste atenção especial aos sinais!",
+      "Dica 2: Cada termo do polinômio deve ser calculado separadamente: substitua x por -1 e y por 2 em todas as partes da expressão. Não esqueça que expoentes são calculados antes da multiplicação e use parênteses para manter a ordem correta das operações.",
+      "Dica 3: Calcule termo a termo: 3 vezes (x)², depois -2 vezes (x) vezes (y), e finalmente 4 vezes (y)². Some os três resultados após substituir x e y pelos valores dados, calculando primeiro as potências e depois as multiplicações."
+    ]
+  }
+]
