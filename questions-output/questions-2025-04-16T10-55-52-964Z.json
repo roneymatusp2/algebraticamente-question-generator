@@ -1,0 +1,21 @@
+[
+  {
+    "question": "Qual é o valor numérico do polinômio P(x) = 2x³ - (5/3)x² + 4x - 1 quando x = -1/2?",
+    "options": [
+      "A) -11/3",
+      "B) -7/3",
+      "C) -5/2",
+      "D) 8/3"
+    ],
+    "correctOption": 0,
+    "explanation": "Primeiro, substituímos x = -1/2 em cada termo:\n1. 2x³ = 2*(-1/2)³ = 2*(-1/8) = -1/4\n2. -(5/3)x² = -(5/3)*(-1/2)² = -(5/3)*(1/4) = -5/12\n3. 4x = 4*(-1/2) = -2\n4. Termo constante = -1\n\nConvertendo para denominador comum (12):\n-1/4 = -3/12, -5/12 mantém-se, -2 = -24/12, -1 = -12/12\nSoma total: (-3/12 -5/12 -24/12 -12/12) = -44/12 = -11/3\n\nErros comuns: esquecer o sinal negativo nos expoentes ímpares, aplicar incorretamente coeficientes fracionários ou errar na adição de frações.",
+    "topic": "Valor numérico de polinômios",
+    "difficulty": "hard",
+    "createdAt": "2025-04-16T10:52:51.198Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  }
+]
