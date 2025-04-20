@@ -36,7 +36,7 @@ const TOPICS = [
     'Simplificação de expressões algébricas'
 ];
 const QUOTA_LIMITS = {
-    easy: 450,
+    easy: 500,
     medium: 350,
     hard: 250
 };

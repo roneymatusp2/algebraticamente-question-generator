@@ -1,0 +1,548 @@
+[
+  {
+    "question": "Simplifique a expressão: 2x + 5x + x",
+    "options": [
+      "8x",
+      "7x",
+      "8",
+      "7"
+    ],
+    "correctOption": 0,
+    "explanation": "1. Identificamos que todos os termos possuem a mesma variável 'x'.\n2. Somamos os coeficientes numéricos: 2 (de 2x) + 5 (de 5x) + 1 (de x, já que x = 1x)\n3. Realizamos a soma: 2 + 5 + 1 = 8\n4. Mantemos a variável 'x' no resultado final\n5. Resposta final: 8x",
+    "topic": "Adição de monômios semelhantes",
+    "difficulty": "easy",
+    "createdAt": "2025-04-20T15:13:18.697Z",
+    "hints": [
+      "dica1: Observe que todos os termos da expressão compartilham uma característica comum relacionada à variável.",
+      "dica2: Monômios semelhantes possuem a mesma parte literal. Para simplificar, some os coeficientes numéricos mantendo a parte literal intacta.",
+      "dica3: Reescreva cada termo explicitando o coeficiente (incluindo o termo sem número visível) e some todos os valores numéricos antes da variável."
+    ]
+  },
+  {
+    "question": "Qual é o resultado da adição dos monômios 5x + 2x + x?",
+    "options": [
+      "8x",
+      "7x",
+      "8x²",
+      "8"
+    ],
+    "correctOption": 0,
+    "explanation": "Primeiro, identificamos que todos os monômios são semelhantes (mesma variável x).\n1. Somamos os coeficientes: 5 (de 5x) + 2 (de 2x) + 1 (de x, pois x = 1x) = 8\n2. Mantemos a variável: x\n3. Resultado final: 8x",
+    "topic": "Adição de monômios semelhantes",
+    "difficulty": "easy",
+    "createdAt": "2025-04-20T15:14:34.977Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Qual é o resultado da subtração de 8x - 3x?",
+    "options": [
+      "5x",
+      "11x",
+      "5",
+      "5x²"
+    ],
+    "correctOption": 0,
+    "explanation": "Para subtrair monômios semelhantes, subtraímos os coeficientes e mantemos a parte literal. Primeiro identificamos que ambos os termos têm a mesma variável x. Calculamos os coeficientes: 8 - 3 = 5. Mantemos a variável x inalterada. Portanto, 8x - 3x = (8 - 3)x = 5x.",
+    "topic": "Subtração de monômios semelhantes",
+    "difficulty": "easy",
+    "createdAt": "2025-04-20T15:15:56.176Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Simplifique a expressão: 8x - 3x",
+    "options": [
+      "5x",
+      "11x",
+      "8x",
+      "3x"
+    ],
+    "correctOption": 0,
+    "explanation": "Para subtrair os monômios semelhantes 8x e 3x, subtraímos seus coeficientes mantendo a variável:\n1. Identificamos que ambos os termos têm a mesma variável 'x'\n2. Subtraímos os coeficientes: 8 - 3 = 5\n3. Mantemos a variável: x\nPortanto, 8x - 3x = (8 - 3)x = 5x",
+    "topic": "Subtração de monômios semelhantes",
+    "difficulty": "easy",
+    "createdAt": "2025-04-20T15:17:33.633Z"
+  },
+  {
+    "question": "Qual é o resultado da multiplicação dos monômios (3x) e (2x)?",
+    "options": [
+      "6x²",
+      "5x²",
+      "6x",
+      "5x"
+    ],
+    "correctOption": 0,
+    "explanation": "1. Multiplicamos os coeficientes numéricos: 3 × 2 = 6.\n2. Multiplicamos as variáveis: x × x = x¹⁺¹ = x².\n3. Combinando os resultados: 6x².\n\nErros comuns:\n- 5x²: Erro ao somar os coeficientes (3+2) em vez de multiplicar\n- 6x: Esqueceu de somar os expoentes das variáveis\n- 5x: Cometeu ambos os erros anteriores simultaneamente",
+    "topic": "Multiplicação de monômios",
+    "difficulty": "easy",
+    "createdAt": "2025-04-20T15:18:41.881Z",
+    "hints": [
+      "Lembre-se de que, ao multiplicar termos algébricos, você pode separar a parte numérica da parte com variável.",
+      "Multiplique os coeficientes numéricos primeiro e depois aplique a propriedade das potências para as variáveis iguais.",
+      "Combine os resultados parciais: coeficiente * coeficiente e x¹ * x¹ usando a regra de expoentes para mesma base."
+    ]
+  },
+  {
+    "question": "Qual é o resultado da multiplicação dos monômios 2x² e 3x?",
+    "options": [
+      "6x³",
+      "5x³",
+      "6x²",
+      "5x²"
+    ],
+    "correctOption": 0,
+    "explanation": "Primeiro multiplicamos os coeficientes: 2 * 3 = 6. Em seguida multiplicamos as variáveis: x² * x = x^(2+1) = x³. Portanto, 2x² * 3x = 6x³. As alternativas incorretas cometem erros como somar coeficientes (5x³) ou expoentes (6x²).",
+    "topic": "Multiplicação de monômios",
+    "difficulty": "easy",
+    "createdAt": "2025-04-20T15:19:36.478Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Divida o monômio 8x⁴ por 2x. Qual é o resultado correto?",
+    "options": [
+      "4x³",
+      "6x³",
+      "4x⁴",
+      "8x³"
+    ],
+    "correctOption": 0,
+    "explanation": "Passo 1: Dividir os coeficientes numéricos: 8 ÷ 2 = 4\nPasso 2: Subtrair os expoentes das variáveis iguais: x⁴ ÷ x = x^(4-1) = x³\nPasso 3: Combinar os resultados: 4x³\n\nErros comuns:\n- 6x³: Erro ao subtrair coeficientes (8-2) em vez de dividir\n- 4x⁴: Erro ao dividir expoentes (4÷1) em vez de subtrair\n- 8x³: Esqueceu de dividir os coeficientes numéricos",
+    "topic": "Divisão de monômios",
+    "difficulty": "easy",
+    "createdAt": "2025-04-20T15:20:59.041Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Qual é o resultado de simplificar a expressão (2x)^4?",
+    "options": [
+      "16x⁴",
+      "8x⁴",
+      "2x⁴",
+      "16x"
+    ],
+    "correctOption": 0,
+    "explanation": "Para resolver (2x)^4 aplicamos a potência a ambos os elementos do monômio:\n1. Elevamos o coeficiente numérico: 2^4 = 16\n2. Elevamos a parte literal: (x)^4 = x⁴\n3. Juntando os resultados: 16x⁴\nErros comuns seriam multiplicar o coeficiente pelo expoente (2×4=8) ou esquecer de elevar a variável.",
+    "topic": "Potenciação de monômios",
+    "difficulty": "easy",
+    "createdAt": "2025-04-20T15:23:35.713Z",
+    "hints": [
+      "Dica1: Lembre-se de que quando um produto está elevado a um expoente, cada fator dentro dos parênteses é afetado pela potência. Como você distribuiria o expoente entre os elementos?",
+      "Dica2: A propriedade da potência de um produto diz que (ab)^n = a^n * b^n. Aplique isso separadamente ao coeficiente numérico e à variável.",
+      "Dica3: Calcule separadamente a potência do coeficiente numérico e da variável, depois multiplique os resultados. Exemplo genérico: (kx)^m = k^m * x^m."
+    ]
+  },
+  {
+    "question": "Calcule (2x)³.",
+    "options": [
+      "8x³",
+      "6x³",
+      "8x",
+      "2x³"
+    ],
+    "correctOption": 0,
+    "explanation": "Para resolver (2x)³, aplicamos a potência tanto ao coeficiente numérico quanto à variável:\n1. Elevamos o coeficiente 2 à potência 3: 2³ = 8\n2. Elevamos a variável x à potência 3: (x)³ = x³\n3. Multiplicamos os resultados: 8 × x³ = 8x³\n\nErros comuns:\n- 6x³: Erro ao calcular 2³ (2×3 em vez de 2×2×2)\n- 8x: Esqueceu de aplicar o expoente 3 à variável\n- 2x³: Aplicou o expoente apenas à variável, esquecendo do coeficiente",
+    "topic": "Potenciação de monômios",
+    "difficulty": "easy",
+    "createdAt": "2025-04-20T15:24:37.020Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Some os binômios (3x + 2) e (4x - 5).",
+    "options": [
+      "7x - 3",
+      "7x + 7",
+      "x - 3",
+      "7x + 3"
+    ],
+    "correctOption": 0,
+    "explanation": "1. Combine os termos semelhantes dos binômios:\n   - Termos com x: 3x + 4x = 7x\n   - Termos constantes: 2 + (-5) = -3\n2. O resultado final é 7x - 3.\nErros comuns: Somar 2 + 5 em vez de 2 - 5 (7x + 7) ou subtrair os coeficientes de x (x - 3).",
+    "topic": "Adição e subtração de binômios",
+    "difficulty": "easy",
+    "createdAt": "2025-04-20T15:26:03.836Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Some os binômios (3x + 2) e (2x - 5).",
+    "options": [
+      "5x - 3",
+      "5x + 7",
+      "x + 7",
+      "5x - 7"
+    ],
+    "correctOption": 0,
+    "explanation": "Passo a passo:\n1. Combine os termos semelhantes com a variável x: 3x + 2x = 5x\n2. Combine os termos constantes (números sem variável): 2 + (-5) = -3\n3. Junte os resultados: 5x - 3\n\nErros comuns evitados:\n- Não confundir o sinal negativo na subtração do segundo termo constante\n- Garantir que todos os termos são corretamente agrupados por similaridade",
+    "topic": "Adição e subtração de binômios",
+    "difficulty": "easy",
+    "createdAt": "2025-04-20T15:27:08.747Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Simplifique a expressão: 2(x + 3)",
+    "options": [
+      "2x + 3",
+      "2x + 5",
+      "2x + 6",
+      "x + 6"
+    ],
+    "correctOption": 2,
+    "explanation": "Primeiro, distribuímos o monômio 2 para cada termo dentro dos parênteses:\n\n2 * x = 2x\n2 * 3 = 6\n\nEm seguida, somamos os resultados: 2x + 6\n\nPortanto, a expressão simplificada é 2x + 6.",
+    "topic": "Multiplicação de binômio por monômio",
+    "difficulty": "easy",
+    "createdAt": "2025-04-20T15:28:50.599Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Simplifique a expressão: 3x(x + 2)",
+    "options": [
+      "3x² + 6x",
+      "3x + 6x",
+      "3x² + 2",
+      "3x² + 6"
+    ],
+    "correctOption": 0,
+    "explanation": "Para multiplicar o monômio 3x pelo binômio (x + 2), aplicamos a propriedade distributiva:\n\n1. Multiplicamos 3x pelo primeiro termo do binômio: 3x * x = 3x²\n2. Multiplicamos 3x pelo segundo termo do binômio: 3x * 2 = 6x\n3. Somamos os resultados: 3x² + 6x\n\nErros comuns incluem esquecer de multiplicar ambos os termos (3x² + 2), não aplicar a regra dos expoentes (3x + 6x) ou esquecer a variável no segundo termo (3x² + 6).",
+    "topic": "Multiplicação de binômio por monômio",
+    "difficulty": "easy",
+    "createdAt": "2025-04-20T15:30:10.672Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Multiplique (x + 2)(x + 3).",
+    "options": [
+      "x² + 5x + 6",
+      "x² + 5x + 5",
+      "x² + 6x + 6",
+      "x² + 6x + 5"
+    ],
+    "correctOption": 0,
+    "explanation": "Para multiplicar os binômios (x + 2) e (x + 3), utilizamos o método FOIL:\n\n1. **Primeiros termos:** x * x = x²\n2. **Termos externos:** x * 3 = 3x\n3. **Termos internos:** 2 * x = 2x\n4. **Últimos termos:** 2 * 3 = 6\n\nSoma-se todos os termos: x² + 3x + 2x + 6\nCombinando os termos semelhantes (3x + 2x = 5x):\nx² + 5x + 6\n\nPortanto, a resposta correta é a alternativa A.",
+    "topic": "Multiplicação de binômios",
+    "difficulty": "easy",
+    "createdAt": "2025-04-20T15:32:31.702Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Qual é o resultado da multiplicação dos binômios (x + 2) e (x + 3)?",
+    "options": [
+      "x² + 5x + 6",
+      "x² + 6x + 6",
+      "x² + 5x + 5",
+      "x² + 6"
+    ],
+    "correctOption": 0,
+    "explanation": "Vamos resolver passo a passo usando o método FOIL:\n1. Primeiros termos: x * x = x²\n2. Termos externos: x * 3 = 3x\n3. Termos internos: 2 * x = 2x\n4. Últimos termos: 2 * 3 = 6\nCombine os resultados: x² + 3x + 2x + 6\nSome os termos semelhantes: x² + 5x + 6",
+    "topic": "Multiplicação de binômios",
+    "difficulty": "easy",
+    "createdAt": "2025-04-20T15:33:43.932Z",
+    "hints": [
+      "Lembre-se de que cada termo do primeiro binômio deve ser multiplicado por todos os termos do segundo. Que operação matemática permite distribuir essa multiplicação?",
+      "Use a propriedade distributiva (método 'chuveirinho') em duas etapas: distribua o primeiro termo de (x + 2) sobre (x + 3), depois faça o mesmo com o segundo termo. Ao final, some os resultados parciais.",
+      "Multiplique x por (x + 3) e 2 por (x + 3) separadamente. Some os produtos obtidos e observe se há termos semelhantes para combinar, especialmente os que contêm apenas números."
+    ]
+  },
+  {
+    "question": "Expanda a expressão algébrica (x + 3)² utilizando o produto notável do quadrado da soma.",
+    "options": [
+      "x² + 6x + 9",
+      "x² + 9",
+      "x² + 3x + 9",
+      "x² + 6x + 6"
+    ],
+    "correctOption": 0,
+    "explanation": "Para resolver (x + 3)², aplicamos a fórmula do quadrado da soma: (a + b)² = a² + 2ab + b².\n1. Primeiro termo: x²\n2. Dobro do produto: 2 * x * 3 = 6x\n3. Quadrado do segundo termo: 3² = 9\n4. Juntando tudo: x² + 6x + 9\nErros comuns seriam esquecer o termo do meio (6x) ou calcular incorretamente o dobro do produto ou o último termo.",
+    "topic": "Produto notável: quadrado da soma",
+    "difficulty": "easy",
+    "createdAt": "2025-04-20T15:34:59.170Z",
+    "hints": [
+      "Lembre-se de que elevar um binômio ao quadrado significa multiplicá-lo por si mesmo. Como você pode representar essa multiplicação de forma expandida?",
+      "O quadrado da soma segue a estrutura (a + b)² = a² + 2ab + b². Identifique quais termos correspondem a 'a' e 'b' na expressão original.",
+      "Aplique a propriedade distributiva multiplicando cada termo do primeiro parêntese por cada termo do segundo parêntese, depois combine os termos semelhantes."
+    ]
+  },
+  {
+    "question": "Expanda a expressão usando o quadrado da soma: (x + 3)²",
+    "options": [
+      "x² + 6x + 9",
+      "x² + 9",
+      "x² + 3x + 9",
+      "x² + 6x + 6"
+    ],
+    "correctOption": 0,
+    "explanation": "Para expandir (x + 3)², aplicamos a fórmula do quadrado da soma: (a + b)² = a² + 2ab + b².\n\n1. Identificamos a = x e b = 3\n2. Calculamos a² = x²\n3. Calculamos 2ab = 2 * x * 3 = 6x\n4. Calculamos b² = 3² = 9\n5. Juntamos todos os termos: x² + 6x + 9\n\nAlternativas incorretas:\n- B) Esqueceu do termo do meio (2ab)\n- C) Usou apenas 3x em vez de 6x\n- D) Errou o cálculo de b² (3² ≠ 6)",
+    "topic": "Produto notável: quadrado da soma",
+    "difficulty": "easy",
+    "createdAt": "2025-04-20T15:35:57.794Z",
+    "hints": [
+      "Lembre-se que elevar um binômio ao quadrado significa multiplicá-lo por si mesmo. Como você distribuiria os termos nessa multiplicação?",
+      "O quadrado da soma segue o padrão: (a + b)² = a² + 2ab + b². Identifique quem são os termos 'a' e 'b' na sua expressão.",
+      "Substitua os valores na fórmula: (x)² + 2*(x)*(3) + (3)². Agora é só calcular cada parte separadamente e combinar os resultados."
+    ]
+  },
+  {
+    "question": "Qual é a forma expandida da expressão (x - 3)²?",
+    "options": [
+      "x² - 6x + 9",
+      "x² - 9",
+      "x² + 6x + 9",
+      "x² - 3x + 9"
+    ],
+    "correctOption": 0,
+    "explanation": "Para expandir (x - 3)², usamos a fórmula do quadrado da diferença: (a - b)² = a² - 2ab + b².\n\n1. Identificamos a = x e b = 3\n2. Calculamos cada termo:\n   - a² = x²\n   - 2ab = 2 * x * 3 = 6x\n   - b² = 3² = 9\n3. Montamos a expressão: x² - 6x + 9\n\nErros comuns:\n- Opção B: Esquece o termo do meio (-6x)\n- Opção C: Erra o sinal do termo do meio\n- Opção D: Calcula errado o coeficiente do termo do meio",
+    "topic": "Produto notável: quadrado da diferença",
+    "difficulty": "easy",
+    "createdAt": "2025-04-20T15:36:52.767Z",
+    "hints": [
+      "Lembre-se de que elevar um binômio ao quadrado significa multiplicá-lo por si mesmo. Como você distribuiria essa multiplicação?",
+      "O quadrado da diferença de dois termos segue a estrutura (a - b)² = a² - 2ab + b². Experimente reescrever a expressão como (x - 3)(x - 3) e aplique a propriedade distributiva.",
+      "Separe a multiplicação em duas etapas: primeiro x*(x - 3), depois -3*(x - 3). Some os resultados e verifique se há termos semelhantes para combinar."
+    ]
+  },
+  {
+    "question": "Expanda a expressão algébrica usando o quadrado da diferença: (x - 3)²",
+    "options": [
+      "x² - 6x + 9",
+      "x² - 3x + 9",
+      "x² - 6x + 3",
+      "x² + 6x + 9"
+    ],
+    "correctOption": 0,
+    "explanation": "Usando a fórmula do quadrado da diferença (a - b)² = a² - 2ab + b²:\n1. Identificamos a = x e b = 3\n2. Calculamos cada termo:\n   - a² = x²\n   - 2ab = 2 * x * 3 = 6x\n   - b² = 3² = 9\n3. Combinamos os termos: x² - 6x + 9\nErros comuns:\n- Esquecer de dobrar o produto (2ab) levaria a x² - 3x + 9\n- Não elevar o segundo termo ao quadrado resultaria em x² - 6x + 3\n- Trocar o sinal do termo central geraria x² + 6x + 9",
+    "topic": "Produto notável: quadrado da diferença",
+    "difficulty": "easy",
+    "createdAt": "2025-04-20T15:37:54.802Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Qual é o resultado da expressão (x + 3)(x - 3)?",
+    "options": [
+      "x² - 9",
+      "x² + 9",
+      "x² - 6x + 9",
+      "x² + 6x - 9"
+    ],
+    "correctOption": 0,
+    "explanation": "Para resolver (x + 3)(x - 3), aplicamos a regra do produto da soma pela diferença: (a + b)(a - b) = a² - b².\n1. Identificamos 'a' como x e 'b' como 3\n2. Calculamos a² = x²\n3. Calculamos b² = 3² = 9\n4. Subtraímos os resultados: x² - 9\nOs termos do meio (3x e -3x) se cancelam, não restando termo linear. As alternativas incorretas mostram erros comuns como esquecer de subtrair (x² + 9) ou confundir com quadrado perfeito (x² - 6x + 9).",
+    "topic": "Produto notável: produto da soma pela diferença",
+    "difficulty": "easy",
+    "createdAt": "2025-04-20T15:38:56.323Z",
+    "hints": [
+      "dica1: Observe a estrutura da expressão: um produto entre dois binômios com termos iguais e sinais opostos. O que acontece quando multiplicamos termos simétricos?",
+      "dica2: Lembre-se da propriedade (a + b)(a - b) = a² - b². Identifique quem representa 'a' e 'b' na expressão dada.",
+      "dica3: Multiplique termo a termo usando a distributiva: x·x, x·(-3), 3·x e 3·(-3). Some os resultados e veja quais termos se cancelam."
+    ]
+  },
+  {
+    "question": "Expanda o produto notável (x + 5)(x - 5).",
+    "options": [
+      "x² - 25",
+      "x² - 5",
+      "x² + 25",
+      "x² - 10x + 25"
+    ],
+    "correctOption": 0,
+    "explanation": "Para expandir (x + 5)(x - 5), aplicamos a fórmula do produto da soma pela diferença: (a + b)(a - b) = a² - b².\n\n1. Identifique 'a' e 'b' na expressão:\n   - a = x\n   - b = 5\n\n2. Aplique a fórmula:\n   - (x)² - (5)²\n\n3. Calcule os quadrados:\n   - x² - 25\n\nErros comuns:\n- Alternativa B: Esqueceu de elevar 5 ao quadrado\n- Alternativa C: Usou sinal positivo na subtração\n- Alternativa D: Expandiu como se fosse (x - 5)² (quadrado da diferença)",
+    "topic": "Produto notável: produto da soma pela diferença",
+    "difficulty": "easy",
+    "createdAt": "2025-04-20T15:40:03.282Z",
+    "hints": [
+      "Observe a estrutura dos binômios: como os sinais do segundo termo se relacionam? Existe uma simplificação quando termos semelhantes se anulam.",
+      "Produtos da forma (a + b)(a - b) seguem uma regra específica: o resultado é o quadrado do primeiro termo menos o quadrado do segundo termo, eliminando o termo misto.",
+      "Aplique a propriedade distributiva de forma estratégica: multiplique cada termo da primeira expressão pelos termos da segunda e identifique quais parcelas se cancelam."
+    ]
+  },
+  {
+    "question": "Some os trinômios (2x² + 3x + 4) e (x² + 5x + 1).",
+    "options": [
+      "3x² + 8x + 5",
+      "3x² + 8x + 6",
+      "2x² + 8x + 5",
+      "3x² + 15x + 5"
+    ],
+    "correctOption": 0,
+    "explanation": "Passo a passo:\n1. Combine os termos semelhantes:\n   - Termos x²: 2x² + x² = 3x²\n   - Termos x: 3x + 5x = 8x\n   - Constantes: 4 + 1 = 5\n2. Junte os resultados: 3x² + 8x + 5\nErros comuns:\n- Somar erradamente os expoentes (x² + x² ≠ x⁴)\n- Esquecer de combinar termos semelhantes\n- Erros de soma simples nas constantes",
+    "topic": "Operações com trinômios",
+    "difficulty": "easy",
+    "createdAt": "2025-04-20T15:41:15.240Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Qual é o resultado da soma dos trinômios (x² + 2x + 3) e (2x² + x + 4)?",
+    "options": [
+      "3x² + 3x + 7",
+      "3x² + 2x + 7",
+      "2x² + 3x + 7",
+      "3x² + 3x + 6"
+    ],
+    "correctOption": 0,
+    "explanation": "Primeiro, combinamos os termos semelhantes dos dois trinômios:\n1. Termos x²: x² + 2x² = 3x²\n2. Termos x: 2x + x = 3x\n3. Termos constantes: 3 + 4 = 7\nAssim, o resultado da soma é 3x² + 3x + 7.",
+    "topic": "Operações com trinômios",
+    "difficulty": "easy",
+    "createdAt": "2025-04-20T15:42:48.622Z",
+    "hints": [
+      "Dica1: Observe os termos semelhantes em cada trinômio. Quais elementos possuem a mesma parte literal e poderiam ser combinados?",
+      "Dica2: Lembre-se que para somar polinômios, devemos adicionar os coeficientes dos termos correspondentes. Agrupe os termos de mesmo grau antes de efetuar as operações.",
+      "Dica3: Some separadamente os coeficientes de x², x e os termos constantes. Por exemplo: (1x² + 2x²) + (2x + 1x) + (3 + 4). O que resulta cada uma dessas parcelas?"
+    ]
+  },
+  {
+    "question": "Qual é a forma fatorada do trinômio x² + 5x + 6?",
+    "options": [
+      "(x + 2)(x + 3)",
+      "(x + 1)(x + 6)",
+      "(x + 5)(x + 1)",
+      "(x - 2)(x - 3)"
+    ],
+    "correctOption": 0,
+    "explanation": "Passo 1: Procuramos dois números que multiplicados resultem em 6 (termo constante) e somados resultem em 5 (coeficiente do termo central).\nPasso 2: Os números 2 e 3 satisfazem ambas as condições (2 × 3 = 6 e 2 + 3 = 5).\nPasso 3: Escrevemos a forma fatorada como (x + 2)(x + 3).\nVerificação: (x + 2)(x + 3) = x² + 3x + 2x + 6 = x² + 5x + 6.",
+    "topic": "Fatoração de trinômios",
+    "difficulty": "easy",
+    "createdAt": "2025-04-20T15:43:56.131Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Fatore o trinômio quadrático: x² + 5x + 6",
+    "options": [
+      "(x + 2)(x + 3)",
+      "(x + 1)(x + 6)",
+      "(x + 2)(x + 4)",
+      "(x + 5)(x + 1)"
+    ],
+    "correctOption": 0,
+    "explanation": "Passo a passo:\n1. Procuramos dois números que multiplicados resultem em 6 (termo constante) e somados resultem em 5 (coeficiente do termo central).\n2. Os números 2 e 3 satisfazem: 2 × 3 = 6 e 2 + 3 = 5\n3. Escrevemos os fatores binomiais: (x + 2)(x + 3)\n4. Verificação: (x + 2)(x + 3) = x² + 3x + 2x + 6 = x² + 5x + 6\nAs outras opções não satisfazem simultaneamente a soma e o produto necessário.",
+    "topic": "Fatoração de trinômios",
+    "difficulty": "easy",
+    "createdAt": "2025-04-20T15:45:22.107Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Qual é o valor numérico do polinômio P(x) = x² + 3x - 2 quando x = 2?",
+    "options": [
+      "8",
+      "6",
+      "12",
+      "10"
+    ],
+    "correctOption": 0,
+    "explanation": "Substituímos x por 2 no polinômio: P(2) = (2)² + 3*(2) - 2. Calculando passo a passo: 2² = 4, 3*2 = 6. Então somamos e subtraímos: 4 + 6 = 10, 10 - 2 = 8. Portanto, o valor numérico é 8.",
+    "topic": "Valor numérico de polinômios",
+    "difficulty": "easy",
+    "createdAt": "2025-04-20T15:47:03.681Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Qual é o valor numérico do polinômio P(x) = 2x² - 3x + 4 quando x = 1?",
+    "options": [
+      "3",
+      "5",
+      "-5",
+      "9"
+    ],
+    "correctOption": 0,
+    "explanation": "1. Substitua x por 1 no polinômio: P(1) = 2(1)² - 3(1) + 4\n2. Calcule a potência primeiro: 2(1) = 2\n3. Multiplique os termos: 2 - 3 + 4\n4. Resolva a expressão passo a passo:\n   2 - 3 = -1\n   -1 + 4 = 3\nPortanto, o valor numérico é 3 quando x = 1.",
+    "topic": "Valor numérico de polinômios",
+    "difficulty": "easy",
+    "createdAt": "2025-04-20T15:48:31.200Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Simplifique a expressão algébrica: 2x + 3 + x + 4",
+    "options": [
+      "3x + 7",
+      "2x + 7",
+      "3x + 12",
+      "3x + 3"
+    ],
+    "correctOption": 0,
+    "explanation": "Primeiro, identificamos os termos semelhantes:\n1. Termos com x: 2x e x → 2x + x = 3x\n2. Termos constantes: 3 e 4 → 3 + 4 = 7\nJuntando os resultados: 3x + 7\n\nErros comuns:\n- Esquecer de combinar 2x com x levaria a 2x + 7 (alternativa B)\n- Multiplicar 3×4 em vez de somar levaria a 3x + 12 (alternativa C)\n- Ignorar o número 4 levaria a 3x + 3 (alternativa D)",
+    "topic": "Simplificação de expressões algébricas",
+    "difficulty": "easy",
+    "createdAt": "2025-04-20T15:51:43.783Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Simplifique a expressão: 3x + 2 + 4x - 5.",
+    "options": [
+      "7x - 3",
+      "7x + 7",
+      "9x - 5",
+      "-x - 3"
+    ],
+    "correctOption": 0,
+    "explanation": "Passo 1: Combine os termos semelhantes com a variável x. \n3x + 4x = 7x\n\nPasso 2: Combine os termos constantes (números sem variável).\n2 - 5 = -3\n\nPasso 3: Junte os resultados.\nExpressão simplificada: 7x - 3\n\nErros comuns:\n- Somar 2 + 5 em vez de subtrair (7x + 7)\n- Combinar termos na ordem errada (9x - 5)\n- Trocar o sinal do 4x (-x - 3)",
+    "topic": "Simplificação de expressões algébricas",
+    "difficulty": "easy",
+    "createdAt": "2025-04-20T15:53:53.381Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  }
+]
