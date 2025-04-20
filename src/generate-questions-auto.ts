@@ -43,7 +43,7 @@ const TOPICS = [
 ];
 
 const QUOTA_LIMITS: Record<string, number> = {
-  easy: 450,
+  easy: 500,
   medium: 350,
   hard: 250
 };
