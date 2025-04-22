@@ -1,0 +1,21 @@
+[
+  {
+    "question": "Qual é o resultado da subtração dos monômios 7x e 4x?",
+    "options": [
+      "3x",
+      "11x",
+      "3",
+      "3x²"
+    ],
+    "correctOption": 0,
+    "explanation": "1) Identificamos que ambos os termos são monômios semelhantes (mesma variável x).\n2) Subtraímos os coeficientes numéricos: 7 - 4 = 3\n3) Mantemos a parte literal (variável x) inalterada.\n4) Resultado final: 3x\nErros comuns: Somar os coeficientes (11x), esquecer a variável (3) ou alterar o expoente (x²).",
+    "topic": "Subtração de monômios semelhantes",
+    "difficulty": "easy",
+    "createdAt": "2025-04-22T10:47:13.089Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  }
+]
