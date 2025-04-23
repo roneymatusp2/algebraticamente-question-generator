@@ -1,0 +1,21 @@
+[
+  {
+    "question": "Divida o monômio 12x⁵ por 4x².",
+    "options": [
+      "3x³",
+      "8x³",
+      "3x⁷",
+      "3x⁵"
+    ],
+    "correctOption": 0,
+    "explanation": "Primeiro, dividimos os coeficientes numéricos: 12 ÷ 4 = 3. Em seguida, dividimos as partes literais subtraindo os expoentes das variáveis iguais: x⁵ ÷ x² = x^(5-2) = x³. Portanto, o resultado final é 3x³.",
+    "topic": "Divisão de monômios",
+    "difficulty": "easy",
+    "createdAt": "2025-04-23T10:49:53.398Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  }
+]
