@@ -1,0 +1,21 @@
+[
+  {
+    "question": "Qual é a forma fatorada do trinômio x² + 5x + 6?",
+    "options": [
+      "(x + 2)(x + 3)",
+      "(x + 1)(x + 5)",
+      "(x + 2)(x + 4)",
+      "(x + 3)(x + 4)"
+    ],
+    "correctOption": 0,
+    "explanation": "Passo a passo:\n1. Procuramos dois números que:\n   - Multiplicados dêem 6 (termo constante)\n   - Somados dêem 5 (coeficiente do termo x)\n2. Os números 2 e 3 satisfazem ambas condições:\n   - 2 × 3 = 6\n   - 2 + 3 = 5\n3. Escrevemos a forma fatorada: (x + 2)(x + 3)\n4. Verificação:\n   (x + 2)(x + 3) = x² + 3x + 2x + 6 = x² + 5x + 6",
+    "topic": "Fatoração de trinômios",
+    "difficulty": "easy",
+    "createdAt": "2025-04-24T10:48:05.782Z",
+    "hints": [
+      "Pense em dois números que multiplicados resultam no termo constante e somados dão o coeficiente do termo central.",
+      "No trinômio do tipo x² + bx + c, a forma fatorada é (x + m)(x + n), onde m e n devem satisfazer m + n = b e m × n = c.",
+      "Liste os pares de fatores do termo constante (6) e identifique qual par soma exatamente o coeficiente do meio (5)."
+    ]
+  }
+]
