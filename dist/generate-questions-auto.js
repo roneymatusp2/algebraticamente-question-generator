@@ -1,31 +1,24 @@
-/* eslint-disable no-console */
-import 'dotenv/config';
-import { createClient } from '@supabase/supabase-js';
-import fetch from 'node-fetch';
-import fs from 'node:fs';
-import path from 'node:path';
+import 'dotenv/config'
+import { createClient } from '@supabase/supabase-js'
+import fetch from 'node-fetch'
+import fs from 'node:fs'
+import path from 'node:path'
 
-// ---------- CREDENCIAIS SUPABASE ----------
-const supabaseUrl = process.env.SUPABASE_URL;
-const supabaseKey = process.env.SUPABASE_SERVICE_KEY;
+const supabase = createClient(
+  process.env.SUPABASE_URL as string,
+  process.env.SUPABASE_SERVICE_KEY as string
+)
 
-if (!supabaseUrl || !supabaseKey) {
-  console.error('Erro: SUPABASE_URL e SUPABASE_SERVICE_KEY não configuradas.');
-  process.exit(1);
-}
-const supabase = createClient(supabaseUrl, supabaseKey);
-
-// ---------- CHAVES DE API ----------
 const apiKeys = {
-  easy:     process.env.DEEPSEEK_API_KEY_EASY,
-  medium:   process.env.DEEPSEEK_API_KEY_MEDIUM,
-  hard:     process.env.DEEPSEEK_API_KEY_HARD,
+  easy: process.env.DEEPSEEK_API_KEY_EASY,
+  medium: process.env.DEEPSEEK_API_KEY_MEDIUM,
+  hard: process.env.DEEPSEEK_API_KEY_HARD,
   feedback: process.env.DEEPSEEK_API_KEY_FEEDBACK,
-  hints:    process.env.DEEPSEEK_API_KEY_HINTS
-};
+  hints: process.env.DEEPSEEK_API_KEY_HINTS
+}
 
-// ---------- CONSTANTES ----------
-const API_URL = 'https://api.deepseek.com/v1/chat/completions';
+const API_URL = 'https://api.deepseek.com/v1/chat/completions'
+
 const TOPICS = [
   'Adição de monômios semelhantes',
   'Subtração de monômios semelhantes',
@@ -42,376 +35,154 @@ const TOPICS = [
   'Fatoração de trinômios',
   'Valor numérico de polinômios',
   'Simplificação de expressões algébricas'
-] as const;
+] as const
 
-const DIFFICULTY_LEVELS = ['easy', 'medium', 'hard'] as const;
-type DifficultyLevel = typeof DIFFICULTY_LEVELS[number];
+const DIFFS = ['easy', 'medium', 'hard'] as const
+type Diff = (typeof DIFFS)[number]
 
-/**
- * Limites **globais** por nível de dificuldade. (CORRIGIDO)
- */
-const QUOTA_LIMITS: Record<DifficultyLevel, number> = {
-  easy:   600,
-  medium: 370,
-  hard:   280
-};
-// DEBUG: Linha crucial para saber qual código está rodando!
-console.log('DEBUG: Usando QUOTA_LIMITS:', QUOTA_LIMITS);
+const QUOTA: Record<Diff, number> = { easy: 600, medium: 370, hard: 280 }
+const QUESTIONS_PER_TOPIC_LEVEL = 2
 
-// Quantas questões tentar gerar por tópico/nível em CADA execução.
-const QUESTIONS_TO_ATTEMPT_PER_RUN = 2;
-
-// Delay em milissegundos entre chamadas à API para evitar rate limits
-const API_DELAY_MS = 1000;
-
-// ---------------------------------------------------------------------------
-//  UTILITÁRIOS DE CONTAGEM (CORRIGIDO para usar count exato)
-// ---------------------------------------------------------------------------
-
-/**
- * Conta quantas questões já existem para (topic, difficulty) usando `head: true`.
- */
-async function getCount(topic: string, difficulty: DifficultyLevel): Promise<number> {
-  const { count, error } = await supabase
+async function count(topic: string, diff: Diff) {
+  const { count } = await supabase
     .from('questions')
-    .select('id', { head: true, count: 'exact' }) // Só pede a contagem exata
+    .select('id', { head: true, count: 'exact' })
     .eq('topic', topic)
-    .eq('difficulty', difficulty);
-
-  if (error) {
-    console.error(`Erro ao contar questões de "${topic}" (${difficulty}):`, error.message);
-    return 0;
-  }
-  return count ?? 0;
+    .eq('difficulty', diff)
+  return count ?? 0
 }
 
-/**
- * Calcula e imprime o panorama completo de contagens usando getCount e retorna os totais globais. (CORRIGIDO)
- */
-async function checkCurrentQuestionCounts(): Promise<Record<DifficultyLevel, number>> {
-  console.log('\n--- Iniciando verificação de contagem detalhada ---');
-  const topicLevelCounts: Record<string, Record<DifficultyLevel | 'total', number>> = {};
-  const globalTotals: Record<DifficultyLevel, number> = { easy: 0, medium: 0, hard: 0 };
-
-  for (const topic of TOPICS) {
-    topicLevelCounts[topic] = { easy: 0, medium: 0, hard: 0, total: 0 };
-
-    for (const diff of DIFFICULTY_LEVELS) {
-      const count = await getCount(topic, diff); // Usa a função corrigida
-      topicLevelCounts[topic][diff] = count;
-      topicLevelCounts[topic].total += count;
-      globalTotals[diff] += count;
+async function countAll() {
+  const map: Record<string, Record<Diff | 'total', number>> = {}
+  for (const t of TOPICS) {
+    map[t] = { easy: 0, medium: 0, hard: 0, total: 0 }
+    for (const d of DIFFS) {
+      const c = await count(t, d as Diff)
+      map[t][d] = c
+      map[t].total += c
     }
-
-    const { easy, medium, hard, total } = topicLevelCounts[topic];
-    console.log(
-      `  Tópico "${topic}": ${total} questões (${easy} easy, ${medium} medium, ${hard} hard)`
-    );
   }
-
-  console.log('\n  Totais globais por nível:');
-  for (const diff of DIFFICULTY_LEVELS) {
-    const total = globalTotals[diff];
-    const limit = QUOTA_LIMITS[diff];
-    const percentage = limit > 0 ? Math.floor((total / limit) * 100) : 100;
-    console.log(`    ${diff}: ${total}/${limit} questões (${percentage}% completo)`);
-  }
-  console.log('--- Fim da verificação de contagem ---\n');
-  return globalTotals;
+  return map
 }
 
-// ---------------------------------------------------------------------------
-//  GERAÇÃO DE QUESTÃO / DICAS / SALVAMENTO (sem alterações significativas aqui)
-// ---------------------------------------------------------------------------
-
-async function generateQuestion(topic: string, difficulty: DifficultyLevel) {
-    console.log(`  Gerando questão sobre "${topic}" (nível: ${difficulty})...`);
-    const apiKey = apiKeys[difficulty];
-    if (!apiKey) {
-        throw new Error(`API key não encontrada para o nível ${difficulty}`);
-    }
-
-    const prompt = `
-Gere uma questão de álgebra sobre "${topic}" com nível de dificuldade "${difficulty}" que seja clara, educativa e apropriada para acompanhar o progresso de aprendizagem do aluno.
-
-Requisitos:
-- Para nível "easy": introduza os conceitos fundamentais de ${topic} com operações diretas e números inteiros positivos pequenos. Use apenas uma variável. As questões devem servir como primeiro contato com o conceito.
-- Para nível "medium": explore aplicações mais elaboradas de ${topic} usando números inteiros (positivos/negativos) e até duas variáveis. As questões devem consolidar o conhecimento e exigir mais passos para solução.
-- Para nível "hard": desafie o aluno com problemas que exigem domínio completo de ${topic}, podendo envolver frações, expoentes maiores ou aplicações menos óbvias do conceito. As questões devem indicar maestria no assunto.
-
-Sobre a progressão educativa:
-- A questão deve permitir uma avaliação clara do entendimento do aluno sobre o tópico
-- As alternativas incorretas devem representar erros comuns de compreensão ou aplicação
-- A explicação deve ser pedagógica, mostrando cada passo do raciocínio de forma clara
-
-Regras:
-- Use notação algébrica padronizada e clara (e.g., x², x³, etc.)
-- Evite ambiguidades na formulação da questão
-- Certifique-se que apenas uma resposta está correta
-- Inclua contexto quando relevante para facilitar o entendimento
-
-Formato JSON (responda APENAS com o JSON, sem nenhum texto antes ou depois):
+async function generateQuestion(topic: string, diff: Diff) {
+  const apiKey = apiKeys[diff]
+  if (!apiKey) throw new Error(`API key inexistente para ${diff}`)
+  const prompt = `
+Gere uma questão de álgebra sobre "${topic}" com nível de dificuldade "${diff}" que seja clara e pedagógica.
+Requisitos easy: conceitos fundamentais, inteiros pequenos, uma variável.
+Requisitos medium: inteiros positivos ou negativos, até duas variáveis.
+Requisitos hard: frações ou expoentes maiores, aplicação menos óbvia.
+Formato JSON sem texto extra:
 {
-  "question": "Enunciado da questão",
-  "options": ["Alternativa A", "Alternativa B", "Alternativa C", "Alternativa D"],
-  "correctOption": 0,
-  "explanation": "Solução passo a passo detalhada"
-}
-    `;
-
-    const response = await fetch(API_URL, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            Authorization: `Bearer ${apiKey}`
-        },
-        body: JSON.stringify({
-            model: 'deepseek-coder',
-            messages: [
-                { role: 'system', content: 'Você é um professor de matemática especializado em álgebra. Sua tarefa é gerar uma questão no formato JSON especificado, sem adicionar nenhum texto fora do JSON.' },
-                { role: 'user', content: prompt }
-            ],
-            temperature: 0.6,
-            max_tokens: 1200
-        })
-    });
-
-    if (!response.ok) {
-        const text = await response.text();
-        throw new Error(`Erro na API DeepSeek (${response.status}): ${text}`);
-    }
-
-    const data = await response.json();
-    const content = data?.choices?.[0]?.message?.content || '';
-
-    if (!content) {
-        throw new Error('Resposta vazia da API DeepSeek');
-    }
-
-    let questionJson;
-    const jsonMatch = content.match(/\{[\s\S]*\}/);
-
-    if (jsonMatch && jsonMatch[0]) {
-         try {
-             questionJson = JSON.parse(jsonMatch[0]);
-         } catch (e: any) {
-            console.error("Erro ao parsear JSON extraído:", e.message);
-            console.error("Conteúdo recebido:", content);
-            throw new Error(`Falha ao parsear JSON da resposta da API: ${content}`);
-         }
-    } else {
-         console.error("Nenhum bloco JSON encontrado na resposta:", content);
-         throw new Error(`Não foi possível encontrar um JSON válido na resposta da API: ${content}`);
-    }
-
-    if (!questionJson.question || !questionJson.options || !Array.isArray(questionJson.options) || questionJson.options.length < 2 || questionJson.correctOption === undefined || typeof questionJson.correctOption !== 'number' || questionJson.correctOption < 0 || questionJson.correctOption >= questionJson.options.length || !questionJson.explanation) {
-         console.error("JSON recebido inválido:", questionJson);
-         throw new Error(`JSON recebido da API está incompleto ou mal formatado.`);
-    }
-
-    const questionData = {
-        question: questionJson.question,
-        options: questionJson.options,
-        correctOption: questionJson.correctOption,
-        explanation: questionJson.explanation,
-        topic,
-        difficulty,
-        createdAt: new Date().toISOString()
-    };
-
-    return questionData;
+ "question":"...",
+ "options":["A","B","C","D"],
+ "correctOption":0,
+ "explanation":"..."
+}`.trim()
+  const res = await fetch(API_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${apiKey}` },
+    body: JSON.stringify({
+      model: 'deepseek-reasoner',
+      messages: [
+        { role: 'system', content: 'Professor de matemática especialista em álgebra.' },
+        { role: 'user', content: prompt }
+      ],
+      temperature: 0.7,
+      max_tokens: 1000
+    })
+  })
+  if (!res.ok) throw new Error(`DeepSeek ${res.status}`)
+  const data = await res.json()
+  const raw = data?.choices?.[0]?.message?.content ?? ''
+  let parsed
+  try {
+    parsed = JSON.parse(raw.trim())
+  } catch {
+    const m = raw.match(/({[\s\S]*})/)
+    if (!m) throw new Error('JSON inválido')
+    parsed = JSON.parse(m[0])
+  }
+  return {
+    question: parsed.question,
+    options: parsed.options,
+    correctOption: parsed.correctOption,
+    explanation: parsed.explanation,
+    topic,
+    difficulty: diff,
+    createdAt: new Date().toISOString()
+  }
 }
 
-
-async function generateHints(question: any): Promise<string[]> {
-    const hintsApiKey = apiKeys.hints;
-    if (!hintsApiKey) {
-        console.log('  API key para dicas não encontrada. Pulando hints.');
-        return [];
-    }
-    console.log(`  Gerando hints para: ${question.question.slice(0,30)}...`);
-
-    const prompt = `
-Para a seguinte questão de álgebra sobre "${question.topic}" (nível ${question.difficulty}):
-Questão: "${question.question}"
-Opções: ${JSON.stringify(question.options)}
-
-Crie exatamente três dicas pedagógicas progressivas:
-1. Dica inicial sutil (direciona o pensamento).
-2. Dica intermediária (esclarece o conceito/método principal).
-3. Dica avançada (indica o caminho da solução, sem dar a resposta).
-
-Responda APENAS com um array JSON contendo as três strings das dicas, como neste exemplo: ["Pense sobre a propriedade distributiva.", "Lembre-se de como multiplicar potências de mesma base.", "Combine os termos semelhantes após a multiplicação."]
-`;
-
-    try {
-        const response = await fetch(API_URL, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${hintsApiKey}` },
-            body: JSON.stringify({
-                model: 'deepseek-coder',
-                messages: [
-                    { role: 'system', content: 'Você é um tutor de matemática. Responda APENAS com um array JSON de 3 strings contendo as dicas solicitadas.' },
-                    { role: 'user', content: prompt }
-                ],
-                temperature: 0.4,
-                max_tokens: 400
-            })
-        });
-
-        if (!response.ok) {
-            console.error(`  Erro na API DeepSeek ao gerar hints (${response.status}): ${await response.text()}`);
-            return [];
-        }
-
-        const data = await response.json();
-        const content = data?.choices?.[0]?.message?.content || '';
-
-        if (!content) {
-            console.warn("  Resposta de hints vazia da API.");
-            return [];
-        }
-
-        const arrayMatch = content.match(/\[[\s\S]*\]/);
-        if (arrayMatch && arrayMatch[0]) {
-            try {
-                const hintsArray = JSON.parse(arrayMatch[0]);
-                if (Array.isArray(hintsArray) && hintsArray.length === 3 && hintsArray.every(h => typeof h === 'string')) {
-                    console.log("  Hints gerados com sucesso.");
-                    return hintsArray;
-                } else {
-                    console.warn("  Formato de array de hints inválido recebido:", hintsArray);
-                }
-            } catch (e: any) {
-                 console.error("  Erro ao parsear JSON de hints:", e.message);
-                 console.error("  Conteúdo recebido para hints:", content);
-            }
-        } else {
-             console.warn("  Nenhum array JSON encontrado na resposta de hints:", content);
-        }
-        return [];
-
-    } catch (err: any) {
-        console.error('  Erro inesperado ao gerar hints:', err.message);
-        return [];
-    }
+async function generateHints(q: any) {
+  const key = apiKeys.hints
+  if (!key) return []
+  const prompt = `
+"${q.question}"
+Crie três dicas progressivas em array JSON.`.trim()
+  const res = await fetch(API_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${key}` },
+    body: JSON.stringify({
+      model: 'deepseek-reasoner',
+      messages: [
+        { role: 'system', content: 'Tutor de matemática.' },
+        { role: 'user', content: prompt }
+      ],
+      temperature: 0.5,
+      max_tokens: 500
+    })
+  })
+  if (!res.ok) return []
+  const data = await res.json()
+  const raw = data?.choices?.[0]?.message?.content ?? ''
+  try {
+    return JSON.parse(raw.trim())
+  } catch {
+    const m = raw.match(/\[(.*)\]/s)
+    return m ? JSON.parse(`[${m[1]}]`) : []
+  }
 }
 
-
-async function saveQuestionToSupabase(question: any) {
-    console.log(`  Salvando questão: ${question.question.slice(0, 50)}...`);
-    const { data, error } = await supabase
-        .from('questions')
-        .insert([question]);
-
-    if (error) {
-        console.error("  Erro ao salvar no Supabase:", error);
-        throw new Error(`Erro ao salvar questão no Supabase: ${error.message}`);
-    }
-    console.log(`  ✔️ Questão salva com sucesso no Supabase.`);
-    return data;
+async function saveQuestion(q: any) {
+  const { error } = await supabase.from('questions').insert([q])
+  if (error) throw new Error(error.message)
 }
 
-// ---------------------------------------------------------------------------
-//  FUNÇÃO PRINCIPAL (MAIN) - Lógica SEM topicLimit (CORRIGIDO)
-// ---------------------------------------------------------------------------
 async function main() {
-    console.log('🚀 Iniciando geração de questões...');
-
-    // 1. Obter contagens iniciais e totais globais (usando a função corrigida)
-    let currentGlobalTotals = await checkCurrentQuestionCounts();
-    const generatedQuestions = []; // Armazena questões geradas nesta execução
-
-    // 2. Iterar sobre tópicos e dificuldades
-    for (const topic of TOPICS) {
-        for (const difficulty of DIFFICULTY_LEVELS) {
-
-            console.log(`\nVerificando ${topic} (${difficulty})`);
-
-            // 3. Verificar API Key
-            if (!apiKeys[difficulty]) {
-                console.log(`  API key não configurada para ${difficulty}. Pulando.`);
-                continue;
-            }
-
-            // 4. Verificar COTA GLOBAL para esta dificuldade
-            if (currentGlobalTotals[difficulty] >= QUOTA_LIMITS[difficulty]) {
-                console.log(`  Cota GLOBAL para ${difficulty} (${currentGlobalTotals[difficulty]}/${QUOTA_LIMITS[difficulty]}) atingida. Pulando.`);
-                continue; // Pula para a próxima dificuldade/tópico
-            }
-
-            // ----- LÓGICA DE topicLimit FOI REMOVIDA -----
-
-            // 5. Tentar gerar 'QUESTIONS_TO_ATTEMPT_PER_RUN' questões
-            console.log(`  Tentando gerar até ${QUESTIONS_TO_ATTEMPT_PER_RUN} questões...`);
-            let generatedInThisPass = 0;
-            for (let i = 0; i < QUESTIONS_TO_ATTEMPT_PER_RUN; i++) {
-
-                // 6. RE-VERIFICAR a cota global ANTES de cada tentativa
-                if (currentGlobalTotals[difficulty] >= QUOTA_LIMITS[difficulty]) {
-                    console.log(`  Cota GLOBAL para ${difficulty} atingida durante o processo. Parando para este tópico/nível.`);
-                    break; // Sai do loop interno (for i)
-                }
-
-                console.log(`  Tentativa ${i + 1}/${QUESTIONS_TO_ATTEMPT_PER_RUN}...`);
-                try {
-                    // Gerar a questão
-                    const question = await generateQuestion(topic, difficulty);
-
-                    // Gerar dicas
-                    const hints = await generateHints(question);
-                    if (hints.length === 3) {
-                        (question as any).hints = hints;
-                    } else if (hints.length > 0) {
-                         console.warn(`  Número inesperado de hints (${hints.length}) recebido para a questão.`);
-                    }
-
-                    // Salvar no Supabase
-                    await saveQuestionToSupabase(question);
-
-                    // Atualizar contagem global e estado local
-                    generatedQuestions.push(question);
-                    currentGlobalTotals[difficulty]++; // Incrementa o total global APÓS salvar
-                    generatedInThisPass++;
-                    console.log(`  Total global ${difficulty} agora: ${currentGlobalTotals[difficulty]}`);
-
-                    // Pausa para evitar sobrecarga da API
-                    await new Promise((resolve) => setTimeout(resolve, API_DELAY_MS));
-
-                } catch (err: any) {
-                    console.error(`  ⚠️ Erro ao gerar/salvar questão [${topic} - ${difficulty}]: ${err.message}`);
-                    await new Promise((resolve) => setTimeout(resolve, API_DELAY_MS * 2));
-                    // break; // Descomente se quiser parar para este tópico/nível após um erro
-                }
-            }
-             if (generatedInThisPass === 0 && currentGlobalTotals[difficulty] < QUOTA_LIMITS[difficulty]) {
-                 console.log(`  Nenhuma questão nova gerada para ${topic} (${difficulty}) nesta passagem (possivelmente devido a erros).`);
-             } else if (generatedInThisPass > 0) {
-                 console.log(`  ${generatedInThisPass} questões geradas para ${topic} (${difficulty}) nesta passagem.`);
-             }
-        } // Fim do loop difficulty
-    } // Fim do loop topic
-
-    // 7. Salvar log local (opcional)
-    const outputDir = 'questions-output';
-    if (!fs.existsSync(outputDir)) {
-        fs.mkdirSync(outputDir);
+  const start = await countAll()
+  const global: Record<Diff, number> = { easy: 0, medium: 0, hard: 0 }
+  for (const d of DIFFS) global[d] = TOPICS.reduce((s, t) => s + start[t][d], 0)
+  const created: any[] = []
+  for (const topic of TOPICS) {
+    for (const diff of DIFFS) {
+      if (!apiKeys[diff]) continue
+      if (global[diff] >= QUOTA[diff]) continue
+      for (let i = 0; i < QUESTIONS_PER_TOPIC_LEVEL; i++) {
+        if (global[diff] >= QUOTA[diff]) break
+        try {
+          const q = await generateQuestion(topic, diff as Diff)
+          const hints = await generateHints(q)
+          if (hints.length) q.hints = hints
+          await saveQuestion(q)
+          created.push(q)
+          global[diff]++
+        } catch (e) {
+          console.error(e)
+        }
+        await new Promise(r => setTimeout(r, 800))
+      }
     }
-    const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-    const outputPath = path.join(outputDir, `questions-${timestamp}.json`);
-    fs.writeFileSync(outputPath, JSON.stringify(generatedQuestions, null, 2));
-
-    // 8. Imprimir resumo final
-    console.log('\n--- Geração Concluída ---');
-    console.log(`Total de questões geradas NESTA EXECUÇÃO: ${generatedQuestions.length}`);
-    console.log(`Arquivo JSON com as novas questões salvo em: ${outputPath}`);
-    await checkCurrentQuestionCounts(); // Mostra as contagens finais
-     console.log('-------------------------\n');
-
+  }
+  if (!fs.existsSync('questions-output')) fs.mkdirSync('questions-output')
+  fs.writeFileSync(
+    path.join('questions-output', `questions-${Date.now()}.json`),
+    JSON.stringify(created, null, 2)
+  )
 }
 
-// Executa a função principal e trata erros fatais
-main().catch((err) => {
-    console.error('\n❌ Erro fatal na execução principal:', err);
-    process.exit(1);
-});
+main().catch(e => {
+  console.error(e)
+  process.exit(1)
+})
