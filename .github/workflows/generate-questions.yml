@@ -61,7 +61,7 @@ jobs:
           git add questions-output/*.json
           if ! git diff --staged --quiet; then
             echo "Mudanças detectadas nos arquivos de questões. Fazendo commit..."
-            git commit -m "🤖 Auto-generate questions [skip ci]" -m "Gerado automaticamente pelo workflow."
+            git commit -m "🤖 Auto-generate questions [skip ci]" -m "Gerado automatically pelo workflow."
             git push origin master
             echo "Push realizado com sucesso."
           else
