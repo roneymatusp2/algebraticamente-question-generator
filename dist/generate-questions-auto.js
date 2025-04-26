@@ -55,7 +55,8 @@ const QUOTA_LIMITS: Record<DifficultyLevel, number> = {
   medium: 370,
   hard:   280
 };
-console.log('DEBUG: Usando QUOTA_LIMITS:', QUOTA_LIMITS); // Para depuração
+// DEBUG: Linha crucial para saber qual código está rodando!
+console.log('DEBUG: Usando QUOTA_LIMITS:', QUOTA_LIMITS);
 
 // Quantas questões tentar gerar por tópico/nível em CADA execução.
 const QUESTIONS_TO_ATTEMPT_PER_RUN = 2;
@@ -156,7 +157,7 @@ Formato JSON (responda APENAS com o JSON, sem nenhum texto antes ou depois):
   "correctOption": 0,
   "explanation": "Solução passo a passo detalhada"
 }
-    `; // Prompt ajustado para pedir APENAS JSON
+    `;
 
     const response = await fetch(API_URL, {
         method: 'POST',
@@ -165,12 +166,12 @@ Formato JSON (responda APENAS com o JSON, sem nenhum texto antes ou depois):
             Authorization: `Bearer ${apiKey}`
         },
         body: JSON.stringify({
-            model: 'deepseek-coder', // Modelo talvez mais focado em formato estruturado
+            model: 'deepseek-coder',
             messages: [
                 { role: 'system', content: 'Você é um professor de matemática especializado em álgebra. Sua tarefa é gerar uma questão no formato JSON especificado, sem adicionar nenhum texto fora do JSON.' },
                 { role: 'user', content: prompt }
             ],
-            temperature: 0.6, // Um pouco menos de variabilidade
+            temperature: 0.6,
             max_tokens: 1200
         })
     });
@@ -187,9 +188,8 @@ Formato JSON (responda APENAS com o JSON, sem nenhum texto antes ou depois):
         throw new Error('Resposta vazia da API DeepSeek');
     }
 
-    // Tentativa robusta de extrair JSON
     let questionJson;
-    const jsonMatch = content.match(/\{[\s\S]*\}/); // Tenta encontrar o primeiro bloco JSON
+    const jsonMatch = content.match(/\{[\s\S]*\}/);
 
     if (jsonMatch && jsonMatch[0]) {
          try {
@@ -204,7 +204,6 @@ Formato JSON (responda APENAS com o JSON, sem nenhum texto antes ou depois):
          throw new Error(`Não foi possível encontrar um JSON válido na resposta da API: ${content}`);
     }
 
-    // Validar estrutura básica do JSON recebido
     if (!questionJson.question || !questionJson.options || !Array.isArray(questionJson.options) || questionJson.options.length < 2 || questionJson.correctOption === undefined || typeof questionJson.correctOption !== 'number' || questionJson.correctOption < 0 || questionJson.correctOption >= questionJson.options.length || !questionJson.explanation) {
          console.error("JSON recebido inválido:", questionJson);
          throw new Error(`JSON recebido da API está incompleto ou mal formatado.`);
@@ -243,14 +242,14 @@ Crie exatamente três dicas pedagógicas progressivas:
 3. Dica avançada (indica o caminho da solução, sem dar a resposta).
 
 Responda APENAS com um array JSON contendo as três strings das dicas, como neste exemplo: ["Pense sobre a propriedade distributiva.", "Lembre-se de como multiplicar potências de mesma base.", "Combine os termos semelhantes após a multiplicação."]
-`; // Prompt mais direto pedindo apenas o array
+`;
 
     try {
         const response = await fetch(API_URL, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${hintsApiKey}` },
             body: JSON.stringify({
-                model: 'deepseek-coder', // Pode ser diferente
+                model: 'deepseek-coder',
                 messages: [
                     { role: 'system', content: 'Você é um tutor de matemática. Responda APENAS com um array JSON de 3 strings contendo as dicas solicitadas.' },
                     { role: 'user', content: prompt }
@@ -273,8 +272,7 @@ Responda APENAS com um array JSON contendo as três strings das dicas, como nest
             return [];
         }
 
-        // Tentativa robusta de extrair array JSON
-        const arrayMatch = content.match(/\[[\s\S]*\]/); // Tenta encontrar o primeiro array JSON
+        const arrayMatch = content.match(/\[[\s\S]*\]/);
         if (arrayMatch && arrayMatch[0]) {
             try {
                 const hintsArray = JSON.parse(arrayMatch[0]);
@@ -291,7 +289,7 @@ Responda APENAS com um array JSON contendo as três strings das dicas, como nest
         } else {
              console.warn("  Nenhum array JSON encontrado na resposta de hints:", content);
         }
-        return []; // Retorna vazio se falhar
+        return [];
 
     } catch (err: any) {
         console.error('  Erro inesperado ao gerar hints:', err.message);
@@ -342,7 +340,7 @@ async function main() {
                 continue; // Pula para a próxima dificuldade/tópico
             }
 
-            // ----- REMOVIDA A LÓGICA DE topicLimit -----
+            // ----- LÓGICA DE topicLimit FOI REMOVIDA -----
 
             // 5. Tentar gerar 'QUESTIONS_TO_ATTEMPT_PER_RUN' questões
             console.log(`  Tentando gerar até ${QUESTIONS_TO_ATTEMPT_PER_RUN} questões...`);
@@ -366,8 +364,6 @@ async function main() {
                         (question as any).hints = hints;
                     } else if (hints.length > 0) {
                          console.warn(`  Número inesperado de hints (${hints.length}) recebido para a questão.`);
-                         // Decide se quer salvar mesmo assim ou descartar
-                         // (question as any).hints = hints; // Opção: salvar mesmo se não forem 3
                     }
 
                     // Salvar no Supabase
@@ -383,9 +379,7 @@ async function main() {
                     await new Promise((resolve) => setTimeout(resolve, API_DELAY_MS));
 
                 } catch (err: any) {
-                    // Loga o erro mas continua para a próxima tentativa/tópico
                     console.error(`  ⚠️ Erro ao gerar/salvar questão [${topic} - ${difficulty}]: ${err.message}`);
-                    // Considerar adicionar um delay maior após um erro
                     await new Promise((resolve) => setTimeout(resolve, API_DELAY_MS * 2));
                     // break; // Descomente se quiser parar para este tópico/nível após um erro
                 }
