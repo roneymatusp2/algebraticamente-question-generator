@@ -1,4 +1,4 @@
-name: 'Algebraticamente: Gerar e Commitar Novas Questões'
+name: Generate Questions
 
 on:
   push:
@@ -8,62 +8,42 @@ on:
       - 'src/generate-questions-auto.ts'
       - 'tsconfig.json'
       - 'package.json'
-      - 'package-lock.json'
-
   schedule:
     - cron: '35 10 * * *'
-
   workflow_dispatch:
 
 jobs:
-  generate_and_commit:
+  generate:
     runs-on: ubuntu-latest
-
     permissions:
       contents: write
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
           node-version: '18'
-          cache: 'npm'
-
       - name: Install dependencies
         run: npm ci
-
-      - name: Build TypeScript
+      - name: Build
         run: npm run build
-        env:
-          NODE_ENV: production
-
-      - name: Run question generation script
-        id: generation
+      - name: Run generation script
         run: npm run generate-questions
         env:
-          SUPABASE_URL:              ${{ secrets.SUPABASE_URL }}
-          SUPABASE_SERVICE_KEY:      ${{ secrets.SUPABASE_SERVICE_KEY }}
-          DEEPSEEK_API_KEY_EASY:     ${{ secrets.DEEPSEEK_API_KEY_EASY }}
-          DEEPSEEK_API_KEY_MEDIUM:   ${{ secrets.DEEPSEEK_API_KEY_MEDIUM }}
-          DEEPSEEK_API_KEY_HARD:     ${{ secrets.DEEPSEEK_API_KEY_HARD }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          DEEPSEEK_API_KEY_EASY: ${{ secrets.DEEPSEEK_API_KEY_EASY }}
+          DEEPSEEK_API_KEY_MEDIUM: ${{ secrets.DEEPSEEK_API_KEY_MEDIUM }}
+          DEEPSEEK_API_KEY_HARD: ${{ secrets.DEEPSEEK_API_KEY_HARD }}
           DEEPSEEK_API_KEY_FEEDBACK: ${{ secrets.DEEPSEEK_API_KEY_FEEDBACK }}
-          DEEPSEEK_API_KEY_HINTS:    ${{ secrets.DEEPSEEK_API_KEY_HINTS }}
-
-      - name: Commit and push generated questions (if changes exist)
+          DEEPSEEK_API_KEY_HINTS: ${{ secrets.DEEPSEEK_API_KEY_HINTS }}
+      - name: Commit and push new JSON
         run: |
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add questions-output/*.json
-          if ! git diff --staged --quiet; then
-            echo "Mudanças detectadas nos arquivos de questões. Fazendo commit..."
-            git commit -m "🤖 Auto-generate questions [skip ci]" -m "Gerado automatically pelo workflow."
-            git push origin master
-            echo "Push realizado com sucesso."
-          else
-            echo "Nenhuma mudança detectada nos arquivos de questões gerados."
-          fi
+          git add .
+          git diff --quiet && git diff --staged --quiet || \
+            (git commit -m "Auto-generate questions [skip ci]" && git push)
