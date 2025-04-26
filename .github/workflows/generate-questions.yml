@@ -9,7 +9,7 @@ on:
       - 'tsconfig.json'
       - 'package.json'
   schedule:
-    - cron: '35 10 * * *'    # todos os dias às 10:35 UTC
+    - cron: '35 10 * * *'       # executa todos os dias às 10:35 UTC
   workflow_dispatch:
 
 jobs:
@@ -33,19 +33,19 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build (t-typescript → dist)
+      - name: Build (ts → dist)
         run: npm run build
 
       - name: Run generation script
         run: npm run generate-questions
         env:
-          SUPABASE_URL:           ${{ secrets.SUPABASE_URL }}
-          SUPABASE_SERVICE_KEY:   ${{ secrets.SUPABASE_SERVICE_KEY }}
-          DEEPSEEK_API_KEY_EASY:  ${{ secrets.DEEPSEEK_API_KEY_EASY }}
-          DEEPSEEK_API_KEY_MEDIUM:${{ secrets.DEEPSEEK_API_KEY_MEDIUM }}
-          DEEPSEEK_API_KEY_HARD:  ${{ secrets.DEEPSEEK_API_KEY_HARD }}
+          SUPABASE_URL:              ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY:      ${{ secrets.SUPABASE_SERVICE_KEY }}
+          DEEPSEEK_API_KEY_EASY:     ${{ secrets.DEEPSEEK_API_KEY_EASY }}
+          DEEPSEEK_API_KEY_MEDIUM:   ${{ secrets.DEEPSEEK_API_KEY_MEDIUM }}
+          DEEPSEEK_API_KEY_HARD:     ${{ secrets.DEEPSEEK_API_KEY_HARD }}
           DEEPSEEK_API_KEY_FEEDBACK: ${{ secrets.DEEPSEEK_API_KEY_FEEDBACK }}
-          DEEPSEEK_API_KEY_HINTS: ${{ secrets.DEEPSEEK_API_KEY_HINTS }}
+          DEEPSEEK_API_KEY_HINTS:    ${{ secrets.DEEPSEEK_API_KEY_HINTS }}
 
       - name: Commit and push new JSON (se houver)
         run: |
