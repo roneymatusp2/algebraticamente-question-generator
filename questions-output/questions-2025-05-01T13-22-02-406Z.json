@@ -1,0 +1,1493 @@
+[
+  {
+    "question": "Some os monômios semelhantes: 3x + 5x + 2x",
+    "options": [
+      "10x",
+      "9x",
+      "30x",
+      "10"
+    ],
+    "correctOption": 0,
+    "explanation": "Passo a passo:\n1. Identifique os coeficientes dos monômios: 3, 5 e 2\n2. Some os coeficientes: 3 + 5 + 2 = 10\n3. Mantenha a variável x: 10x\n\nErros comuns:\n- Opção B: Soma incorreta (3+5+2≠9)\n- Opção C: Multiplicou os coeficientes (3×5×2)\n- Opção D: Esqueceu de incluir a variável x",
+    "topic": "Adição de monômios semelhantes",
+    "difficulty": "easy",
+    "createdAt": "2025-05-01T10:46:51.867Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Simplifique a expressão: 3x + x + 2x.",
+    "options": [
+      "6x",
+      "5x",
+      "6",
+      "6x²"
+    ],
+    "correctOption": 0,
+    "explanation": "Para simplificar a expressão, seguimos estes passos:\n1. Identificar os coeficientes de cada monômio: 3, 1 (pois x = 1x) e 2.\n2. Somar os coeficientes: 3 + 1 + 2 = 6.\n3. Manter a variável com seu expoente (x = x¹).\n4. Combinar o resultado: 6x.\nErros comuns incluem esquecer que x tem coeficiente 1 (levando a 5x) ou alterar incorretamente o expoente (6x²).",
+    "topic": "Adição de monômios semelhantes",
+    "difficulty": "easy",
+    "createdAt": "2025-05-01T10:47:55.481Z",
+    "hints": [
+      "Observe que todos os termos possuem a mesma parte literal. O que você pode fazer com os coeficientes numéricos nesse caso?",
+      "Monômios semelhantes são somados adicionando os coeficientes e mantendo a parte literal. Exemplo: 2y + y = 3y.",
+      "Some os números que estão multiplicando 'x' (3, 1 e 2). Lembre-se que 'x' sozinho equivale a 1x."
+    ]
+  },
+  {
+    "question": "Simplifique a expressão algébrica: 3x²y - 2xy² + 5x²y + 4xy² - (-6x²y)",
+    "options": [
+      "14x²y + 2xy²",
+      "8x²y + 2xy²",
+      "14x²y - 2xy²",
+      "2x²y + 2xy²"
+    ],
+    "correctOption": 0,
+    "explanation": "Passo a passo:\n1. Distribua o sinal negativo do último termo: -(-6x²y) = +6x²y\n2. Agrupe os termos semelhantes:\n   - Termos com x²y: 3x²y + 5x²y + 6x²y\n   - Termos com xy²: -2xy² + 4xy²\n3. Some os coeficientes:\n   - Para x²y: (3 + 5 + 6) = 14 → 14x²y\n   - Para xy²: (-2 + 4) = 2 → 2xy²\n4. Resultado final: 14x²y + 2xy²",
+    "topic": "Adição de monômios semelhantes",
+    "difficulty": "medium",
+    "createdAt": "2025-05-01T10:49:25.496Z",
+    "hints": [
+      "dica1: Observe os termos que possuem as mesmas variáveis elevadas aos mesmos expoentes. Agrupe-os mentalmente para identificar padrões.",
+      "dica2: Monômios semelhantes são aqueles com a mesma parte literal. Some/subtraia seus coeficientes numéricos. Atenção ao sinal negativo antes do parêntese no último termo!",
+      "dica3: Combine os coeficientes dos termos com x²y (3, 5 e o oposto de -6) separadamente dos termos com xy² (-2 e +4). Simplifique cada grupo mantendo a parte literal."
+    ]
+  },
+  {
+    "question": "Simplifique a expressão: 2m - 3mn + 5n - 4m + 6mn - 2n.",
+    "options": [
+      "-2m + 3mn + 3n",
+      "-2m + 9mn + 3n",
+      "6m + 3mn + 3n",
+      "-2m - 3mn + 7n"
+    ],
+    "correctOption": 0,
+    "explanation": "Primeiro, agrupamos os termos semelhantes:\n1. Termos com 'm': 2m - 4m = -2m\n2. Termos com 'mn': -3mn + 6mn = 3mn\n3. Termos com 'n': 5n - 2n = 3n\nCombinação dos resultados: -2m + 3mn + 3n\n\nErros comuns:\n- Somar coeficientes sem verificar as variáveis (ex: 2m + 5n)\n- Errar sinais na combinação (-3mn + 6mn ≠ 9mn)\n- Não simplificar todos os grupos de termos",
+    "topic": "Adição de monômios semelhantes",
+    "difficulty": "medium",
+    "createdAt": "2025-05-01T10:51:25.369Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Simplifique a expressão combinando os monômios semelhantes: \\(\\frac{3}{4}x^3y^2 - \\frac{1}{2}x^2y^3 + 2x^3y^2 + \\frac{5}{2}x^2y^3 - 4xy\\)",
+    "options": [
+      "\\(\\frac{11}{4}x^3y^2 + 2x^2y^3 - 4xy\\)",
+      "\\(\\frac{5}{4}x^3y^2 + 3x^2y^3 - 4xy\\)",
+      "\\(\\frac{11}{4}x^5y^5 - 4xy\\)",
+      "\\(\\frac{11}{4}x^3y^2 + 2x^2y^3 + 4xy\\)"
+    ],
+    "correctOption": 0,
+    "explanation": "Passo a passo:\n1. Identificar monômios semelhantes:\n   - Termos com \\(x^3y^2\\): \\(\\frac{3}{4}x^3y^2\\) e \\(2x^3y^2\\)\n   - Termos com \\(x^2y^3\\): \\(-\\frac{1}{2}x^2y^3\\) e \\(\\frac{5}{2}x^2y^3\\)\n   - Termo isolado: \\(-4xy\\)\n2. Combinar coeficientes:\n   - Para \\(x^3y^2\\): \\(\\frac{3}{4} + 2 = \\frac{3}{4} + \\frac{8}{4} = \\frac{11}{4}\\)\n   - Para \\(x^2y^3\\): \\(-\\frac{1}{2} + \\frac{5}{2} = \\frac{4}{2} = 2\\)\n3. Reescrever a expressão simplificada:\n   \\(\\frac{11}{4}x^3y^2 + 2x^2y^3 - 4xy\\)\n4. Observar que \\(-4xy\\) não tem termos semelhantes para combinar.",
+    "topic": "Adição de monômios semelhantes",
+    "difficulty": "hard",
+    "createdAt": "2025-05-01T10:52:34.588Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Simplifique a expressão: (3/4)x²y³ + (1/2)x³y² - (5/6)x²y³ + (2/3)x³y² - (1/3)x²y³ + (7/4)x³y²",
+    "options": [
+      "(35/12)x³y² - (5/12)x²y³",
+      "(5/12)x²y³ + (35/12)x³y²",
+      "(35/12)x³y² + (5/12)x²y³",
+      "(10/9)x³y² - (1/12)x²y³"
+    ],
+    "correctOption": 0,
+    "explanation": "Passo 1: Agrupar termos semelhantes:\n- Termos com x²y³: 3/4 -5/6 -1/3\n- Termos com x³y²: 1/2 + 2/3 +7/4\n\nPasso 2: Calcular coeficientes para x²y³:\nConverter para denominador 12:\n3/4 = 9/12, -5/6 = -10/12, -1/3 = -4/12\nSoma: 9/12 -10/12 -4/12 = -5/12\n\nPasso 3: Calcular coeficientes para x³y²:\nConverter para denominador 12:\n1/2 = 6/12, 2/3 = 8/12, 7/4 = 21/12\nSoma: 6/12 +8/12 +21/12 = 35/12\n\nPasso 4: Combinar resultados:\n-5/12x²y³ + 35/12x³y² (Alternativa A)",
+    "topic": "Adição de monômios semelhantes",
+    "difficulty": "hard",
+    "createdAt": "2025-05-01T10:54:38.819Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Qual é o resultado da subtração 7x - 3x - 2x?",
+    "options": [
+      "2x",
+      "4x",
+      "12x",
+      "6x"
+    ],
+    "correctOption": 0,
+    "explanation": "Para resolver a subtração de monômios semelhantes:\n1. Identificamos que todos os termos possuem a mesma parte literal (x)\n2. Subtraímos os coeficientes: 7 - 3 - 2 = 2\n3. Mantemos a variável: x\n4. Resultado final: 2x\n\nErros comuns:\n- 4x: esquecer de subtrair o último termo (7-3=4)\n- 12x: somar todos os coeficientes (7+3+2)\n- 6x: subtrair os dois primeiros e somar o último (7-3=4 +2=6)",
+    "topic": "Subtração de monômios semelhantes",
+    "difficulty": "easy",
+    "createdAt": "2025-05-01T10:56:06.368Z",
+    "hints": [
+      "Dica 1: Observe atentamente as partes literais de cada termo da expressão. O que eles têm em comum que permitiria uma simplificação?",
+      "Dica 2: Lembre-se que monômios semelhantes podem ser combinados através das operações com seus coeficientes numéricos, mantendo a parte literal intacta.",
+      "Dica 3: Comece resolvendo as operações da esquerda para a direita: primeiro subtraia 3x de 7x e, em seguida, subtraia 2x do resultado obtido."
+    ]
+  },
+  {
+    "question": "Qual é o resultado da subtração 8x - 3x?",
+    "options": [
+      "5x",
+      "5",
+      "5x²",
+      "11x"
+    ],
+    "correctOption": 0,
+    "explanation": "Para subtrair monômios semelhantes:\n1. Subtraímos os coeficientes: 8 - 3 = 5\n2. Mantemos a parte literal (x) inalterada\n3. Combinando os resultados: 5x\nErros comuns incluem esquecer de manter a variável (opção B), somar os coeficientes (opção D) ou modificar o expoente (opção C).",
+    "topic": "Subtração de monômios semelhantes",
+    "difficulty": "easy",
+    "createdAt": "2025-05-01T10:57:00.392Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Simplifique a expressão algébrica: (3x²y − 4xy²) − (5x²y + 2xy²)",
+    "options": [
+      "-2x²y - 6xy²",
+      "-2x²y - 2xy²",
+      "2x²y - 6xy²",
+      "-8x²y²"
+    ],
+    "correctOption": 0,
+    "explanation": "1. Distribua o sinal negativo no segundo polinômio:\n(3x²y - 4xy²) - 5x²y - 2xy²\n\n2. Combine os termos semelhantes:\n- Para x²y: 3x²y - 5x²y = -2x²y\n- Para xy²: -4xy² - 2xy² = -6xy²\n\n3. Resultado final: -2x²y - 6xy²\n\nErros comuns:\n- Esquecer de distribuir o sinal negativo em ambos os termos do segundo polinômio (levaria a -2x²y - 2xy²)\n- Errar o sinal ao combinar coeficientes (levaria a 2x²y - 6xy²)\n- Tentar combinar termos com variáveis diferentes (levaria a -8x²y²)",
+    "topic": "Subtração de monômios semelhantes",
+    "difficulty": "medium",
+    "createdAt": "2025-05-01T10:58:41.151Z",
+    "hints": [
+      "dica1: Lembre-se de prestar atenção no sinal de subtração antes do segundo parênteses. Como ele afeta todos os termos dentro dos parênteses?",
+      "dica2: Identifique os termos semelhantes (monômios com as mesmas variáveis e expoentes). Agrupe os termos em x²y e os termos em xy² para facilitar a simplificação.",
+      "dica3: Após distribuir corretamente o sinal negativo no segundo parênteses, some/subtraia os coeficientes numéricos dos termos semelhantes mantendo as variáveis inalteradas."
+    ]
+  },
+  {
+    "question": "Simplifique a expressão algébrica: (3/4 x³y² - 2/5 xy⁴ + 3/2 y²) - (-5/2 x³y² + 3 xy⁴ - 7/3 y²)",
+    "options": [
+      "(13/4)x³y² - (17/5)xy⁴ + (23/6)y²",
+      "(13/4)x³y² - (23/5)xy⁴ + (23/6)y²",
+      "(7/4)x³y² - (17/5)xy⁴ + (5/6)y²",
+      "(13/4)x³y² + (17/5)xy⁴ + (23/6)y²"
+    ],
+    "correctOption": 0,
+    "explanation": "Primeiro, distribuímos o sinal negativo para cada termo do segundo polinômio: 3/4 x³y² - 2/5 xy⁴ + 3/2 y² + 5/2 x³y² - 3 xy⁴ + 7/3 y². Agrupamos os termos semelhantes: (3/4 + 5/2)x³y² + (-2/5 - 3)xy⁴ + (3/2 +7/3)y². Convertendo para denominadores comuns: 3/4 +10/4 =13/4 (x³y²); -2/5 -15/5= -17/5 (xy⁴); 9/6 +14/6=23/6 (y²). Resultado: (13/4)x³y² - (17/5)xy⁴ + (23/6)y².",
+    "topic": "Subtração de monômios semelhantes",
+    "difficulty": "hard",
+    "createdAt": "2025-05-01T11:01:18.859Z",
+    "hints": [
+      "dica1: Lembre-se que ao subtrair uma expressão inteira, cada termo dentro dos parênteses que estão sendo subtraídos terá seu sinal invertido. Observe com atenção os coeficientes fracionários.",
+      "dica2: Identifique os termos semelhantes pelas variáveis e expoentes idênticos. Agrupe separadamente os termos com x³y², xy⁴ e y² para reorganizar a expressão de forma mais clara.",
+      "dica3: Após distribuir o sinal negativo e agrupar termos semelhantes, concentre-se nas operações com frações: some/subtraia numeradores mantendo o denominador comum e preste atenção aos sinais durante a combinação."
+    ]
+  },
+  {
+    "question": "Qual é o resultado da multiplicação de 3x por 2x?",
+    "options": [
+      "6x²",
+      "5x²",
+      "6x",
+      "5x"
+    ],
+    "correctOption": 0,
+    "explanation": "Para multiplicar monômios:\n1. Multiplicamos os coeficientes: 3 × 2 = 6\n2. Multiplicamos as variáveis (x × x): x¹ × x¹ = x¹⁺¹ = x²\n3. Combinando os resultados: 6x²\n\nErros comuns:\n- 5x²: ocorre ao somar os coeficientes (3+2) em vez de multiplicar\n- 6x: ocorre ao esquecer de somar os expoentes das variáveis\n- 5x: combina os dois erros anteriores",
+    "topic": "Multiplicação de monômios",
+    "difficulty": "easy",
+    "createdAt": "2025-05-01T11:05:06.346Z",
+    "hints": [
+      "Lembre-se de que, ao multiplicar termos algébricos, é útil separar a parte numérica da parte literal (variáveis).",
+      "Multiplique os coeficientes numéricos separadamente e, para as variáveis iguais, some seus expoentes (lembrando que x = x¹).",
+      "Siga a ordem: (3 × 2) para os números e (x × x) para as variáveis. Depois, combine os resultados obtidos em cada parte."
+    ]
+  },
+  {
+    "question": "Calcule o produto dos monômios: 2x * 3x.",
+    "options": [
+      "6x²",
+      "6x",
+      "5x²",
+      "5x"
+    ],
+    "correctOption": 0,
+    "explanation": "Passo a passo:\n1. Multiplicamos os coeficientes numéricos: 2 * 3 = 6\n2. Multiplicamos as partes literais: x * x = x^(1+1) = x²\n3. Juntando os resultados: 6x²\n\nErros comuns:\n- Alternativa B: Esqueceu de somar os expoentes (x * x = x)\n- Alternativa C: Somou os coeficientes em vez de multiplicar (2 + 3 = 5)\n- Alternativa D: Cometeu ambos os erros anteriores",
+    "topic": "Multiplicação de monômios",
+    "difficulty": "easy",
+    "createdAt": "2025-05-01T11:06:06.679Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Qual é o resultado da multiplicação dos monômios (3x²y) e (-2xy³)?",
+    "options": [
+      "-6x³y⁴",
+      "6x³y⁴",
+      "-6x²y³",
+      "-5x³y⁴"
+    ],
+    "correctOption": 0,
+    "explanation": "Para multiplicar os monômios, seguimos três passos:\n1. Multiplicar os coeficientes: 3 × (-2) = -6\n2. Multiplicar as variáveis x: x² × x = x²⁺¹ = x³\n3. Multiplicar as variáveis y: y × y³ = y¹⁺³ = y⁴\nJuntando tudo: -6x³y⁴\n\nErros comuns:\n- Esquecer o sinal negativo (opção B)\n- Somar expoentes ao invés de multiplicar (opção C)\n- Errar na multiplicação dos coeficientes (opção D)",
+    "topic": "Multiplicação de monômios",
+    "difficulty": "medium",
+    "createdAt": "2025-05-01T11:07:04.877Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Calcule o produto dos monômios: (-3x²y) * (4xy³)",
+    "options": [
+      "-12x³y⁴",
+      "12x³y⁴",
+      "-12x²y³",
+      "-7x³y⁴"
+    ],
+    "correctOption": 0,
+    "explanation": "1. Multiplicamos os coeficientes: (-3) * 4 = -12\n2. Multiplicamos as variáveis x: x² * x = x^(2+1) = x³\n3. Multiplicamos as variáveis y: y * y³ = y^(1+3) = y⁴\n4. Combinando todos os elementos: -12x³y⁴\nErros comuns: esquecer o sinal negativo (12x³y⁴), somar expoentes errados (-12x²y³) ou somar coeficientes (-7x³y⁴).",
+    "topic": "Multiplicação de monômios",
+    "difficulty": "medium",
+    "createdAt": "2025-05-01T11:08:09.710Z",
+    "hints": [
+      "dica1: Lembre-se de que, ao multiplicar termos algébricos, você pode separar a multiplicação dos coeficientes numéricos da multiplicação das partes literais (variáveis).",
+      "dica2: Multiplique os coeficientes separadamente e depois aplique a propriedade das potências para variáveis iguais: x^a * x^b = x^(a+b). Não esqueça de considerar o sinal dos coeficientes!",
+      "dica3: Comece calculando (-3)*4. Para as variáveis, some os expoentes de termos semelhantes: x²*x = x^(2+1) e y*y³ = y^(1+3). Combine todos os resultados parciais mantendo a ordem dos fatores."
+    ]
+  },
+  {
+    "question": "Calcule o produto dos monômios (\\(\\frac{3}{4}a^5b^2c^3\\)) e (\\(-\\frac{5}{6}a^3b^4c^2\\)).",
+    "options": [
+      "\\(-\\frac{5}{8}a^8b^6c^5\\)",
+      "\\(\\frac{15}{24}a^{15}b^8c^6\\)",
+      "\\(-\\frac{5}{8}a^{15}b^8c^6\\)",
+      "\\(\\frac{15}{24}a^8b^6c^5\\)"
+    ],
+    "correctOption": 0,
+    "explanation": "1. Multiplicar coeficientes: \\(\\frac{3}{4} \\times (-\\frac{5}{6}) = -\\frac{15}{24} = -\\frac{5}{8}\\) (simplificado).\n2. Adicionar expoentes das variáveis:\n   - Para \\(a\\): \\(5 + 3 = 8\\) → \\(a^8\\)\n   - Para \\(b\\): \\(2 + 4 = 6\\) → \\(b^6\\)\n   - Para \\(c\\): \\(3 + 2 = 5\\) → \\(c^5\\).\n3. Combinar resultados: \\(-\\frac{5}{8}a^8b^6c^5\\).\nErros comuns:\n- Multiplicar expoentes (alternativas B e C)\n- Esquecer sinal negativo (alternativas B e D)\n- Não simplificar frações (alternativas B e D).",
+    "topic": "Multiplicação de monômios",
+    "difficulty": "hard",
+    "createdAt": "2025-05-01T11:09:27.971Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Multiplique os monômios \\(\\left(\\frac{2}{3}x^5y^{-2}\\right)\\) e \\(\\left(-\\frac{5}{4}x^{-3}y^7\\)\\).",
+    "options": [
+      "-\\frac{5}{6}x^2y^5",
+      "\\frac{5}{6}x^2y^5",
+      "-\\frac{10}{12}x^8y^5",
+      "-\\frac{5}{6}x^{15}y^{-14}"
+    ],
+    "correctOption": 0,
+    "explanation": "1. Multiplicar os coeficientes: \\(\\frac{2}{3} \\times (-\\frac{5}{4}) = -\\frac{10}{12} = -\\frac{5}{6}\\)\n2. Multiplicar as variáveis:\n   - Para x: \\(x^5 \\times x^{-3} = x^{5+(-3)} = x^2\\)\n   - Para y: \\(y^{-2} \\times y^7 = y^{-2+7} = y^5\\)\n3. Combinar resultados: \\(-\\frac{5}{6}x^2y^5\\)\n\nErros comuns:\n- Alternativa B: Erro de sinal no coeficiente\n- Alternativa C: Não simplificou a fração e somou expoentes de x incorretamente\n- Alternativa D: Multiplicou expoentes ao invés de somar",
+    "topic": "Multiplicação de monômios",
+    "difficulty": "hard",
+    "createdAt": "2025-05-01T11:10:25.577Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Divida os monômios: 12x⁵ ÷ 3x²",
+    "options": [
+      "4x³",
+      "9x³",
+      "4x⁷",
+      "3x³"
+    ],
+    "correctOption": 0,
+    "explanation": "Para dividir 12x⁵ por 3x², dividimos os coeficientes (12 ÷ 3 = 4) e subtraímos os expoentes (x⁵⁻² = x³). Portanto, o resultado é 4x³. As alternativas incorretas cometem erros comuns como subtrair coeficientes (9x³), somar expoentes (4x⁷) ou dividir coeficientes incorretamente (3x³).",
+    "topic": "Divisão de monômios",
+    "difficulty": "easy",
+    "createdAt": "2025-05-01T11:11:54.563Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Divida o monômio 12x⁵ por 3x².",
+    "options": [
+      "4x³",
+      "9x³",
+      "4x⁷",
+      "4x²"
+    ],
+    "correctOption": 0,
+    "explanation": "Primeiro dividimos os coeficientes numéricos: 12 ÷ 3 = 4. Para a variável, subtraímos os expoentes mantendo a mesma base: x^(5-2) = x³. Combinando os resultados, obtemos 4x³. As alternativas incorretas mostram erros comuns como subtrair coeficientes (9x³), somar expoentes (4x⁷) ou calcular errado a subtração de expoentes (4x²).",
+    "topic": "Divisão de monômios",
+    "difficulty": "easy",
+    "createdAt": "2025-05-01T11:13:29.580Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Simplifique a divisão de monômios: (-18x⁵y³) ÷ (3x²y)",
+    "options": [
+      "-6x³y²",
+      "6x³y²",
+      "-6x²y³",
+      "-6x⁷y²"
+    ],
+    "correctOption": 0,
+    "explanation": "Passo a passo:\n1. Divida os coeficientes: -18 ÷ 3 = -6\n2. Subtraia os expoentes de x: 5 - 2 = 3 → x³\n3. Subtraia os expoentes de y: 3 - 1 = 2 → y²\n4. Combine os resultados: -6x³y²\n\nErros comuns:\n- Esquecer o sinal negativo leva à alternativa B\n- Subtrair errado os expoentes de x (5-3) ou y (3-0) leva à alternativa C\n- Somar expoentes em vez de subtrair (x⁵⁺²) leva à alternativa D",
+    "topic": "Divisão de monômios",
+    "difficulty": "medium",
+    "createdAt": "2025-05-01T11:15:21.120Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Divida o monômio -12x⁴y³ por 3x²y e selecione a alternativa correta.",
+    "options": [
+      "-4x²y²",
+      "4x²y²",
+      "-4x²y³",
+      "-4x⁶y²"
+    ],
+    "correctOption": 0,
+    "explanation": "Passo 1: Dividir os coeficientes numéricos: -12 ÷ 3 = -4.\nPasso 2: Subtrair os expoentes de x: 4 - 2 = 2 → x².\nPasso 3: Subtrair os expoentes de y: 3 - 1 = 2 → y².\nPasso 4: Combinar os resultados: -4x²y².\nA) Correto: Todos os passos foram aplicados adequadamente.\nB) Erro: Sinal positivo no coeficiente (-12 ÷ 3 ≠ 4).\nC) Erro: Não subtraiu o expoente de y (3 - 1 ≠ 3).\nD) Erro: Somou os expoentes de x (4 + 2 = 6) em vez de subtrair.",
+    "topic": "Divisão de monômios",
+    "difficulty": "medium",
+    "createdAt": "2025-05-01T11:16:56.213Z",
+    "hints": [
+      "Dica 1: Comece separando a parte numérica das variáveis. Lembre-se que divisão de potências de mesma base envolve uma propriedade específica dos expoentes.",
+      "Dica 2: Ao dividir monômios: 1) Divida os coeficientes numéricos normalmente. 2) Para cada variável igual, subtraia os expoentes (ex: xᵃ ÷ xᵇ = xᵃ⁻ᵇ). Atenção ao sinal do resultado!",
+      "Dica 3: Resolva em 3 passos: 1) -12 ÷ 3 = ? 2) x⁴ ÷ x² = x^(?) 3) y³ ÷ y = y^(?). Combine esses resultados, mantendo a ordem das variáveis e simplifique."
+    ]
+  },
+  {
+    "question": "Simplifique a expressão \\(\\frac{\\frac{3}{4}x^5 y^3 z^2}{\\frac{2}{5}x^2 y^4 z^7}\\) e selecione a alternativa correta.",
+    "options": [
+      "\\(\\frac{15x^3}{8y z^5}\\)",
+      "\\(\\frac{6x^3}{20y z^5}\\)",
+      "\\(\\frac{15x^3}{8y^5 z^3}\\)",
+      "\\(\\frac{15x^3 y z^5}{8}\\)"
+    ],
+    "correctOption": 0,
+    "explanation": "Passo a passo:\n1. Divida os coeficientes: \\(\\frac{3}{4} \\div \\frac{2}{5} = \\frac{3}{4} \\times \\frac{5}{2} = \\frac{15}{8}\\).\n2. Subtraia os expoentes das variáveis:\n   - Para \\(x\\): \\(5 - 2 = 3\\).\n   - Para \\(y\\): \\(3 - 4 = -1 \\) → \\(y^{-1} = \\frac{1}{y}\\).\n   - Para \\(z\\): \\(2 - 7 = -5 \\) → \\(z^{-5} = \\frac{1}{z^5}\\).\n3. Combine todos os termos: \\(\\frac{15}{8}x^3 \\times \\frac{1}{y} \\times \\frac{1}{z^5} = \\frac{15x^3}{8y z^5}\\).\nErros comuns:\n- Alternativa B: Multiplicou os coeficientes ao invés de dividir.\n- Alternativa C: Subtraiu os expoentes de \\(y\\) e \\(z\\) na ordem errada.\n- Alternativa D: Manteve as variáveis com expoentes negativos no numerador.",
+    "topic": "Divisão de monômios",
+    "difficulty": "hard",
+    "createdAt": "2025-05-01T11:18:36.550Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Simplifique a expressão \\(\\frac{3}{4}x^5 y^{-2} \\div (-2x^{-3} y^4)\\), apresentando o resultado com expoentes positivos.",
+    "options": [
+      "\\(-\\frac{3}{8}x^8 y^{-6}\\)",
+      "\\(-\\frac{3}{8}x^8 \\cdot \\frac{1}{y^6}\\)",
+      "\\(\\frac{3}{8}x^2 y^{-2}\\)",
+      "\\(-\\frac{3}{8}x^{-8} y^6\\)"
+    ],
+    "correctOption": 1,
+    "explanation": "Passo a passo:\n1. Dividir os coeficientes: \\(\\frac{3}{4} \\div (-2) = \\frac{3}{4} \\times \\left(-\\frac{1}{2}\\right) = -\\frac{3}{8}\\)\n2. Variável x: \\(x^{5 - (-3)} = x^{5+3} = x^8\\)\n3. Variável y: \\(y^{-2 - 4} = y^{-6}\\).\n4. Reescrever com expoentes positivos: \\(y^{-6} = \\frac{1}{y^6}\\)\nResultado final: \\(-\\frac{3}{8}x^8 \\cdot \\frac{1}{y^6}\\)\nAlternativa B está correta pois apresenta a simplificação adequada. As demais erram: A mantém expoente negativo, C erra divisão de coeficientes e expoentes, D inverte expoentes incorretamente.",
+    "topic": "Divisão de monômios",
+    "difficulty": "hard",
+    "createdAt": "2025-05-01T11:19:40.311Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Calcule (2x)³.",
+    "options": [
+      "8x³",
+      "6x³",
+      "2x³",
+      "8x"
+    ],
+    "correctOption": 0,
+    "explanation": "Para resolver (2x)³, aplicamos a potência tanto ao coeficiente quanto à variável:\n1. Calculamos 2³ = 2 × 2 × 2 = 8\n2. Calculamos (x)³ = x¹×³ = x³\n3. Combinando os resultados: 8x³\nErros comuns seriam multiplicar 2×3=6 (alternativa B), esquecer de elevar o coeficiente (alternativa C), ou esquecer de elevar o expoente da variável (alternativa D).",
+    "topic": "Potenciação de monômios",
+    "difficulty": "easy",
+    "createdAt": "2025-05-01T11:20:50.930Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Qual é o resultado de (2x)³?",
+    "options": [
+      "8x³",
+      "2x³",
+      "6x³",
+      "8x"
+    ],
+    "correctOption": 0,
+    "explanation": "Para resolver (2x)³, aplicamos a potência tanto ao coeficiente numérico quanto à variável:\n1. Primeiro calculamos 2³ = 8\n2. Em seguida calculamos (x)³ = x³\n3. Juntando os resultados: 8 × x³ = 8x³\n\nAlternativa B: Erro comum de esquecer de elevar o coeficiente\nAlternativa C: Erro de cálculo de 2³ (2×3 ao invés de 2×2×2)\nAlternativa D: Erro de esquecer de aplicar o expoente à variável",
+    "topic": "Potenciação de monômios",
+    "difficulty": "easy",
+    "createdAt": "2025-05-01T11:21:49.678Z",
+    "hints": [
+      "Lembre-se de que, ao elevar um monômio a um expoente, tanto o coeficiente numérico quanto a variável são afetados. O que acontece quando cada parte é elevada ao cubo?",
+      "Na potenciação de um produto, a propriedade distributiva da exponenciação diz que (a * b)ⁿ = aⁿ * bⁿ. Aplique isso separadamente ao coeficiente e à variável.",
+      "Separe a base em fatores: (2)³ * (x)³. Calcule cada parte individualmente e depois multiplique os resultados obtidos."
+    ]
+  },
+  {
+    "question": "Simplifique a expressão (-2x²y)³.",
+    "options": [
+      "-8x⁶y³",
+      "8x⁵y³",
+      "-6x⁶y³",
+      "-8x⁶y"
+    ],
+    "correctOption": 0,
+    "explanation": "Primeiro, aplicamos o expoente 3 a cada parte do monômio:\n1. (-2)³ = -8\n2. (x²)³ = x²*³ = x⁶\n3. (y)³ = y³\nMultiplicando todos os resultados: -8x⁶y³\n\nErros comuns:\n- Esquecer do sinal negativo ao calcular (-2)³, resultando em 8x⁶y³ (opção B)\n- Multiplicar os expoentes de x² e 3 incorretamente (x²*³ ≠ x⁵)\n- Esquecer de elevar y ao cubo (opção D)\n- Calcular (-2)³ como -6 (opção C)",
+    "topic": "Potenciação de monômios",
+    "difficulty": "medium",
+    "createdAt": "2025-05-01T11:22:58.970Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Simplifique a expressão \\( \\frac{(-3a^2b^{-3})^{-2}}{(2a^{-4}b^2)^3} \\)",
+    "options": [
+      "\\frac{a^8}{72}",
+      "-\\frac{a^8}{72}",
+      "\\frac{a^{16}}{72}",
+      "72a^8"
+    ],
+    "correctOption": 0,
+    "explanation": "1. Aplicamos as potências externas a cada termo.\n2. Numerador: \\((-3)^{-2} = \\frac{1}{9}\\), \\(a^{2 \\times (-2)} = a^{-4}\\), \\(b^{-3 \\times (-2)} = b^6\\).\n3. Denominador: \\(2^3 = 8\\), \\(a^{-4 \\times 3} = a^{-12}\\), \\(b^{2 \\times 3} = b^6\\).\n4. Dividimos os coeficientes: \\(\\frac{1}{9} \\div 8 = \\frac{1}{72}\\).\n5. Subtraímos expoentes: \\(a^{-4 - (-12)} = a^8\\), \\(b^{6 - 6} = 1\\).\n6. Resultado final: \\(\\frac{a^8}{72}\\).",
+    "topic": "Potenciação de monômios",
+    "difficulty": "hard",
+    "createdAt": "2025-05-01T11:25:58.661Z",
+    "hints": [
+      "dica1: Lembre-se que ao elevar um monômio a um expoente negativo, todos os elementos dentro dos parênteses são afetados. Comece aplicando a propriedade da potência para distribuir o expoente externo a cada termo.",
+      "dica2: Use a propriedade (x^m)^n = x^(m*n) e converta expoentes negativos em inversos. Na divisão de mesma base, subtrai-se os expoentes. Atente ao sinal do coeficiente numérico e às regras de potência para números negativos.",
+      "dica3: Aplique os expoentes externos separadamente em cada componente (-3, a², b⁻³) e (2, a⁻⁴, b²). Inverta a fração do denominador para multiplicar, transformando a divisão em multiplicação pelo inverso. Combine termos semelhantes aplicando as operações de expoentes e simplifique os coeficientes numéricos."
+    ]
+  },
+  {
+    "question": "Simplifique a expressão \\(\\left(\\dfrac{3x^2y^{-3}}{2z^{-1}}\\right)^4\\) e selecione a alternativa correta:",
+    "options": [
+      "\\dfrac{81x^8z^4}{16y^{12}}",
+      "\\dfrac{81x^8}{16y^{12}z^4}",
+      "\\dfrac{12x^8z^4}{8y^{12}}",
+      "\\dfrac{81x^8y^{12}}{16z^4}"
+    ],
+    "correctOption": 0,
+    "explanation": "1. Aplique a potência 4 a cada elemento do monômio:\n   - Coeficiente: \\(\\left(\\dfrac{3}{2}\\right)^4 = \\dfrac{81}{16}\\)\n   - Variáveis: \\((x^2)^4 = x^8\\), \\((y^{-3})^4 = y^{-12}\\), \\((z^{-1})^4 = z^{-4}\\)\n\n2. Reescreva a expressão com os resultados:\n   \\(\\dfrac{81x^8y^{-12}}{16z^{-4}}\\)\n\n3. Simplifique expoentes negativos:\n   - \\(y^{-12}\\) no numerador vai para o denominador como \\(y^{12}\\)\n   - \\(z^{-4}\\) no denominador vai para o numerador como \\(z^4\\)\n\n4. Resultado final:\n   \\(\\dfrac{81x^8z^4}{16y^{12}}\\)",
+    "topic": "Potenciação de monômios",
+    "difficulty": "hard",
+    "createdAt": "2025-05-01T11:29:42.099Z",
+    "hints": [
+      "dica1: Lembre-se que ao elevar uma fração a um expoente, cada termo do numerador e denominador é afetado. Reflita sobre como os expoentes negativos e a potência externa interagem.",
+      "dica2: Expoentes negativos indicam inversão de posição na fração. Ao aplicar a potência 4, multiplique os expoentes atuais por 4 em todos os termos, incluindo coeficientes numéricos e variáveis.",
+      "dica3: Separe a expressão em partes: (3^4)*(x^(2*4)) no numerador, (2^4) no denominador, trate y^(-3*4) como 1/y^12 e z^(-1*4) como z^4. Reorganize os termos para eliminar expoentes negativos."
+    ]
+  },
+  {
+    "question": "Simplifique a expressão: (2x + 5) + (4x − 3)",
+    "options": [
+      "6x + 2",
+      "6x + 8",
+      "2x + 2",
+      "2x + 8"
+    ],
+    "correctOption": 0,
+    "explanation": "Primeiro, agrupamos os termos semelhantes. Para os termos com x: 2x + 4x = 6x. Para os termos constantes: 5 − 3 = 2. Portanto, a expressão simplificada é 6x + 2.",
+    "topic": "Adição e subtração de binômios",
+    "difficulty": "easy",
+    "createdAt": "2025-05-01T11:31:23.584Z",
+    "hints": [
+      "Dica1: Observe os termos que possuem a mesma parte literal e os que são apenas números. Como você pode reorganizá-los para facilitar a simplificação?",
+      "Dica2: Lembre-se de que, em binômios, termos semelhantes (com a mesma variável) podem ser combinados através da soma/subtração de seus coeficientes. Constantes numéricas também podem ser agrupadas.",
+      "Dica3: Remova os parênteses (não há sinal negativo antes deles), some os coeficientes dos termos com 'x' separadamente e depois combine os termos constantes. Exemplo: (ax + b) + (cx + d) = (a + c)x + (b + d)"
+    ]
+  },
+  {
+    "question": "Simplifique a expressão: (7x + 4) - (2x + 1)",
+    "options": [
+      "5x + 3",
+      "5x + 5",
+      "9x + 5",
+      "5x - 3"
+    ],
+    "correctOption": 0,
+    "explanation": "Passo a passo:\n1. Distribua o sinal negativo no segundo binômio: 7x + 4 - 2x - 1\n2. Combine os termos semelhantes:\n   - Termos com x: 7x - 2x = 5x\n   - Termos constantes: 4 - 1 = 3\n3. Resultado final: 5x + 3\n\nErros comuns evitados:\n- Esquecer de distribuir o sinal negativo para ambos os termos do segundo binômio (levaria a 5x + 5)\n- Somar ao invés de subtrair (levaria a 9x + 5)\n- Subtrair incorretamente os termos constantes (levaria a 5x - 3)",
+    "topic": "Adição e subtração de binômios",
+    "difficulty": "easy",
+    "createdAt": "2025-05-01T11:32:57.978Z"
+  },
+  {
+    "question": "Simplifique a expressão (−2x + 5y) − (4x − 3y).",
+    "options": [
+      "-6x + 8y",
+      "-6x + 2y",
+      "2x + 8y",
+      "6x - 8y"
+    ],
+    "correctOption": 0,
+    "explanation": "Passo a passo:\n1. Distribua o sinal negativo no segundo binômio: (−2x + 5y) −4x + 3y\n2. Combine os termos semelhantes:\n   - Termos com x: −2x −4x = −6x\n   - Termos com y: 5y + 3y = 8y\n3. Resultado final: −6x + 8y\n\nErros comuns:\n- Esquecer de distribuir o sinal negativo para o segundo termo (levaria a −6x + 2y)\n- Combinar incorretamente −2x −4x como 2x (levaria a 2x + 8y)\n- Subtrair os binômios na ordem inversa (levaria a 6x − 8y)",
+    "topic": "Adição e subtração de binômios",
+    "difficulty": "medium",
+    "createdAt": "2025-05-01T11:35:38.732Z",
+    "hints": [
+      "dica1: Lembre-se de que ao subtrair um binômio, cada termo dentro do segundo parêntese é afetado pelo sinal negativo. Preste atenção nos sinais de cada monômio após remover os parênteses.",
+      "dica2: A propriedade distributiva se aplica aqui: o sinal negativo antes do segundo parêntese multiplica todos os termos dentro dele. Revise como alterar os sinais corretamente antes de combinar os termos semelhantes.",
+      "dica3: Após distribuir o sinal negativo, identifique e some os coeficientes das variáveis iguais (x com x, y com y). Organize os termos resultantes em ordem alfabética para simplificação final."
+    ]
+  },
+  {
+    "question": "Simplifique a expressão algébrica: (2x + 3y) + (-5x + 4y) - (3x - 2y)",
+    "options": [
+      "-6x + 9y",
+      "-6x + 5y",
+      "0x + 9y",
+      "-6x - 3y"
+    ],
+    "correctOption": 0,
+    "explanation": "Passo a passo:\n1. Remover os parênteses:\n   = 2x + 3y - 5x + 4y - 3x + 2y\n2. Agrupar termos semelhantes:\n   x: 2x - 5x - 3x\n   y: 3y + 4y + 2y\n3. Calcular coeficientes:\n   x: (2 - 5 - 3)x = -6x\n   y: (3 + 4 + 2)y = 9y\n4. Resultado final: -6x + 9y\n\nErros comuns:\n- Esquecer de inverter os sinais na subtração do último binômio\n- Miscalcular a soma dos coeficientes negativos\n- Confundir os termos das diferentes variáveis",
+    "topic": "Adição e subtração de binômios",
+    "difficulty": "medium",
+    "createdAt": "2025-05-01T11:36:44.239Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Simplifique a expressão: \\(\\left(\\frac{2}{3}x^3 - \\frac{1}{4}x\\right) - \\left(\\frac{5}{6}x^3 + \\frac{3}{8}x\\)\\)",
+    "options": [
+      "\\(-\\frac{1}{6}x^3 - \\frac{5}{8}x\\)",
+      "\\(-\\frac{1}{6}x^3 + \\frac{1}{8}x\\)",
+      "\\(\\frac{1}{6}x^3 - \\frac{5}{8}x\\)",
+      "\\(-\\frac{1}{2}x^3 - \\frac{1}{2}x\\)"
+    ],
+    "correctOption": 0,
+    "explanation": "Passo a passo:\n1. Distribuir o sinal negativo no segundo binômio:\n\\(\\frac{2}{3}x^3 - \\frac{1}{4}x - \\frac{5}{6}x^3 - \\frac{3}{8}x\\)\n\n2. Combinar termos semelhantes:\n- Termos \\(x^3\\): \\(\\frac{2}{3} - \\frac{5}{6} = \\frac{4}{6} - \\frac{5}{6} = -\\frac{1}{6}\\)\n- Termos \\(x\\): \\(-\\frac{1}{4} - \\frac{3}{8} = -\\frac{2}{8} - \\frac{3}{8} = -\\frac{5}{8}\\)\n\n3. Resultado final:\n\\(-\\frac{1}{6}x^3 - \\frac{5}{8}x\\)\n\nErros comuns:\n- Confundir adição/subtração de frações (Alternativa B)\n- Inverter sinal na subtração (Alternativa C)\n- Simplificação incorreta de denominadores (Alternativa D)",
+    "topic": "Adição e subtração de binômios",
+    "difficulty": "hard",
+    "createdAt": "2025-05-01T11:38:09.807Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Simplifique a expressão: 4x(3x + 2)",
+    "options": [
+      "12x² + 8x",
+      "12x + 8x",
+      "12x² + 8",
+      "20x"
+    ],
+    "correctOption": 0,
+    "explanation": "Primeiro, distribuímos o monômio 4x a cada termo do binômio (3x + 2):\n\n1. 4x * 3x = (4*3)(x*x) = 12x²\n2. 4x * 2 = (4*2)x = 8x\n\nSomando os resultados: 12x² + 8x",
+    "topic": "Multiplicação de binômio por monômio",
+    "difficulty": "easy",
+    "createdAt": "2025-05-01T11:42:18.847Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Qual é o resultado da multiplicação de 2x por (x + 3)?",
+    "options": [
+      "2x² + 6x",
+      "2x + 6",
+      "2x + 6x",
+      "2x² + 3"
+    ],
+    "correctOption": 0,
+    "explanation": "Para resolver 2x(x + 3), aplicamos a propriedade distributiva:\n1) Multiplicamos 2x pelo primeiro termo do binômio: 2x * x = 2x²\n2) Multiplicamos 2x pelo segundo termo do binômio: 2x * 3 = 6x\n3) Somamos os resultados: 2x² + 6x\n\nErros comuns:\n- Opção B: Esqueceu de multiplicar a variável (usou 2 em vez de 2x)\n- Opção C: Somou termos diferentes (2x + 6x) como se fossem semelhantes\n- Opção D: Não multiplicou o segundo termo por 2x (manteve 3 em vez de 6x)",
+    "topic": "Multiplicação de binômio por monômio",
+    "difficulty": "easy",
+    "createdAt": "2025-05-01T11:43:52.230Z",
+    "hints": [
+      "dica1: Pense em como distribuir um termo externo para cada elemento dentro dos parênteses.",
+      "dica2: Use a propriedade distributiva: multiplique o monômio por cada termo do binômio individualmente.",
+      "dica3: Faça 2x vezes x e depois 2x vezes 3, somando os resultados ao final."
+    ]
+  },
+  {
+    "question": "Simplifique a expressão -4x(5x + 3y).",
+    "options": [
+      "-20x² - 12xy",
+      "-20x² + 12xy",
+      "-20x + 3y",
+      "20x² - 12xy"
+    ],
+    "correctOption": 0,
+    "explanation": "Primeiro, distribuímos o monômio -4x a cada termo do binômio (5x + 3y):\n1) -4x * 5x = (-4*5)(x*x) = -20x²\n2) -4x * 3y = (-4*3)(x*y) = -12xy\n\nJuntando os termos, a expressão simplificada é -20x² - 12xy.\n\nErros comuns incluem esquecer o sinal negativo no segundo termo (-20x² + 12xy) ou erros na multiplicação dos expoentes (como -20x no lugar de -20x²).",
+    "topic": "Multiplicação de binômio por monômio",
+    "difficulty": "medium",
+    "createdAt": "2025-05-01T11:45:49.967Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Simplifique a expressão algébrica: (-2xy)(3x - 5y)",
+    "options": [
+      "-6x²y + 10xy²",
+      "6x²y - 10xy²",
+      "-6x² + 10xy²",
+      "-6x²y - 10xy²"
+    ],
+    "correctOption": 0,
+    "explanation": "1. Distribuímos o monômio (-2xy) a cada termo do binômio:\n   - Primeiro termo: (-2xy) * 3x = (-2*3)(x*x)(y) = -6x²y\n   - Segundo termo: (-2xy) * (-5y) = (-2*(-5))(x)(y*y) = +10xy²\n2. Combinando os resultados: -6x²y + 10xy²\n3. Erros comuns incluem esquecer a regra dos sinais (opção B e D) ou calcular incorretamente os expoentes das variáveis (opção C).",
+    "topic": "Multiplicação de binômio por monômio",
+    "difficulty": "medium",
+    "createdAt": "2025-05-01T11:46:48.236Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Multiplique o binômio (2a²b⁻¹ - 3a⁻³b²) pelo monômio (3/2 a⁻²b³). Simplifique completamente sua resposta.",
+    "options": [
+      "3b² - \\frac{9}{2}a^{-5}b^{5}",
+      "3a^{2}b^{2} - \\frac{9}{2}a^{-5}b^{5}",
+      "3b² + \\frac{9}{2}a^{-5}b^{5}",
+      "3b² - \\frac{9}{2}a^{-5}b^{6}"
+    ],
+    "correctOption": 0,
+    "explanation": "Primeiro, distribuímos o monômio (3/2 a⁻²b³) a cada termo do binômio:\n\n1. Multiplicando 2a²b⁻¹ por 3/2 a⁻²b³:\n   - Coeficientes: 2 * 3/2 = 3\n   - Variável 'a': a² * a⁻² = a^(2 + (-2)) = a⁰ = 1\n   - Variável 'b': b⁻¹ * b³ = b^(−1 + 3) = b²\n   - Resultado parcial: 3b²\n\n2. Multiplicando -3a⁻³b² por 3/2 a⁻²b³:\n   - Coeficientes: -3 * 3/2 = -9/2\n   - Variável 'a': a⁻³ * a⁻² = a^(−3 + (−2)) = a⁻⁵\n   - Variável 'b': b² * b³ = b^(2 + 3) = b⁵\n   - Resultado parcial: -\\frac{9}{2}a⁻⁵b⁵\n\nJuntando os termos: 3b² - \\frac{9}{2}a⁻⁵b⁵\n\nErros comuns:\n- Opção B: Esqueceu de simplificar a² * a⁻² na primeira parte\n- Opção C: Erro de sinal no segundo termo\n- Opção D: Expoente incorreto em 'b' no segundo termo",
+    "topic": "Multiplicação de binômio por monômio",
+    "difficulty": "hard",
+    "createdAt": "2025-05-01T11:49:25.815Z",
+    "hints": [
+      "dica1: Lembre-se de que cada termo do binômio deve interagir com o monômio. Pense em como distribuir a multiplicação respeitando as regras de sinais e expoentes.",
+      "dica2: Ao multiplicar variáveis com expoentes, some os expoentes das mesmas bases. Atenção aos coeficientes fracionários e às simplificações de termos com expoentes negativos.",
+      "dica3: Multiplique separadamente 2a²b⁻¹ por (3/2 a⁻�b³) e depois -3a⁻³b² pelo mesmo monômio. Simplifique cada termo resultante combinando coeficientes e aplicando a⁽ᵐ⁺ⁿ⁾, mantendo expoentes positivos na resposta final."
+    ]
+  },
+  {
+    "question": "Realize a multiplicação do binômio (5p³q² - 7p²q⁵) pelo monômio (-²⁄₃ p⁴ q) e simplifique.",
+    "options": [
+      "¹⁴⁄₃ p⁶ q⁶ - ¹⁰⁄₃ p⁷ q³",
+      "-¹⁰⁄₃ p⁷ q³ - ¹⁴⁄₃ p⁶ q⁶",
+      "¹⁰⁄₃ p⁷ q³ + ¹⁴⁄₃ p⁶ q⁶",
+      "-¹⁴⁄₃ p¹⁰ q¹⁰ + ¹⁰⁄₃ p¹² q⁶"
+    ],
+    "correctOption": 0,
+    "explanation": "Resolução passo a passo:\n\n1. Distribua o monômio para ambos os termos do binômio:\n\n• Primeiro termo: (5p³q²) × (-²⁄₃ p⁴ q)\n  - Multiplicação de coeficientes: 5 × (-²⁄₃) = -¹⁰⁄₃\n  - Variáveis: p³ × p⁴ = p⁷ (soma expoentes)\n            q² × q = q³\n  Resultado parcial: -¹⁰⁄₃ p⁷ q³\n\n• Segundo termo: (-7p²q⁵) × (-²⁄₃ p⁴ q)\n  - Multiplicação de coeficientes: -7 × (-²⁄₃) = ¹⁴⁄₃\n  - Variáveis: p² × p⁴ = p⁶\n            q⁵ × q = q⁶\n  Resultado parcial: ¹⁴⁄₃ p⁶ q⁶\n\n2. Combine os resultados:\n  -¹⁰⁄₃ p⁷ q³ + ¹⁴⁄₃ p⁶ q⁶\n\nErros comuns nas alternativas:\n- Alternativa B: Erro de sinal no segundo termo\n- Alternativa C: Sinal invertido no primeiro termo\n- Alternativa D: Expoentes calculados incorretamente (multiplicação ao invés de soma)",
+    "topic": "Multiplicação de binômio por monômio",
+    "difficulty": "hard",
+    "createdAt": "2025-05-01T11:51:09.894Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Qual é o resultado da multiplicação dos binômios (x + 2) e (x + 3)?",
+    "options": [
+      "x² + 5x + 6",
+      "x² + 6x + 6",
+      "x² + 5x + 5",
+      "x² + 6"
+    ],
+    "correctOption": 0,
+    "explanation": "Para multiplicar os binômios (x + 2) e (x + 3), utilizamos o método FOIL:\n\n1. **Primeiro termos:** x * x = x²\n2. **Externo termos:** x * 3 = 3x\n3. **Interno termos:** 2 * x = 2x\n4. **Último termos:** 2 * 3 = 6\n\nAgora, somamos todos os termos:\nx² + 3x + 2x + 6\n\nCombinando os termos semelhantes (3x + 2x = 5x):\nx² + 5x + 6\n\nPortanto, a resposta correta é x² + 5x + 6.",
+    "topic": "Multiplicação de binômios",
+    "difficulty": "easy",
+    "createdAt": "2025-05-01T11:52:38.666Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Qual é o resultado da multiplicação dos binômios (x + 2) e (x + 3)?",
+    "options": [
+      "x² + 5x + 6",
+      "x² + 6x + 6",
+      "x² + 5x + 5",
+      "x² + 3x + 6"
+    ],
+    "correctOption": 0,
+    "explanation": "Para multiplicar os binômios (x + 2) e (x + 3), aplicamos a propriedade distributiva duas vezes (método FOIL):\n\n1. **Primeiros termos**: x * x = x²\n2. **Termos externos**: x * 3 = 3x\n3. **Termos internos**: 2 * x = 2x\n4. **Últimos termos**: 2 * 3 = 6\n\nSomando todos os termos: x² + 3x + 2x + 6\n\nCombine os termos semelhantes (3x + 2x = 5x):\n\nResultado final: x² + 5x + 6",
+    "topic": "Multiplicação de binômios",
+    "difficulty": "easy",
+    "createdAt": "2025-05-01T11:54:32.349Z",
+    "hints": [
+      "dica1: Lembre-se de que cada termo do primeiro binômio precisa interagir com todos os termos do segundo binômio. Pense em como distribuir essa interação de forma organizada.",
+      "dica2: Use a propriedade distributiva duas vezes (também conhecida como método FOIL para binômios): multiplique o primeiro termo de cada, depois os termos externos, seguido pelos internos e, por último, os últimos termos de cada binômio.",
+      "dica3: Após multiplicar todos os pares de termos conforme a dica anterior, identifique os termos semelhantes (aqueles com a mesma parte literal) e some seus coeficientes para simplificar a expressão final."
+    ]
+  },
+  {
+    "question": "Expandir o produto dos binômios: (2x - 3y)(x + 4y)",
+    "options": [
+      "2x² + 5xy - 12y²",
+      "2x² + 11xy - 12y²",
+      "2x² - 5xy - 12y²",
+      "2x² + 5xy + 12y²"
+    ],
+    "correctOption": 0,
+    "explanation": "Usando o método FOIL:\n1. Primeiros termos: 2x * x = 2x²\n2. Externos: 2x * 4y = 8xy\n3. Internos: -3y * x = -3xy\n4. Últimos: -3y * 4y = -12y²\nSoma parcial: 2x² + 8xy - 3xy -12y²\nCombine termos semelhantes: 8xy - 3xy = 5xy\nResultado final: 2x² + 5xy -12y²",
+    "topic": "Multiplicação de binômios",
+    "difficulty": "medium",
+    "createdAt": "2025-05-01T11:55:19.855Z",
+    "hints": [
+      "Lembre-se de que cada termo do primeiro binômio deve multiplicar todos os termos do segundo. Como você pode distribuir essa multiplicação?",
+      "Aplique a propriedade distributiva duas vezes: primeiro distribua o primeiro termo do primeiro binômio e depois o segundo termo. Não se esqueça de combinar os termos semelhantes ao final.",
+      "Multiplique 2x por x e 4y, depois -3y por x e 4y. Some os resultados parciais e verifique os termos com x², xy e y² para simplificar."
+    ]
+  },
+  {
+    "question": "Qual é o produto de (2x - 3y)(x + 4y)?",
+    "options": [
+      "2x² +5xy -12y²",
+      "2x² +11xy -12y²",
+      "2x² +5xy +12y²",
+      "2x² -5xy -12y²"
+    ],
+    "correctOption": 0,
+    "explanation": "Vamos resolver passo a passo:\n1. Aplique a propriedade distributiva (método FOIL):\n   - **Primeiros termos:** 2x · x = 2x²\n   - **Termos externos:** 2x · 4y = 8xy\n   - **Termos internos:** -3y · x = -3xy\n   - **Últimos termos:** -3y · 4y = -12y²\n\n2. Combine os termos semelhantes:\n   - Termos em xy: 8xy - 3xy = 5xy\n\n3. Resultado final:\n   2x² +5xy -12y²\n\n**Análise das alternativas incorretas:**\n- Alternativa B: Erro ao somar 8xy + (-3xy) como 11xy.\n- Alternativa C: Sinal incorreto no último termo (-12y² virou +12y²).\n- Alternativa D: Erro de sinal ao combinar 8xy -3xy como -5xy.",
+    "topic": "Multiplicação de binômios",
+    "difficulty": "medium",
+    "createdAt": "2025-05-01T11:58:59.508Z",
+    "hints": [
+      "Lembre-se de que cada termo do primeiro binômio deve interagir com todos os termos do segundo. Como você distribuiria essa multiplicação de forma sistemática?",
+      "Use o método FOIL (Primeiros, Externos, Internos, Últimos) para expandir os produtos e, em seguida, some os termos semelhantes. Quais pares de termos gerarão coeficientes para x², xy e y²?",
+      "Multiplique 2x por (x + 4y), depois -3y por (x + 4y). Some os resultados parciais e combine os termos que têm a mesma parte literal (xy). Atenção aos sinais!"
+    ]
+  },
+  {
+    "question": "Multiplique os binômios \\(\\left(\\frac{1}{2}x^2 + \\frac{3}{4}y\\right)\\) e \\(\\left(\\frac{2}{3}x - \\frac{5}{6}y^3\\right)\\)",
+    "options": [
+      "\\frac{1}{3}x^3 + \\frac{1}{2}xy - \\frac{5}{12}x^2y^3 - \\frac{5}{8}y^4",
+      "\\frac{2}{5}x^3 + \\frac{1}{2}xy - \\frac{5}{12}x^2y^3 - \\frac{5}{8}y^4",
+      "\\frac{1}{3}x^3 + \\frac{1}{2}xy + \\frac{5}{12}x^2y^3 - \\frac{5}{8}y^4",
+      "\\frac{1}{3}x^3 + \\frac{1}{2}xy - \\frac{5}{12}x^2y^3 - \\frac{5}{6}y^4"
+    ],
+    "correctOption": 0,
+    "explanation": "Aplicando a distributiva (método FOIL):\n1. Primeiro termo: \\(\\frac{1}{2}x^2 \\cdot \\frac{2}{3}x = \\frac{1}{3}x^3\\)\n2. Termos externos: \\(\\frac{1}{2}x^2 \\cdot (-\\frac{5}{6}y^3) = -\\frac{5}{12}x^2y^3\\)\n3. Termos internos: \\(\\frac{3}{4}y \\cdot \\frac{2}{3}x = \\frac{1}{2}xy\\)\n4. Último termo: \\(\\frac{3}{4}y \\cdot (-\\frac{5}{6}y^3) = -\\frac{5}{8}y^4\\)\n\nNão há termos semelhantes para combinar. As alternativas incorretas incluem erros comuns como:\n- Erro na multiplicação de frações (B)\n- Sinal incorreto (C)\n- Simplificação incorreta de frações (D)",
+    "topic": "Multiplicação de binômios",
+    "difficulty": "hard",
+    "createdAt": "2025-05-01T12:02:58.905Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Expanda a expressão \\(\\left(\\frac{3}{4}x^2 - \\frac{2}{3}y\\right)\\left(\\frac{5}{2}x + \\frac{4}{9}y^3\\)\\) e selecione a forma simplificada correta.",
+    "options": [
+      "\\[\\frac{15}{8}x^3 + \\frac{1}{3}x^2y^3 - \\frac{5}{3}xy - \\frac{8}{27}y^4\\]",
+      "\\[\\frac{15}{8}x^3 + \\frac{4}{9}x^2y^3 - \\frac{5}{3}xy - \\frac{8}{27}y^4\\]",
+      "\\[\\frac{15}{8}x^3 + \\frac{1}{3}x^2y^3 + \\frac{5}{3}xy - \\frac{8}{27}y^4\\]",
+      "\\[\\frac{15}{8}x^3 + \\frac{1}{3}x^2y^3 - \\frac{5}{3}xy + \\frac{8}{27}y^4\\]"
+    ],
+    "correctOption": 0,
+    "explanation": "1. Aplique a distributiva (método FOIL):\n\n- **Primeiro termo:** \\(\\frac{3}{4}x^2 \\cdot \\frac{5}{2}x = \\frac{15}{8}x^3\\)\n- **Externo termo:** \\(\\frac{3}{4}x^2 \\cdot \\frac{4}{9}y^3 = \\frac{12}{36}x^2y^3 = \\frac{1}{3}x^2y^3\\)\n- **Interno termo:** \\(-\\frac{2}{3}y \\cdot \\frac{5}{2}x = -\\frac{10}{6}xy = -\\frac{5}{3}xy\\)\n- **Último termo:** \\(-\\frac{2}{3}y \\cdot \\frac{4}{9}y^3 = -\\frac{8}{27}y^4\\)\n\n2. Combine todos os termos:\n\n\\[\\frac{15}{8}x^3 + \\frac{1}{3}x^2y^3 - \\frac{5}{3}xy - \\frac{8}{27}y^4\\]\n\nErros comuns incluem: multiplicação incorreta de frações (opção B), sinal errado no terceiro termo (opção C) e sinal positivo incorreto no último termo (opção D).",
+    "topic": "Multiplicação de binômios",
+    "difficulty": "hard",
+    "createdAt": "2025-05-01T12:05:06.795Z",
+    "hints": [
+      "dica1: Lembre-se de que, para expandir o produto de dois binômios, cada termo do primeiro parêntese deve interagir com todos os termos do segundo parêntese. Que propriedade matemática permite essa distribuição sistemática?",
+      "dica2: Aplique a propriedade distributiva (também conhecida como método FOIL para binômios). Multiplique cada termo do primeiro binômio por cada termo do segundo, seguindo a ordem: Primeiros, Externos, Internos, Últimos. Atenção às regras de multiplicação de frações e expoentes.",
+      "dica3: Organize as multiplicações parciais separadamente: (3/4x² * 5/2x), (3/4x² * 4/9y³), (-2/3y * 5/2x) e (-2/3y * 4/9y³). Simplifique cada resultado usando as regras de expoentes (x²·x = x³, y·y³ = y⁴) e reduza as frações antes de combinar os termos semelhantes no final."
+    ]
+  },
+  {
+    "question": "Expanda o produto notável (x + 2)².",
+    "options": [
+      "x² + 4x + 4",
+      "x² + 2x + 4",
+      "x² + 4",
+      "x² + 4x + 2"
+    ],
+    "correctOption": 0,
+    "explanation": "Para expandir (x + 2)², aplicamos a fórmula do quadrado da soma: (a + b)² = a² + 2ab + b².\n1. Identificamos a = x e b = 2\n2. Calculamos cada termo:\n   - a² = x²\n   - 2ab = 2 * x * 2 = 4x\n   - b² = 2² = 4\n3. Juntando os termos: x² + 4x + 4\n\nErros comuns:\n- Esquecer o termo do meio (2ab) levaria a x² + 4 (opção C)\n- Não dobrar o produto (2ab) resultaria em x² + 2x + 4 (opção B)\n- Errar no cálculo do quadrado de 2 seria x² + 4x + 2 (opção D)",
+    "topic": "Produto notável: quadrado da soma",
+    "difficulty": "easy",
+    "createdAt": "2025-05-01T12:07:20.294Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Desenvolva o produto notável (x + 2)².",
+    "options": [
+      "x² + 4x + 4",
+      "x² + 4",
+      "x² + 2x + 4",
+      "x² + 4x + 2"
+    ],
+    "correctOption": 0,
+    "explanation": "Aplicando a fórmula do quadrado da soma: (a + b)² = a² + 2ab + b²\n1. Primeiro termo (a²): x²\n2. Segundo termo (2ab): 2 * x * 2 = 4x\n3. Terceiro termo (b²): 2² = 4\n4. Juntando todos os termos: x² + 4x + 4",
+    "topic": "Produto notável: quadrado da soma",
+    "difficulty": "easy",
+    "createdAt": "2025-05-01T12:08:17.339Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Expanda a expressão (-2x + 5y)² e selecione a alternativa correta.",
+    "options": [
+      "4x² - 20xy + 25y²",
+      "4x² + 20xy + 25y²",
+      "4x² - 10xy + 25y²",
+      "-4x² - 20xy + 25y²"
+    ],
+    "correctOption": 0,
+    "explanation": "Aplicando o produto notável (a + b)² = a² + 2ab + b², onde a = -2x e b = 5y:\n1. a² = (-2x)² = 4x²\n2. 2ab = 2·(-2x)·5y = -20xy\n3. b² = (5y)² = 25y²\nSomando os termos: 4x² - 20xy + 25y²\nErros comuns: esquecer o sinal negativo no termo central (opção B), calcular apenas 1ab em vez de 2ab (opção C), ou errar o sinal do primeiro termo (opção D).",
+    "topic": "Produto notável: quadrado da soma",
+    "difficulty": "medium",
+    "createdAt": "2025-05-01T12:10:09.525Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Expand the expression (2x - 5y)² and select the correct answer:",
+    "options": [
+      "4x² - 20xy + 25y²",
+      "4x² + 25y²",
+      "4x² - 10xy + 25y²",
+      "2x² - 20xy + 5y²"
+    ],
+    "correctOption": 0,
+    "explanation": "Using the square of a sum formula (a + b)² = a² + 2ab + b²:\n1. Identify a = 2x and b = -5y\n2. Calculate a²: (2x)² = 4x²\n3. Calculate 2ab: 2*(2x)*(-5y) = -20xy\n4. Calculate b²: (-5y)² = 25y²\n5. Combine all terms: 4x² -20xy +25y²\nCommon errors: Forgetting the middle term (option B), miscalculating the coefficient of xy (option C), or not squaring coefficients properly (option D).",
+    "topic": "Produto notável: quadrado da soma",
+    "difficulty": "medium",
+    "createdAt": "2025-05-01T12:11:40.199Z",
+    "hints": [
+      "Lembre-se de que elevar um binômio ao quadrado significa multiplicá-lo por si mesmo. Tente reescrever a expressão como um produto de dois termos idênticos e distribuir gradualmente.",
+      "Use a estrutura do quadrado da diferença: (a - b)² = a² - 2ab + b². Identifique quais partes da expressão original correspondem a 'a' e 'b' nesse padrão.",
+      "Aplique o padrão identificado: calcule separadamente o quadrado do primeiro termo, o dobro do produto dos dois termos (com sinal negativo) e o quadrado do segundo termo. Some essas três partes ordenadamente."
+    ]
+  },
+  {
+    "question": "Expanda e simplifique a expressão: \\(\\left(3x^2 + \\frac{2}{x}\\right)^2\\)",
+    "options": [
+      "9x⁴ + 12x + \\frac{4}{x²}",
+      "9x⁴ + 12x² + \\frac{4}{x²}",
+      "3x⁴ + 12x + \\frac{4}{x²}",
+      "9x⁴ + 12x + \\frac{4}{x}"
+    ],
+    "correctOption": 0,
+    "explanation": "Aplicando o quadrado da soma \\((a + b)^2 = a² + 2ab + b²\\):\n1. Identifique \\(a = 3x^2\\) e \\(b = \\frac{2}{x}\\)\n2. Calcule \\(a² = (3x^2)^2 = 9x^4\\)\n3. Calcule \\(2ab = 2 \\cdot 3x^2 \\cdot \\frac{2}{x} = 12x\\)\n4. Calcule \\(b² = \\left(\\frac{2}{x}\\right)^2 = \\frac{4}{x²}\\)\n5. Combine os termos: \\(9x^4 + 12x + \\frac{4}{x²}\\)\nErros comuns: esquecer de elevar o coeficiente 3 ao quadrado (opção C), calcular errado o expoente de x no termo central (opção B) ou no termo final (opção D).",
+    "topic": "Produto notável: quadrado da soma",
+    "difficulty": "hard",
+    "createdAt": "2025-05-01T12:12:54.753Z",
+    "hints": [
+      "Lembre-se de que o quadrado de uma soma segue um padrão específico. Como você identificaria cada termo 'a' e 'b' nessa expressão para aplicar o conceito de (a + b)²?",
+      "O quadrado da soma é igual a: quadrado do primeiro termo + 2 vezes o produto dos termos + quadrado do segundo termo. Atente-se às regras de potência e frações ao expandir cada parte separadamente.",
+      "Após expandir usando o padrão (a + b)², verifique: 1) O quadrado de 3x² (coeficiente e expoente). 2) O dobro do produto entre 3x² e 2/x (simplifique a variável). 3) O quadrado de 2/x (propriedade de potência em frações). Combine os termos resultantes."
+    ]
+  },
+  {
+    "question": "Expanda a expressão \\(\\left(\\frac{3}{4}x^2 + \\frac{5}{2}y^3\\right)^2\\) e selecione a alternativa correta:",
+    "options": [
+      "\\(\\frac{9}{16}x^4 + \\frac{15}{4}x^2y^3 + \\frac{25}{4}y^6\\)",
+      "\\(\\frac{9}{16}x^4 + \\frac{15}{8}x^2y^3 + \\frac{25}{4}y^6\\)",
+      "\\(\\frac{9}{16}x^4 + \\frac{30}{8}x^2y^3 + \\frac{25}{2}y^6\\)",
+      "\\(\\frac{3}{4}x^4 + \\frac{15}{4}x^2y^3 + \\frac{5}{2}y^6\\)"
+    ],
+    "correctOption": 0,
+    "explanation": "Aplicando o quadrado da soma \\((a + b)^2 = a^2 + 2ab + b^2\\):\n1. \\(a = \\frac{3}{4}x^2\\): \\(a^2 = \\left(\\frac{3}{4}\\right)^2(x^2)^2 = \\frac{9}{16}x^4\\)\n2. \\(b = \\frac{5}{2}y^3\\): \\(b^2 = \\left(\\frac{5}{2}\\right)^2(y^3)^2 = \\frac{25}{4}y^6\\)\n3. \\(2ab = 2 \\cdot \\frac{3}{4}x^2 \\cdot \\frac{5}{2}y^3 = 2 \\cdot \\frac{15}{8}x^2y^3 = \\frac{15}{4}x^2y^3\\)\nErros comuns:\n- Esquecer de multiplicar por 2 no termo central (opção B)\n- Calcular errado o quadrado das frações (opção C e D)\n- Não aplicar expoente aos coeficientes (opção D)",
+    "topic": "Produto notável: quadrado da soma",
+    "difficulty": "hard",
+    "createdAt": "2025-05-01T12:14:49.578Z"
+  },
+  {
+    "question": "Expanda a expressão (x - 3)² utilizando o produto notável quadrado da diferença. Qual das alternativas apresenta o resultado correto?",
+    "options": [
+      "x² - 6x + 9",
+      "x² - 9",
+      "x² + 6x + 9",
+      "x² - 3x + 9"
+    ],
+    "correctOption": 0,
+    "explanation": "Passo a passo:\n1. Aplicamos a fórmula do quadrado da diferença: (a - b)² = a² - 2ab + b²\n2. Identificamos a = x e b = 3\n3. Substituímos na fórmula:\n   (x)² - 2*(x)*(3) + (3)²\n4. Calculamos cada termo:\n   x² - 6x + 9\n5. Erros comuns:\n   - Opção B: esqueceu o termo do meio (-2ab)\n   - Opção C: errou o sinal do termo do meio\n   - Opção D: calculou errado o coeficiente 2ab (3x em vez de 6x)",
+    "topic": "Produto notável: quadrado da diferença",
+    "difficulty": "easy",
+    "createdAt": "2025-05-01T12:16:22.756Z",
+    "hints": [
+      "Lembre-se de que o quadrado de uma diferença segue um padrão específico. Tente identificar quais termos correspondem a 'a' e 'b' na expressão (a - b)².",
+      "A regra do quadrado da diferença afirma que (a - b)² = a² - 2ab + b². Aplique essa estrutura à expressão original, substituindo os valores correspondentes.",
+      "Separe a expressão em três partes: o quadrado do primeiro termo, menos duas vezes o produto dos dois termos, mais o quadrado do segundo termo. Calcule cada parte individualmente e depois combine-as."
+    ]
+  },
+  {
+    "question": "Expanda a expressão algébrica (x - 2)² utilizando o produto notável do quadrado da diferença.",
+    "options": [
+      "x² - 4x + 4",
+      "x² - 4",
+      "x² + 4x + 4",
+      "x² - 2x + 4"
+    ],
+    "correctOption": 0,
+    "explanation": "Para resolver (x - 2)², aplicamos a fórmula do quadrado da diferença: (a - b)² = a² - 2ab + b².\n1) Identificamos 'a' como x e 'b' como 2\n2) Calculamos a² = x²\n3) Calculamos 2ab = 2 * x * 2 = 4x\n4) Calculamos b² = 2² = 4\n5) Montamos a expressão: x² - 4x + 4\nAs alternativas incorretas cometem erros comuns como:\n- Esquecer o termo do meio (x² - 4)\n- Trocar o sinal do termo do meio (x² + 4x + 4)\n- Calcular errado o coeficiente do termo do meio (x² - 2x + 4)",
+    "topic": "Produto notável: quadrado da diferença",
+    "difficulty": "easy",
+    "createdAt": "2025-05-01T12:17:20.443Z",
+    "hints": [
+      "Lembre-se de que o quadrado de uma diferença envolve multiplicar o binômio por ele mesmo. Como você distribuiria os termos nessa multiplicação?",
+      "A estrutura do quadrado da diferença é (a - b)² = a² - 2ab + b². Identifique quem são 'a' e 'b' na expressão original e substitua nesse padrão.",
+      "Aplique o padrão: primeiro eleve o primeiro termo ao quadrado, depois subtraia o dobro do produto dos dois termos e finalmente some o quadrado do segundo termo. Só falta calcular cada parte separadamente!"
+    ]
+  },
+  {
+    "question": "Qual é a forma expandida do produto notável (-5x + 4y)²?",
+    "options": [
+      "25x² + 40xy + 16y²",
+      "-25x² - 40xy + 16y²",
+      "25x² - 40xy - 16y²",
+      "25x² - 40xy + 16y²"
+    ],
+    "correctOption": 3,
+    "explanation": "Aplicando o quadrado da diferença (a + b)² = a² + 2ab + b²:\n1. (-5x)² = 25x² (quadrado do primeiro termo)\n2. 2 * (-5x) * 4y = -40xy (dobro do produto com sinal negativo)\n3. (4y)² = 16y² (quadrado do segundo termo)\n\nJuntando todos os termos: 25x² - 40xy + 16y². Erros comuns incluem esquecer do sinal negativo no termo central ou calcular errado os quadrados.",
+    "topic": "Produto notável: quadrado da diferença",
+    "difficulty": "medium",
+    "createdAt": "2025-05-01T12:19:36.095Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Expanda a expressão (3m - 2n)² e selecione o resultado correto:",
+    "options": [
+      "9m² - 12mn + 4n²",
+      "9m² - 6mn + 4n²",
+      "9m² - 4n²",
+      "3m² - 12mn + 4n²"
+    ],
+    "correctOption": 0,
+    "explanation": "Usando o quadrado da diferença: (a - b)² = a² - 2ab + b²\n1. Identifique a = 3m e b = 2n\n2. Calcule a² = (3m)² = 9m²\n3. Calcule 2ab = 2*(3m)*(2n) = 12mn\n4. Calcule b² = (2n)² = 4n²\n5. Combine os termos: 9m² - 12mn + 4n²\nErros comuns:\n- Esquecer de dobrar o produto (opção B)\n- Não calcular os quadrados completos (opção C)\n- Errar na aplicação do expoente no coeficiente (opção D)",
+    "topic": "Produto notável: quadrado da diferença",
+    "difficulty": "medium",
+    "createdAt": "2025-05-01T12:21:15.748Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Desenvolva o produto notável \\(\\left(\\dfrac{3x^2}{4} - 5y^3\\right)^2\\) e assinale a alternativa correta:",
+    "options": [
+      "\\(\\dfrac{9x^4}{16} - \\dfrac{15x^2y^3}{2} + 25y^6\\)",
+      "\\(\\dfrac{9x^4}{4} - \\dfrac{15x^2y^3}{2} + 25y^6\\)",
+      "\\(\\dfrac{9x^4}{16} - 30x^2y^3 + 25y^6\\)",
+      "\\(\\dfrac{9x^4}{16} - \\dfrac{15x^2y^3}{2} + 25y^5\\)"
+    ],
+    "correctOption": 0,
+    "explanation": "Aplicamos a fórmula do quadrado da diferença \\((a - b)^2 = a^2 - 2ab + b^2\\):\n1. \\(a = \\dfrac{3x^2}{4}\\) e \\(b = 5y^3\\)\n2. \\(a^2 = \\left(\\dfrac{3x^2}{4}\\right)^2 = \\dfrac{9x^4}{16}\\)\n3. \\(2ab = 2 \\cdot \\dfrac{3x^2}{4} \\cdot 5y^3 = \\dfrac{30x^2y^3}{4} = \\dfrac{15x^2y^3}{2}\\)\n4. \\(b^2 = (5y^3)^2 = 25y^6\\)\nJuntando os termos: \\(\\dfrac{9x^4}{16} - \\dfrac{15x^2y^3}{2} + 25y^6\\).\nErros comuns: esquecer de elevar o denominador ao quadrado (Alternativa B), não simplificar corretamente o termo do meio (Alternativa C), e erro no expoente do último termo (Alternativa D).",
+    "topic": "Produto notável: quadrado da diferença",
+    "difficulty": "hard",
+    "createdAt": "2025-05-01T12:23:12.659Z",
+    "hints": [
+      "dica1: Lembre-se de que o quadrado de uma diferença envolve dois termos. Como você pode reescrever a expressão aplicando a propriedade distributiva de forma estruturada?",
+      "dica2: O quadrado da diferença segue a fórmula (a - b)² = a² - 2ab + b². Identifique qual parte da expressão original corresponde a 'a' e qual corresponde a 'b'.",
+      "dica3: Separe o cálculo em três etapas: calcule o quadrado do primeiro termo, depois o dobro do produto dos termos (atenção ao sinal negativo) e finalmente o quadrado do segundo termo. Organize cada parte separadamente antes de juntá-las."
+    ]
+  },
+  {
+    "question": "Desenvolva o quadrado da diferença: \\(\\left(3x^2 - \\frac{2}{3}y^3\\right)^2\\)",
+    "options": [
+      "9x⁴ - 4x²y³ + \\(\\frac{4}{9}\\)y⁶",
+      "9x⁴ - 2x²y³ + \\(\\frac{4}{9}\\)y⁶",
+      "3x⁴ - 4x²y³ + \\(\\frac{2}{9}\\)y⁶",
+      "9x⁴ + 4x²y³ + \\(\\frac{4}{9}\\)y⁶"
+    ],
+    "correctOption": 0,
+    "explanation": "Aplicando a fórmula do quadrado da diferença \\((a - b)^2 = a^2 - 2ab + b^2\\):\n1. \\(a = 3x^2\\) ⇒ \\(a^2 = (3x^2)^2 = 9x^4\\)\n2. \\(b = \\frac{2}{3}y^3\\) ⇒ \\(b^2 = \\left(\\frac{2}{3}y^3\\right)^2 = \\frac{4}{9}y^6\\)\n3. \\(2ab = 2 \\cdot 3x^2 \\cdot \\frac{2}{3}y^3 = 4x^2y^3\\)\nJuntando os termos: \\(9x^4 - 4x^2y^3 + \\frac{4}{9}y^6\\).\nErros comuns incluem esquecer de elevar o coeficiente ao quadrado (opção C), errar o coeficiente do termo central (opção B) ou inverter o sinal (opção D).",
+    "topic": "Produto notável: quadrado da diferença",
+    "difficulty": "hard",
+    "createdAt": "2025-05-01T12:24:27.411Z",
+    "hints": [
+      "Lembre-se que o quadrado de uma diferença não é apenas a diferença dos quadrados. Considere todos os termos envolvidos na expansão.",
+      "Aplique a fórmula (a - b)² = a² - 2ab + b², substituindo 'a' e 'b' pelos termos apropriados do problema.",
+      "Calcule separadamente o quadrado de cada termo, o dobro do produto entre eles e some os resultados, atentando para os coeficientes e expoentes."
+    ]
+  },
+  {
+    "question": "Ao expandir a expressão (x + 3)(x - 3), qual é o resultado correto?",
+    "options": [
+      "x² + 9",
+      "x² - 3",
+      "x² - 6x + 9",
+      "x² - 9"
+    ],
+    "correctOption": 3,
+    "explanation": "Para resolver (x + 3)(x - 3), aplicamos o produto notável da soma pela diferença: (a + b)(a - b) = a² - b².\n1. Identificamos 'a' como x e 'b' como 3\n2. Calculamos a²: x²\n3. Calculamos b²: 3² = 9\n4. Subtraímos os resultados: x² - 9\n\nO erro comum de escolher x² + 9 vem de confundir a fórmula com (a + b)², enquanto x² - 3 ocorre por esquecer de elevar o 3 ao quadrado. Já x² - 6x + 9 seria o resultado caso fosse (x - 3)².",
+    "topic": "Produto notável: produto da soma pela diferença",
+    "difficulty": "easy",
+    "createdAt": "2025-05-01T12:25:54.601Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Qual é a forma expandida do produto notável (x + 3)(x - 3)?",
+    "options": [
+      "x² - 9",
+      "x² + 9",
+      "x² - 3",
+      "x² - 6x + 9"
+    ],
+    "correctOption": 0,
+    "explanation": "1. Identificamos que a expressão é um produto da soma pela diferença: (a + b)(a - b) = a² - b²\n2. Neste caso, a = x e b = 3\n3. Aplicamos a fórmula: (x)² - (3)²\n4. Calculamos os quadrados: x² - 9\n5. Os termos do meio (+3x e -3x) se cancelam, resultando apenas na diferença dos quadrados.",
+    "topic": "Produto notável: produto da soma pela diferença",
+    "difficulty": "easy",
+    "createdAt": "2025-05-01T12:27:07.632Z",
+    "hints": [
+      "Observe que os dois binômios possuem termos iguais e opostos. Tente multiplicar termo a termo e veja se há simplificação.",
+      "Lembre-se do padrão (a + b)(a - b), onde o produto resulta na diferença entre o quadrado do primeiro termo e o quadrado do segundo termo.",
+      "Identifique quem é 'a' e 'b' na expressão dada, aplique a propriedade da diferença de quadrados e faça as potências individualmente."
+    ]
+  },
+  {
+    "question": "Qual é a forma simplificada da expressão (3x + 2y)(3x − 2y)?",
+    "options": [
+      "9x² − 4y²",
+      "3x² − 2y²",
+      "9x² + 4y²",
+      "6x² − 4y²"
+    ],
+    "correctOption": 0,
+    "explanation": "Aplicando o produto da soma pela diferença (a+b)(a−b) = a² − b²:\n1. Identificamos a = 3x e b = 2y\n2. Calculamos a² = (3x)² = 9x²\n3. Calculamos b² = (2y)² = 4y²\n4. Subtraímos: 9x² − 4y²\nErros comuns incluem esquecer de elevar os coeficientes ao quadrado (opção B), errar o sinal (opção C) ou multiplicar coeficientes ao invés de elevar ao quadrado (opção D).",
+    "topic": "Produto notável: produto da soma pela diferença",
+    "difficulty": "medium",
+    "createdAt": "2025-05-01T12:28:09.521Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Expanda a expressão algébrica (-3x + 2y)(-3x - 2y) e selecione a alternativa correta.",
+    "options": [
+      "9x² - 4y²",
+      "9x² + 4y²",
+      "-9x² - 4y²",
+      "9x² - 12xy + 4y²"
+    ],
+    "correctOption": 0,
+    "explanation": "1. Reconhecemos a estrutura de produto da soma pela diferença: (a + b)(a - b) = a² - b²\n2. Identificamos a = -3x e b = 2y\n3. Aplicamos a fórmula:\n   (-3x)² - (2y)²\n4. Calculamos cada termo:\n   (-3x)² = 9x²\n   (2y)² = 4y²\n5. Subtraímos os resultados:\n   9x² - 4y²\n\nErros comuns:\n- Alternativa B: Esqueceu de inverter o sinal do segundo termo na subtração\n- Alternativa C: Errou o sinal do quadrado do primeiro termo\n- Alternativa D: Confundiu com o quadrado de um binômio em vez de usar a propriedade específica",
+    "topic": "Produto notável: produto da soma pela diferença",
+    "difficulty": "medium",
+    "createdAt": "2025-05-01T12:29:44.828Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Expanda o produto \\(\\left(\\dfrac{3}{4}a^3 + \\dfrac{2}{5}b^2\\right)\\left(\\dfrac{3}{4}a^3 - \\dfrac{2}{5}b^2\\right)\\).",
+    "options": [
+      "\\dfrac{9}{16}a^6 - \\dfrac{4}{25}b^4",
+      "\\dfrac{9}{16}a^6 + \\dfrac{4}{25}b^4",
+      "\\dfrac{9}{4}a^6 - \\dfrac{4}{5}b^4",
+      "\\dfrac{9}{16}a^3 - \\dfrac{4}{25}b^2"
+    ],
+    "correctOption": 0,
+    "explanation": "Aplicando o produto notável da soma pela diferença, temos:\n\n\\[(a + b)(a - b) = a^2 - b^2\\]\n\nOnde:\n- \\(a = \\dfrac{3}{4}a^3\\)\n- \\(b = \\dfrac{2}{5}b^2\\)\n\nCalculando cada termo:\n1. \\(a^2 = \\left(\\dfrac{3}{4}a^3\\right)^2 = \\left(\\dfrac{3}{4}\\right)^2 \\cdot (a^3)^2 = \\dfrac{9}{16}a^6\\)\n2. \\(b^2 = \\left(\\dfrac{2}{5}b^2\\right)^2 = \\left(\\dfrac{2}{5}\\right)^2 \\cdot (b^2)^2 = \\dfrac{4}{25}b^4\\)\n\nSubtraindo os resultados:\n\\[\\dfrac{9}{16}a^6 - \\dfrac{4}{25}b^4\\]",
+    "topic": "Produto notável: produto da soma pela diferença",
+    "difficulty": "hard",
+    "createdAt": "2025-05-01T12:32:27.552Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Expanda e simplifique a expressão: \\(\\left(\\frac{3}{4}x^5 + \\frac{2}{5}y^3\\right)\\left(\\frac{3}{4}x^5 - \\frac{2}{5}y^3\\right)\\)",
+    "options": [
+      "\\(\\frac{9}{16}x^{10} - \\frac{4}{25}y^{6}\\)",
+      "\\(\\frac{9}{16}x^{25} - \\frac{4}{25}y^{9}\\)",
+      "\\(\\frac{3}{4}x^{10} - \\frac{2}{5}y^{6}\\)",
+      "\\(\\frac{9}{16}x^{10} + \\frac{4}{25}y^{6}\\)"
+    ],
+    "correctOption": 0,
+    "explanation": "1. Reconhecemos o padrão do produto da soma pela diferença: \\((a+b)(a-b) = a^2 - b^2\\)\n2. Identificamos \\(a = \\frac{3}{4}x^5\\) e \\(b = \\frac{2}{5}y^3\\)\n3. Calculamos \\(a^2 = \\left(\\frac{3}{4}\\right)^2(x^5)^2 = \\frac{9}{16}x^{10}\\)\n4. Calculamos \\(b^2 = \\left(\\frac{2}{5}\\right)^2(y^3)^2 = \\frac{4}{25}y^{6}\\)\n5. Subtraímos os resultados: \\(\\frac{9}{16}x^{10} - \\frac{4}{25}y^{6}\\)\nErros comuns: esquecer de elevar os coeficientes ao quadrado (Opção C), errar a regra de potência de potência (Opção B), ou inverter o sinal do segundo termo (Opção D).",
+    "topic": "Produto notável: produto da soma pela diferença",
+    "difficulty": "hard",
+    "createdAt": "2025-05-01T12:34:02.618Z",
+    "hints": [
+      "dica1: Observe a estrutura dos dois binômios. Note que eles possuem termos idênticos, exceto pelo sinal entre eles. Isso lembra algum padrão de produto notável que você já estudou?",
+      "dica2: Relembre o conceito de 'produto da soma pela diferença': (a + b)(a - b) resulta na diferença entre o quadrado do primeiro termo e o quadrado do segundo. Identifique quem são 'a' e 'b' na expressão dada.",
+      "dica3: Aplique a fórmula (a² - b²) substituindo 'a' pelo termo que se repete com sinal positivo no primeiro fator e 'b' pelo termo que muda de sinal. Não esqueça de elevar cada coeficiente fracionário e cada variável ao quadrado separadamente."
+    ]
+  },
+  {
+    "question": "Qual é o resultado da soma dos trinômios (3x² + 2x + 5) e (2x² + 4x + 1)?",
+    "options": [
+      "5x² + 6x + 6",
+      "5x² + 6x + 5",
+      "6x² + 6x + 6",
+      "5x² + 5x + 6"
+    ],
+    "correctOption": 0,
+    "explanation": "1. Combine os termos com x²: 3x² + 2x² = 5x²\n2. Combine os termos com x: 2x + 4x = 6x\n3. Combine os termos constantes: 5 + 1 = 6\n4. O resultado final é 5x² + 6x + 6\n\nErros comuns: esquecer de somar os últimos números (5+1) levaria à opção B, somar errado os coeficientes de x² (3+2=6) levaria à opção C, e errar a soma dos termos com x (2+4=5) levaria à opção D.",
+    "topic": "Operações com trinômios",
+    "difficulty": "easy",
+    "createdAt": "2025-05-01T12:35:51.690Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Simplifique a expressão resultante da operação: (2x - y + 3)(x + 2y - 1) - (x² - 3xy + 4y²)",
+    "options": [
+      "x² + 6xy + x - 6y² + 7y - 3",
+      "x² + 3xy + x - 6y² + 7y - 3",
+      "x² + 6xy + x + 2y² + 7y - 3",
+      "x² + 6xy + x - 6y² + 6y - 3"
+    ],
+    "correctOption": 0,
+    "explanation": "1. Expanda o produto (2x - y + 3)(x + 2y - 1):\n   - Multiplique cada termo:\n     2x·x = 2x²; 2x·2y = 4xy; 2x·(-1) = -2x\n     (-y)·x = -xy; (-y)·2y = -2y²; (-y)·(-1) = y\n     3·x = 3x; 3·2y = 6y; 3·(-1) = -3\n   - Combine termos semelhantes:\n     2x² + 3xy + x - 2y² + 7y - 3\n\n2. Subtraia o trinômio (x² - 3xy + 4y²):\n   - Distribua o sinal negativo:\n     (2x² + 3xy + x - 2y² + 7y - 3) - x² + 3xy - 4y²\n   - Combine novamente:\n     x² + 6xy + x - 6y² + 7y - 3\n\nErros comuns: Esquecer de distribuir o sinal negativo em todos os termos do trinômio subtraído (opção B) ou calcular incorretamente os coeficientes durante a combinação de termos (opções C e D).",
+    "topic": "Operações com trinômios",
+    "difficulty": "medium",
+    "createdAt": "2025-05-01T12:40:40.623Z",
+    "hints": [
+      "Dica1: Comece analisando a estrutura da expressão. Lembre-se de distribuir cada termo do primeiro trinômio por todos os termos do segundo trinômio antes de lidar com a subtração final.",
+      "Dica2: Após expandir os produtos usando a propriedade distributiva, organize os termos semelhantes por grau (quadráticos, lineares, constantes) e atenção especial aos coeficientes negativos na subtração do trinômio quadrático.",
+      "Dica3: Para evitar erros, faça uma tabela temporária: multiplique cada termo (2x, -y, +3) por cada termo do segundo trinômio, some tudo, depois subtraia individualmente x², some 3xy e subtraia 4y². Agrupe os termos finais por similaridade."
+    ]
+  },
+  {
+    "question": "Simplifique a expressão resultante da operação: [(3x - 2y + 5) - (2x + y - 4)] · (x - 2y)",
+    "options": [
+      "x² -5xy +6y² +9x -18y",
+      "x² +5xy +6y² +9x -18y",
+      "x² -5xy -6y² +9x -18y",
+      "x² -5xy +6y² -9x +18y"
+    ],
+    "correctOption": 0,
+    "explanation": "1. Resolva a subtração de trinômios primeiro:\n(3x - 2y + 5) - (2x + y - 4)\n= 3x - 2y + 5 - 2x - y + 4\n= (3x-2x) + (-2y-y) + (5+4)\n= x - 3y + 9\n\n2. Multiplique o resultado pelo binômio (x - 2y):\n(x - 3y + 9)(x - 2y)\n= x(x) + x(-2y) + (-3y)(x) + (-3y)(-2y) + 9(x) + 9(-2y)\n= x² - 2xy - 3xy + 6y² + 9x - 18y\n\n3. Combine termos semelhantes:\nx² + (-2xy -3xy) + 6y² + 9x -18y\n= x² -5xy +6y² +9x -18y",
+    "topic": "Operações com trinômios",
+    "difficulty": "medium",
+    "createdAt": "2025-05-01T12:42:20.703Z",
+    "hints": [
+      "dica1: Comece analisando a expressão dentro dos colchetes. Lembre-se de distribuir corretamente o sinal negativo ao subtrair o segundo trinômio.",
+      "dica2: Após eliminar os parênteses internos, combine os termos semelhantes (termos com x, termos com y e constantes) antes de realizar a multiplicação.",
+      "dica3: Multiplique cada termo do trinômio simplificado por cada termo do binômio (x - 2y), aplicando a propriedade distributiva. Organize os resultados e combine os termos semelhantes para obter a forma final."
+    ]
+  },
+  {
+    "question": "Simplifique a expressão: \\((\\frac{1}{2}x^2 - \\frac{3}{4}x + 1)(2x^2 + 4x - 3) - (x^3 - 5x^2 + 2)\\).",
+    "options": [
+      "x⁴ - \\frac{1}{2}x³ + \\frac{5}{2}x² + \\frac{25}{4}x - 5",
+      "x⁴ + \\frac{3}{2}x³ - \\frac{7}{2}x² + \\frac{17}{4}x - 3",
+      "x⁴ - \\frac{5}{2}x³ + \\frac{1}{2}x² + \\frac{13}{4}x - 7",
+      "x⁴ + \\frac{1}{2}x³ + \\frac{3}{2}x² + \\frac{25}{4}x - 1"
+    ],
+    "correctOption": 0,
+    "explanation": "Passo a passo:\n\n1. **Multiplicar os trinômios**:\n\\((\\frac{1}{2}x^2)(2x^2) = x^4\\)\n\\((\\frac{1}{2}x^2)(4x) = 2x^3\\)\n\\((\\frac{1}{2}x^2)(-3) = -\\frac{3}{2}x^2\\)\n\\((-\\frac{3}{4}x)(2x^2) = -\\frac{3}{2}x^3\\)\n\\((-\\frac{3}{4}x)(4x) = -3x^2\\)\n\\((-\\frac{3}{4}x)(-3) = \\frac{9}{4}x\\)\n\\((1)(2x^2) = 2x^2\\)\n\\((1)(4x) = 4x\\)\n\\((1)(-3) = -3\\)\n\n2. **Combinar termos semelhantes**:\n\\(x^4 + (2x^3 - \\frac{3}{2}x^3) + (-\\frac{3}{2}x^2 - 3x^2 + 2x^2) + (\\frac{9}{4}x + 4x) - 3\\)\nSimplificando:\n\\(x^4 + \\frac{1}{2}x^3 - \\frac{5}{2}x^2 + \\frac{25}{4}x - 3\\)\n\n3. **Subtrair o terceiro trinômio**:\n\\((x^4 + \\frac{1}{2}x^3 - \\frac{5}{2}x^2 + \\frac{25}{4}x - 3) - x^3 + 5x^2 - 2\\)\nSimplificando:\n\\(x^4 - \\frac{1}{2}x^3 + \\frac{5}{2}x^2 + \\frac{25}{4}x - 5\\)\n\n**Destaques**:\n- Cuidado com sinais negativos na subtração final\n- Combinação precisa de coeficientes fracionários\n- Ordenação correta dos termos por grau",
+    "topic": "Operações com trinômios",
+    "difficulty": "hard",
+    "createdAt": "2025-05-01T12:44:44.554Z",
+    "hints": [
+      "dica1: Comece expandindo o produto dos dois trinômios. Lembre-se de multiplicar cada termo do primeiro polinômio por todos os termos do segundo polinômio, mantendo atenção nos sinais e coeficientes.",
+      "dica2: Após a expansão, combine os termos semelhantes cuidadosamente. Não se esqueça de que o último trinômio está sendo subtraído de todo o resultado anterior - aplique o sinal negativo em cada um de seus termos no momento adequado.",
+      "dica3: Organize a expressão resultante por graus decrescentes de x após todas as operações. Verifique especialmente os coeficientes dos termos x³ e x², pois são onde ocorrem as principais simplificações e possíveis erros de sinal."
+    ]
+  },
+  {
+    "question": "Simplifique a expressão: (2x² - 3/4 y + 5)(x³ + 2y - 1) - (4x⁵ - x²y + 3).",
+    "options": [
+      "-2x⁵ - (3/4)x³y +5x³ +5x²y -2x² - (3/2)y² + (43/4)y -8",
+      "-2x⁵ - (3/4)x³y +5x³ +5x²y -2x² - (3/2)y² + (43/4)y -5",
+      "-2x⁵ - (3/4)x³y +5x³ +3x²y -2x² - (3/2)y² + (43/4)y -8",
+      "-2x⁵ - (3/4)x³y +5x³ +5x²y -2x² + (3/2)y² + (43/4)y -8"
+    ],
+    "correctOption": 0,
+    "explanation": "1. Expanda o produto (2x² - 3/4 y +5)(x³ +2y -1):\n   - 2x² * x³ = 2x⁵; 2x² * 2y = 4x²y; 2x²*(-1) = -2x²\n   - (-3/4 y)*x³ = -3/4x³y; (-3/4 y)*2y = -3/2y²; (-3/4 y)*(-1) = 3/4y\n   - 5*x³ =5x³; 5*2y=10y; 5*(-1)=-5\n   - Combine termos: 2x⁵ +4x²y -2x² -3/4x³y -3/2y² +3/4y +5x³ +10y -5\n2. Subtraia (4x⁵ -x²y +3):\n   - 2x⁵ -4x⁵ = -2x⁵; 4x²y -(-x²y)=5x²y; -5 -3 = -8\n3. Resultado final: -2x⁵ -3/4x³y +5x³ +5x²y -2x² -3/2y² +43/4y -8",
+    "topic": "Operações com trinômios",
+    "difficulty": "hard",
+    "createdAt": "2025-05-01T12:47:50.827Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Qual é a forma fatorada do trinômio x² + 8x + 15?",
+    "options": [
+      "(x + 3)(x + 5)",
+      "(x + 1)(x + 15)",
+      "(x + 2)(x + 6)",
+      "(x + 4)(x + 4)"
+    ],
+    "correctOption": 0,
+    "explanation": "Para fatorar x² + 8x + 15, procuramos dois números que multiplicados resultem em 15 (termo constante) e somados resultem em 8 (coeficiente do termo central). Os números 3 e 5 satisfazem:\n1. 3 × 5 = 15\n2. 3 + 5 = 8\nAssim, a forma fatorada é (x + 3)(x + 5). As outras opções apresentam erros comuns como:\n- (x + 1)(x + 15): soma errada (1 + 15 = 16)\n- (x + 2)(x + 6): produto errado (2 × 6 = 12)\n- (x + 4)(x + 4): produto errado (4 × 4 = 16)",
+    "topic": "Fatoração de trinômios",
+    "difficulty": "easy",
+    "createdAt": "2025-05-01T12:49:26.231Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Qual é a forma fatorada do trinômio x² + 5x + 6?",
+    "options": [
+      "(x + 2)(x + 3)",
+      "(x + 1)(x + 6)",
+      "(x + 2)(x + 4)",
+      "(x + 5)(x + 1)"
+    ],
+    "correctOption": 0,
+    "explanation": "1. Precisamos encontrar dois números que multiplicados resultem em 6 (termo constante) e somados resultem em 5 (coeficiente do termo central).\n2. Os pares de fatores de 6 são: (1,6) e (2,3).\n3. Testando as somas: 1+6=7 (não serve) e 2+3=5 (serve).\n4. Portanto, a fatoração correta é (x + 2)(x + 3), onde:\n   - 2 × 3 = 6 (termo constante)\n   - 2 + 3 = 5 (coeficiente do termo central)",
+    "topic": "Fatoração de trinômios",
+    "difficulty": "easy",
+    "createdAt": "2025-05-01T12:50:23.130Z",
+    "hints": [
+      "dica1: Pense em dois números que multiplicados resultem no termo constante e somados deem o coeficiente do termo do meio.",
+      "dica2: Para fatorar trinômios da forma x² + bx + c, busque dois fatores de 'c' que somados resultem em 'b'. No caso, quais números multiplicam 6 e somam 5?",
+      "dica3: Liste os pares de fatores de 6 e identifique qual deles atende às duas condições (soma e produto). Depois, estruture os binômios como (x + m)(x + n)."
+    ]
+  },
+  {
+    "question": "Fatore completamente o trinômio: x² + 2xy - 8y²",
+    "options": [
+      "(x + 4y)(x - 2y)",
+      "(x - 4y)(x + 2y)",
+      "(x + 8y)(x - y)",
+      "(x + 4y)(x + 2y)"
+    ],
+    "correctOption": 0,
+    "explanation": "Passo a passo:\n1. Identificamos o trinômio quadrático: x² + 2xy - 8y²\n2. Procuramos dois números que:\n   - Multiplicados dêem o último termo (-8y²)\n   - Somados dêem o coeficiente do termo do meio (+2y)\n3. Os números 4y e -2y satisfazem:\n   4y × (-2y) = -8y²\n   4y + (-2y) = 2y\n4. Escrevemos a forma fatorada: (x + 4y)(x - 2y)\n\nVerificação das alternativas incorretas:\nB) (x - 4y)(x + 2y) = x² - 2xy - 8y² (sinal errado no termo central)\nC) (x + 8y)(x - y) = x² + 7xy - 8y² (coeficiente central incorreto)\nD) (x + 4y)(x + 2y) = x² + 6xy + 8y² (sinal incorreto no último termo)",
+    "topic": "Fatoração de trinômios",
+    "difficulty": "medium",
+    "createdAt": "2025-05-01T12:51:54.003Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Fatore completamente o trinômio a seguir: x² - xy - 12y²",
+    "options": [
+      "(x + 3y)(x - 4y)",
+      "(x - 3y)(x + 4y)",
+      "(x + 6y)(x - 2y)",
+      "(x - 2y)(x + 6y)"
+    ],
+    "correctOption": 0,
+    "explanation": "Para fatorar x² - xy - 12y²:\n1. Procuramos dois números que multiplicados resultem em -12 (coeficiente do termo y²) e somados resultem em -1 (coeficiente do termo xy).\n2. Os números 3 e -4 satisfazem: 3 × (-4) = -12 e 3 + (-4) = -1.\n3. Escrevemos os fatores como (x + 3y)(x - 4y), mantendo a relação com y.\n4. Verificação: (x + 3y)(x - 4y) = x² -4xy +3xy -12y² = x² -xy -12y².\nAs alternativas incorretas usam pares que não satisfazem ambas condições (ex: (x-3y)(x+4y) resulta em +xy no termo central).",
+    "topic": "Fatoração de trinômios",
+    "difficulty": "medium",
+    "createdAt": "2025-05-01T12:53:51.692Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Qual é o valor numérico do polinômio P(x) = 5x - 3 quando x = 2?",
+    "options": [
+      "7",
+      "10",
+      "4",
+      "13"
+    ],
+    "correctOption": 0,
+    "explanation": "Primeiro substituímos x por 2 no polinômio: P(2) = 5*2 - 3. Calculamos a multiplicação: 5*2 = 10. Em seguida subtraímos 3: 10 - 3 = 7. Portanto, o valor numérico é 7.",
+    "topic": "Valor numérico de polinômios",
+    "difficulty": "easy",
+    "createdAt": "2025-05-01T12:59:35.853Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Dado o polinômio P(x) = 2x² + 3x - 1, qual é o valor numérico de P(2)?",
+    "options": [
+      "13",
+      "9",
+      "15",
+      "11"
+    ],
+    "correctOption": 0,
+    "explanation": "Para calcular P(2), substituímos x por 2 no polinômio:\n1. Calcule 2x²: 2*(2)² = 2*4 = 8\n2. Calcule 3x: 3*2 = 6\n3. Combine os termos: 8 (de 2x²) + 6 (de 3x) - 1 (termo independente) = 13\nErros comuns:\n- Esquecer de elevar ao quadrado (2*2 + 6 -1 = 9)\n- Trocar sinal do termo independente (8 + 6 +1 = 15)\n- Erro de subtração (8 +6 -3 = 11)",
+    "topic": "Valor numérico de polinômios",
+    "difficulty": "easy",
+    "createdAt": "2025-05-01T13:02:39.257Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Dado o polinômio P(x, y) = 2x³y - xy² + 4x - 3y, qual é o valor numérico quando x = -1 e y = 2?",
+    "options": [
+      "-10",
+      "10",
+      "-6",
+      "6"
+    ],
+    "correctOption": 0,
+    "explanation": "Substituindo x = -1 e y = 2 no polinômio:\n1. 2x³y = 2·(-1)³·2 = 2·(-1)·2 = -4\n2. -xy² = -(-1)·(2)² = -(-1)·4 = +4\n3. 4x = 4·(-1) = -4\n4. -3y = -3·2 = -6\nSomando todos os termos: -4 + 4 - 4 - 6 = -10\nAtenção aos sinais negativos e prioridade das potências antes das multiplicações.",
+    "topic": "Valor numérico de polinômios",
+    "difficulty": "medium",
+    "createdAt": "2025-05-01T13:03:54.932Z",
+    "hints": [
+      "dica1: Lembre-se de substituir cada variável pelo valor correspondente. Atenção especial aos sinais negativos ao substituir x = -1.",
+      "dica2: Calcule cada termo do polinômio separadamente antes de combiná-los. Verifique a ordem das operações: potências primeiro, depois multiplicações/divisões.",
+      "dica3: Para cada termo: (2*(-1)³*2) → resolva a potência primeiro. (-1*(2)²) → calcule o quadrado antes. (4*(-1)) e (-3*2) são termos simples. Some todos os resultados parciais."
+    ]
+  },
+  {
+    "question": "Simplifique a expressão: 3x + 5 - x + 2",
+    "options": [
+      "2x + 7",
+      "4x + 7",
+      "3x + 7",
+      "2x + 5"
+    ],
+    "correctOption": 0,
+    "explanation": "1. Identifique os termos semelhantes:\n   - Termos com x: 3x e -x\n   - Constantes: 5 e 2\n2. Combine os termos com x: 3x - x = 2x\n3. Some as constantes: 5 + 2 = 7\n4. Junte os resultados: 2x + 7\n\nErros comuns:\n- Somar 3x + x = 4x (Alternativa B)\n- Esquecer de somar a constante 2 (Alternativa D)\n- Não subtrair o coeficiente de x (Alternativa C)",
+    "topic": "Simplificação de expressões algébricas",
+    "difficulty": "easy",
+    "createdAt": "2025-05-01T13:12:12.951Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Simplifique a expressão: 2x + 5 + 3x - 2",
+    "options": [
+      "5x + 3",
+      "5x + 7",
+      "6x + 3",
+      "8x"
+    ],
+    "correctOption": 0,
+    "explanation": "Passo a passo:\n1. Identifique os termos semelhantes:\n   - Termos com x: 2x e 3x\n   - Constantes numéricas: 5 e -2\n\n2. Combine os termos com x:\n   2x + 3x = 5x\n\n3. Combine as constantes:\n   5 - 2 = 3\n\n4. Junte os resultados:\n   5x + 3\n\nErros comuns nas alternativas:\n- 5x + 7: Esqueceu de subtrair 2 das constantes\n- 6x + 3: Somou 2x + 3x incorretamente\n- 8x: Misturou coeficientes de termos diferentes",
+    "topic": "Simplificação de expressões algébricas",
+    "difficulty": "easy",
+    "createdAt": "2025-05-01T13:13:45.679Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Simplifique a expressão 3(2x - 4y) + 2(-x + 5y).",
+    "options": [
+      "4x - 2y",
+      "4x + 22y",
+      "8x - 2y",
+      "4x - 7y"
+    ],
+    "correctOption": 0,
+    "explanation": "Passo 1: Distribuir os coeficientes dentro dos parênteses:\n3*(2x) = 6x, 3*(-4y) = -12y, 2*(-x) = -2x, 2*(5y) = 10y.\nExpressão expandida: 6x -12y -2x +10y.\nPasso 2: Combinar termos semelhantes:\nTermos com x: 6x -2x = 4x\nTermos com y: -12y +10y = -2y\nResposta final: 4x -2y.",
+    "topic": "Simplificação de expressões algébricas",
+    "difficulty": "medium",
+    "createdAt": "2025-05-01T13:15:58.247Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Simplifique a expressão algébrica: 3x - 2y + 4 - x + 5y - 6.",
+    "options": [
+      "2x + 3y - 2",
+      "4x + 3y - 2",
+      "2x - 3y - 2",
+      "2x + 3y + 10"
+    ],
+    "correctOption": 0,
+    "explanation": "1. Agrupe os termos semelhantes:\n   - Termos em x: 3x - x = 2x\n   - Termos em y: -2y + 5y = 3y\n   - Termos constantes: 4 - 6 = -2\n2. Combine os resultados: 2x + 3y - 2\nErros comuns:\n- Não alterar sinal ao subtrair (4x em vez de 2x)\n- Errar sinais nos termos em y (-3y)\n- Somar constantes ao invés de subtrair (+10)",
+    "topic": "Simplificação de expressões algébricas",
+    "difficulty": "medium",
+    "createdAt": "2025-05-01T13:17:29.817Z",
+    "hints": [
+      "dica1",
+      "dica2",
+      "dica3"
+    ]
+  },
+  {
+    "question": "Simplifique a expressão: \\(\\frac{2}{3}x^2y^{-1} - \\frac{5}{4}x^{-1}y^2 + \\frac{3}{8}x^3y - \\frac{1}{6}x^2y^{-1} + \\frac{7}{12}x^{-1}y^2 - \\frac{1}{2}x^3y\\)",
+    "options": [
+      "\\(\\frac{1}{2}\\frac{x^2}{y} - \\frac{2}{3}\\frac{y^2}{x} - \\frac{1}{8}x^3y\\)",
+      "\\(\\frac{1}{2}x^2y^{-1} + \\frac{2}{3}x^{-1}y^2 - \\frac{5}{8}x^3y\\)",
+      "\\(\\frac{1}{3}x^2y^{-1} - \\frac{1}{4}x^{-1}y^2 - \\frac{1}{8}x^3y\\)",
+      "\\(\\frac{1}{2}\\frac{x^2}{y} + \\frac{2}{3}\\frac{y^2}{x} + \\frac{1}{8}x^3y\\)"
+    ],
+    "correctOption": 0,
+    "explanation": "1. Agrupe termos semelhantes:\n   - \\(x^2y^{-1}\\): \\(\\frac{2}{3} - \\frac{1}{6} = \\frac{1}{2}\\)\n   - \\(x^{-1}y^2\\): \\(-\\frac{5}{4} + \\frac{7}{12} = -\\frac{15}{12} + \\frac{7}{12} = -\\frac{2}{3}\\)\n   - \\(x^3y\\): \\(\\frac{3}{8} - \\frac{1}{2} = -\\frac{1}{8}\\)\n2. Converta expoentes negativos para notação fracionária:\n   - \\(\\frac{1}{2}x^2y^{-1} = \\frac{1}{2}\\frac{x^2}{y}\\)\n   - \\(-\\frac{2}{3}x^{-1}y^2 = -\\frac{2}{3}\\frac{y^2}{x}\\)\n3. Resultado final: Combinação das simplificações acima.",
+    "topic": "Simplificação de expressões algébricas",
+    "difficulty": "hard",
+    "createdAt": "2025-05-01T13:20:01.550Z",
+    "hints": [
+      "dica1: Observe atentamente os expoentes das variáveis em cada termo e identifique padrões que possam ser agrupados.",
+      "dica2: Termos semelhantes possuem as mesmas variáveis elevadas aos mesmos expoentes. Combine os coeficientes numéricos desses termos mantendo a parte literal.",
+      "dica3: Separe os termos em grupos com x²y⁻¹, x⁻¹y² e x³y. Some/subtraia os coeficientes decimais de cada grupo e simplifique as frações."
+    ]
+  }
+]
